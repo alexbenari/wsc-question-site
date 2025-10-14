@@ -140,6 +140,7 @@
     let currentIndex = -1;
     let currentQuestion = null;
     let hasAnswered = false;
+    let answeredQuestionIds = new Set(); // Track answered questions by ID
 
     // Elements
     const questionText = document.getElementById('question-text');
@@ -197,9 +198,18 @@
       nextBtn.style.display = 'none';
       hasAnswered = false;
 
-      // Pick a random question (could be improved to avoid repeats)
-      currentIndex = Math.floor(Math.random() * questions.length);
-      currentQuestion = questions[currentIndex];
+      // Get questions that haven't been answered yet
+      const unansweredQuestions = questions.filter(q => !answeredQuestionIds.has(q.id));
+      
+      // Check if all questions have been answered
+      if (unansweredQuestions.length === 0) {
+        showCompletionMessage();
+        return;
+      }
+
+      // Pick a random question from unanswered ones
+      currentIndex = Math.floor(Math.random() * unansweredQuestions.length);
+      currentQuestion = unansweredQuestions[currentIndex];
 
       // Shuffle choices for fairness
       const choices = shuffle([...currentQuestion.choices]);
@@ -242,6 +252,8 @@
         btn.setAttribute('aria-pressed', 'true');
         feedback.textContent = 'Correct!';
         nextBtn.style.display = 'inline-block';
+        // Mark question as answered
+        answeredQuestionIds.add(currentQuestion.id);
       } else {
         // Wrong answer - keep buttons enabled for retry
         btn.classList.add('incorrect');
@@ -249,6 +261,58 @@
         feedback.textContent = 'Incorrect. Try another answer or "Show Answer" if you\'re stuck.';
         showAnswerBtn.style.display = 'inline-block';
       }
+    }
+
+    function showCompletionMessage() {
+      const totalQuestions = questions.length;
+      const answeredCount = answeredQuestionIds.size;
+      
+      questionText.innerHTML = `
+        <div style="text-align: center; padding: 2rem 0;">
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">🎉 Quiz Complete!</h2>
+          <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+            You've answered all ${totalQuestions} questions!
+          </p>
+          <p style="margin-bottom: 2rem;">
+            <strong>Questions answered: ${answeredCount}/${totalQuestions}</strong>
+          </p>
+          <button id="restart-btn" style="
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            cursor: pointer;
+            margin-right: 1rem;
+          ">Start New Session</button>
+          <button id="reset-btn" style="
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            cursor: pointer;
+          ">Reset Progress</button>
+        </div>
+      `;
+      
+      choicesList.innerHTML = '';
+      feedback.textContent = '';
+      showAnswerBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+      
+      // Add event listeners for the new buttons
+      document.getElementById('restart-btn').addEventListener('click', () => {
+        answeredQuestionIds.clear();
+        showNextQuestion();
+      });
+      
+      document.getElementById('reset-btn').addEventListener('click', () => {
+        answeredQuestionIds.clear();
+        showNextQuestion();
+      });
     }
 
     showAnswerBtn.addEventListener('click', () => {
@@ -265,6 +329,8 @@
       feedback.textContent = `The correct answer is: "${correct}".`;
       showAnswerBtn.style.display = 'none';
       nextBtn.style.display = 'inline-block';
+      // Mark question as answered
+      answeredQuestionIds.add(currentQuestion.id);
     });
 
     nextBtn.addEventListener('click', () => {
