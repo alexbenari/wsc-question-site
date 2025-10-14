@@ -120,6 +120,7 @@
       <ul class="choices" id="choices-list"></ul>
       <div class="feedback" id="feedback" aria-live="assertive"></div>
       <div class="actions">
+        <button id="skip-btn" type="button">Skip Question</button>
         <button id="show-answer-btn" type="button" style="display:none;">Show Answer</button>
         <button id="next-btn" type="button" style="display:none;">Next Question</button>
       </div>
@@ -146,6 +147,7 @@
     const questionText = document.getElementById('question-text');
     const choicesList = document.getElementById('choices-list');
     const feedback = document.getElementById('feedback');
+    const skipBtn = document.getElementById('skip-btn');
     const showAnswerBtn = document.getElementById('show-answer-btn');
     const nextBtn = document.getElementById('next-btn');
     const loading = document.getElementById('loading');
@@ -194,6 +196,7 @@
 
     function showNextQuestion() {
       feedback.textContent = '';
+      skipBtn.style.display = 'inline-block';
       showAnswerBtn.style.display = 'none';
       nextBtn.style.display = 'none';
       hasAnswered = false;
@@ -241,6 +244,7 @@
         b.setAttribute('aria-pressed', 'false');
       });
       feedback.textContent = '';
+      skipBtn.style.display = 'none';
       showAnswerBtn.style.display = 'none';
       nextBtn.style.display = 'none';
       
@@ -300,6 +304,7 @@
       
       choicesList.innerHTML = '';
       feedback.textContent = '';
+      skipBtn.style.display = 'none';
       showAnswerBtn.style.display = 'none';
       nextBtn.style.display = 'none';
       
@@ -314,6 +319,10 @@
         showNextQuestion();
       });
     }
+
+    skipBtn.addEventListener('click', () => {
+      showNextQuestion();
+    });
 
     showAnswerBtn.addEventListener('click', () => {
       // Reveal correct answer and disable all buttons
