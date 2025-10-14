@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Practice multiple choice questions with instant feedback.">
+  <title>WSC Quizzer</title>
+  <style>
+    :root {
+      --primary: #2a7ae2;
+      --secondary: #f5f5f5;
+      --accent: #e23a2a;
+      --radius: 8px;
+      --font: 'Segoe UI', Arial, sans-serif;
+    }
+    body {
+      font-family: var(--font);
+      background: var(--secondary);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    main {
+      background: #fff;
+      margin: 2rem 0;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      max-width: 480px;
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .question {
+      font-size: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .choices {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.2rem 0;
+    }
+    .choices li {
+      margin-bottom: 0.7rem;
+    }
+    .choice-btn {
+      width: 100%;
+      padding: 0.7em 1em;
+      border: 1px solid #ccc;
+      border-radius: var(--radius);
+      background: #f9f9f9;
+      color: #333;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, border 0.2s, color 0.2s;
+    }
+    .choice-btn[aria-pressed="true"] {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .choice-btn.correct {
+      background: #4caf50;
+      color: #fff;
+      border-color: #4caf50;
+    }
+    .choice-btn.incorrect {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .feedback {
+      margin: 1rem 0;
+      font-weight: bold;
+      min-height: 1.5em;
+    }
+    .actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+      margin-top: 1.5rem;
+    }
+    button {
+      font-size: 1rem;
+      padding: 0.6em 1.2em;
+      border-radius: var(--radius);
+      border: none;
+      background: var(--primary);
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Question Generator</h1>
+    <section id="question-section" aria-live="polite">
+      <div class="question" id="question-text"></div>
+      <ul class="choices" id="choices-list"></ul>
+      <div class="feedback" id="feedback" aria-live="assertive"></div>
+      <div class="actions">
+        <button id="show-answer-btn" type="button" style="display:none;">Show Answer</button>
+        <button id="next-btn" type="button" style="display:none;">Next Question</button>
+      </div>
+    </section>
+    <div id="loading" style="text-align:center; margin-top:1.5rem;">Loading questions...</div>
+    <div id="error" style="color:var(--accent); text-align:center; display:none;"></div>
+  </main>
+  <script>
+    // Accessibility: focus management helpers
+    function focusFirstChoice() {
+      const first = document.querySelector('.choice-btn');
+      if (first) first.focus();
+    }
+
+
+    // State
+    let questions = [];
+    let currentIndex = -1;
+    let currentQuestion = null;
+    let hasAnswered = false;
+
+    // Elements
+    const questionText = document.getElementById('question-text');
+    const choicesList = document.getElementById('choices-list');
+    const feedback = document.getElementById('feedback');
+    const showAnswerBtn = document.getElementById('show-answer-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const loading = document.getElementById('loading');
+    const errorDiv = document.getElementById('error');
+
+    // Fetch and parse JSONL from local file
+    async function loadQuestions() {
+      try {
+        const resp = await fetch('question-pool.jsonl');
+        if (!resp.ok) throw new Error('Could not load question pool.');
+        const text = await resp.text();
+        questions = text
+          .split('\n')
+          .map(line => line.trim())
+          .filter(Boolean)
+          .map(line => {
+            try {
+              const parsed = JSON.parse(line);
+              // Convert letter answer (A, B, C, etc.) to numeric index
+              if (parsed.correct && typeof parsed.correct === 'string') {
+                parsed.answer = parsed.correct.charCodeAt(0) - 65; // A=0, B=1, C=2, etc.
+              }
+              return parsed;
+            } catch {
+              return null;
+            }
+          })
+          .filter(q => q && q.question && Array.isArray(q.choices) && typeof q.answer !== 'undefined');
+        if (questions.length === 0) throw new Error('No valid questions found.');
+        loading.style.display = 'none';
+        showNextQuestion();
+      } catch (e) {
+        loading.style.display = 'none';
+        errorDiv.style.display = 'block';
+        errorDiv.textContent = e.message;
+      }
+    }
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function showNextQuestion() {
+      feedback.textContent = '';
+      showAnswerBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+      hasAnswered = false;
+
+      // Pick a random question (could be improved to avoid repeats)
+      currentIndex = Math.floor(Math.random() * questions.length);
+      currentQuestion = questions[currentIndex];
+
+      // Shuffle choices for fairness
+      const choices = shuffle([...currentQuestion.choices]);
+      questionText.textContent = currentQuestion.question;
+      choicesList.innerHTML = '';
+      choices.forEach((choice, idx) => {
+        const li = document.createElement('li');
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'choice-btn';
+        btn.setAttribute('aria-pressed', 'false');
+        btn.setAttribute('tabindex', '0');
+        btn.textContent = choice;
+        btn.addEventListener('click', () => handleChoice(btn, choice));
+        li.appendChild(btn);
+        choicesList.appendChild(li);
+      });
+      focusFirstChoice();
+    }
+
+    function handleChoice(btn, selectedChoice) {
+      // Find correct answer text
+      const correct = currentQuestion.choices[currentQuestion.answer];
+      const btns = document.querySelectorAll('.choice-btn');
+      
+      // Clear previous selections and feedback
+      btns.forEach(b => {
+        b.classList.remove('incorrect', 'correct');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      feedback.textContent = '';
+      showAnswerBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+      
+      if (btn.textContent === correct) {
+        // Correct answer - disable all buttons and show success
+        hasAnswered = true;
+        btns.forEach(b => b.disabled = true);
+        btn.classList.add('correct');
+        btn.setAttribute('aria-pressed', 'true');
+        feedback.textContent = 'Correct!';
+        nextBtn.style.display = 'inline-block';
+      } else {
+        // Wrong answer - keep buttons enabled for retry
+        btn.classList.add('incorrect');
+        btn.setAttribute('aria-pressed', 'true');
+        feedback.textContent = 'Incorrect. Try another answer or "Show Answer" if you\'re stuck.';
+        showAnswerBtn.style.display = 'inline-block';
+      }
+    }
+
+    showAnswerBtn.addEventListener('click', () => {
+      // Reveal correct answer and disable all buttons
+      hasAnswered = true;
+      const correct = currentQuestion.choices[currentQuestion.answer];
+      const btns = document.querySelectorAll('.choice-btn');
+      btns.forEach(b => {
+        b.disabled = true;
+        if (b.textContent === correct) {
+          b.classList.add('correct');
+        }
+      });
+      feedback.textContent = `The correct answer is: "${correct}".`;
+      showAnswerBtn.style.display = 'none';
+      nextBtn.style.display = 'inline-block';
+    });
+
+    nextBtn.addEventListener('click', () => {
+      showNextQuestion();
+    });
+
+    // Keyboard accessibility: allow Enter/Space to select
+    choicesList.addEventListener('keydown', e => {
+      if (e.target.classList.contains('choice-btn') && (e.key === 'Enter' || e.key === ' ')) {
+        e.preventDefault();
+        e.target.click();
+      }
+    });
+
+    // Initial load
+    window.addEventListener('DOMContentLoaded', loadQuestions);
+  </script>
+</body>
+</html>
