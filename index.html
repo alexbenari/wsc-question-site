@@ -19,18 +19,30 @@
       margin: 0;
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-direction: row;
+      align-items: flex-start;
       justify-content: flex-start;
+    }
+    .sidebar {
+      width: 300px;
+      background: #fff;
+      margin: 2rem 0 2rem 2rem;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      height: fit-content;
+      position: sticky;
+      top: 2rem;
     }
     main {
       background: #fff;
-      margin: 2rem 0;
+      margin: 2rem 2rem 2rem 0;
       padding: 2rem;
       border-radius: var(--radius);
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
       max-width: 480px;
       width: 100%;
+      flex: 1;
     }
     h1 {
       text-align: center;
@@ -101,10 +113,72 @@
       background: #ccc;
       cursor: not-allowed;
     }
-    @media (max-width: 600px) {
+    .topic-list {
+      margin-bottom: 1.5rem;
+    }
+    .topic-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .topic-item:hover:not(.disabled) {
+      background: #f0f0f0;
+    }
+    .topic-item.selected {
+      background: var(--primary);
+      color: white;
+    }
+    .topic-item.disabled {
+      color: #999;
+      cursor: not-allowed;
+    }
+    .topic-checkbox {
+      margin-right: 0.5rem;
+      width: 16px;
+      height: 16px;
+    }
+    .topic-name {
+      flex: 1;
+      font-size: 0.9rem;
+    }
+    .topic-count {
+      font-size: 0.8rem;
+      color: #666;
+      margin-left: 0.5rem;
+    }
+    .topic-item.selected .topic-count {
+      color: rgba(255,255,255,0.8);
+    }
+    .topic-item.disabled .topic-count {
+      color: #ccc;
+    }
+    .ask-button {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        margin: 1rem;
+        position: static;
+      }
       main {
+        margin: 0 1rem 1rem 1rem;
+      }
+    }
+    @media (max-width: 600px) {
+      .sidebar, main {
         padding: 1rem;
-        margin: 1rem 0;
+        margin: 0.5rem;
       }
       h1 {
         font-size: 1.3rem;
@@ -113,9 +187,18 @@
   </style>
 </head>
 <body>
+  <aside class="sidebar">
+    <h2 style="margin-top: 0; color: var(--primary); font-size: 1.2rem;">Select Topics</h2>
+    <div style="margin-bottom: 1rem;">
+      <button id="select-all-button" style="margin-right: 0.5rem; padding: 0.4rem 0.8rem; font-size: 0.9rem; border: none; border-radius: var(--radius); background: var(--primary); color: white; cursor: pointer;">Select All</button>
+      <button id="unselect-all-button" style="padding: 0.4rem 0.8rem; font-size: 0.9rem; border: none; border-radius: var(--radius); background: #666; color: white; cursor: pointer;">Unselect All</button>
+    </div>
+    <div class="topic-list" id="topic-list"></div>
+    <button id="ask-button" class="ask-button" disabled>Ask me about these</button>
+  </aside>
   <main>
     <h1>Question Generator</h1>
-    <section id="question-section" aria-live="polite">
+    <section id="question-section" aria-live="polite" style="display:none;">
       <div class="question" id="question-text"></div>
       <ul class="choices" id="choices-list"></ul>
       <div class="feedback" id="feedback" aria-live="assertive"></div>
@@ -127,6 +210,11 @@
     </section>
     <div id="loading" style="text-align:center; margin-top:1.5rem;">Loading questions...</div>
     <div id="error" style="color:var(--accent); text-align:center; display:none;"></div>
+    <div id="welcome-message" style="text-align:center; margin-top:1.5rem; display:none;">
+      <h2>Welcome to the WSC Quizzer!</h2>
+      <p>Select topics from the list on the left to begin your quiz.</p>
+      <p>Choose one or more topics, then click "Ask me about these" to start.</p>
+    </div>
   </main>
   <script>
     // Accessibility: focus management helpers
@@ -138,10 +226,16 @@
 
     // State
     let questions = [];
+    let allQuestions = []; // Store all questions for topic filtering
     let currentIndex = -1;
     let currentQuestion = null;
     let hasAnswered = false;
     let answeredQuestionIds = new Set(); // Track answered questions by ID
+    let skippedQuestionIds = new Set(); // Track skipped questions by ID
+    let reviewedSkippedIds = new Set(); // Track skipped questions that have been reviewed
+    let isInReviewMode = false; // Track if we're in review mode
+    let selectedTopics = new Set(); // Track selected topics
+    let topicQuestionCounts = {}; // Count questions per topic
 
     // Elements
     const questionText = document.getElementById('question-text');
@@ -152,6 +246,10 @@
     const nextBtn = document.getElementById('next-btn');
     const loading = document.getElementById('loading');
     const errorDiv = document.getElementById('error');
+    const topicList = document.getElementById('topic-list');
+    const askButton = document.getElementById('ask-button');
+    const selectAllButton = document.getElementById('select-all-button');
+    const unselectAllButton = document.getElementById('unselect-all-button');
 
     // Fetch and parse JSONL from local file
     async function loadQuestions() {
@@ -159,7 +257,7 @@
         const resp = await fetch('question-pool.jsonl');
         if (!resp.ok) throw new Error('Could not load question pool.');
         const text = await resp.text();
-        questions = text
+        allQuestions = text
           .split('\n')
           .map(line => line.trim())
           .filter(Boolean)
@@ -176,9 +274,16 @@
             }
           })
           .filter(q => q && q.question && Array.isArray(q.choices) && typeof q.answer !== 'undefined');
-        if (questions.length === 0) throw new Error('No valid questions found.');
+        
+        if (allQuestions.length === 0) throw new Error('No valid questions found.');
+        
+        // Build topic counts and create topic list
+        buildTopicCounts();
+        createTopicList();
+        
         loading.style.display = 'none';
-        showNextQuestion();
+        document.getElementById('welcome-message').style.display = 'block';
+        // Don't show questions until topics are selected
       } catch (e) {
         loading.style.display = 'none';
         errorDiv.style.display = 'block';
@@ -194,6 +299,157 @@
       return array;
     }
 
+    // Build counts of questions per topic
+    function buildTopicCounts() {
+      topicQuestionCounts = {};
+      allQuestions.forEach(question => {
+        if (question.topics && Array.isArray(question.topics)) {
+          question.topics.forEach(topic => {
+            topicQuestionCounts[topic] = (topicQuestionCounts[topic] || 0) + 1;
+          });
+        }
+      });
+    }
+
+    // Create the topic list UI
+    function createTopicList() {
+      topicList.innerHTML = '';
+      
+      // Load topic names from the file
+      const topicNames = [
+        "Introductory Questions",
+        "The Best is Yet to Be",
+        "In Futurity, Someone Prophetic Sees",
+        "The Future Wasn't Meant to Be",
+        "If At First You Fall, Try, Try Again",
+        "Things Really Do Catch Fire",
+        "Speeches that Inspire, Speeches that Spit Fire",
+        "Reliving It Up",
+        "Entertaining Ourselves Back to Life",
+        "Much Excite, Much Ignite",
+        "The Generative Area: A Mind for Imagination",
+        "No Backup, But Restore",
+        "Punky Futures",
+        "Concluding Questions"
+      ];
+
+      topicNames.forEach(topicName => {
+        const count = topicQuestionCounts[topicName] || 0;
+        const topicItem = document.createElement('div');
+        const isSelectable = count > 0;
+        
+        // Select all topics with questions by default
+        if (isSelectable) {
+          selectedTopics.add(topicName);
+        }
+        
+        topicItem.className = `topic-item ${!isSelectable ? 'disabled' : 'selected'}`;
+        topicItem.innerHTML = `
+          <input type="checkbox" class="topic-checkbox" ${!isSelectable ? 'disabled' : 'checked'} />
+          <span class="topic-name">${topicName}</span>
+          <span class="topic-count">(${count})</span>
+        `;
+        
+        if (isSelectable) {
+          topicItem.addEventListener('click', () => toggleTopic(topicName, topicItem));
+        }
+        
+        topicList.appendChild(topicItem);
+      });
+      
+      // Update ask button state
+      askButton.disabled = selectedTopics.size === 0;
+    }
+
+    // Toggle topic selection
+    function toggleTopic(topicName, topicItem) {
+      const checkbox = topicItem.querySelector('.topic-checkbox');
+      const isSelected = selectedTopics.has(topicName);
+      
+      if (isSelected) {
+        selectedTopics.delete(topicName);
+        topicItem.classList.remove('selected');
+        checkbox.checked = false;
+      } else {
+        selectedTopics.add(topicName);
+        topicItem.classList.add('selected');
+        checkbox.checked = true;
+      }
+      
+      // Enable/disable ask button based on selection
+      askButton.disabled = selectedTopics.size === 0;
+    }
+
+    // Filter questions by selected topics
+    function filterQuestionsByTopics() {
+      if (selectedTopics.size === 0) {
+        questions = [];
+        return;
+      }
+      
+      questions = allQuestions.filter(question => {
+        if (!question.topics || !Array.isArray(question.topics)) {
+          return false;
+        }
+        return question.topics.some(topic => selectedTopics.has(topic));
+      });
+    }
+
+    // Select all topics with questions
+    function selectAllTopics() {
+      const topicItems = document.querySelectorAll('.topic-item:not(.disabled)');
+      topicItems.forEach(item => {
+        const topicName = item.querySelector('.topic-name').textContent;
+        selectedTopics.add(topicName);
+        item.classList.add('selected');
+        item.querySelector('.topic-checkbox').checked = true;
+      });
+      askButton.disabled = selectedTopics.size === 0;
+    }
+
+    // Unselect all topics
+    function unselectAllTopics() {
+      const topicItems = document.querySelectorAll('.topic-item');
+      topicItems.forEach(item => {
+        const topicName = item.querySelector('.topic-name').textContent;
+        selectedTopics.delete(topicName);
+        item.classList.remove('selected');
+        item.querySelector('.topic-checkbox').checked = false;
+      });
+      askButton.disabled = selectedTopics.size === 0;
+    }
+
+    // Start quiz with selected topics
+    function startQuizWithTopics() {
+      // Clear review mode flag
+      isInReviewMode = false;
+      filterQuestionsByTopics();
+      if (questions.length === 0) {
+        alert('No questions available for the selected topics.');
+        return;
+      }
+      // Don't clear answeredQuestionIds here - preserve answered questions
+      document.getElementById('welcome-message').style.display = 'none';
+      document.getElementById('question-section').style.display = 'block';
+      showNextQuestion();
+    }
+
+    // Start reviewing skipped questions
+    function startSkippedQuestionsReview() {
+      // Set review mode flag
+      isInReviewMode = true;
+      // Reset reviewed tracking for skipped questions
+      reviewedSkippedIds.clear();
+      // Restore the full question set from the original filtered questions
+      filterQuestionsByTopics();
+      if (questions.length === 0) {
+        alert('No skipped questions to review.');
+        return;
+      }
+      document.getElementById('question-section').style.display = 'block';
+      showNextQuestion();
+    }
+
     function showNextQuestion() {
       feedback.textContent = '';
       skipBtn.style.display = 'inline-block';
@@ -201,18 +457,35 @@
       nextBtn.style.display = 'none';
       hasAnswered = false;
 
-      // Get questions that haven't been answered yet
-      const unansweredQuestions = questions.filter(q => !answeredQuestionIds.has(q.id));
+      let availableQuestions;
+      if (isInReviewMode) {
+        // In review mode, show skipped questions that haven't been reviewed yet
+        availableQuestions = questions.filter(q => 
+          skippedQuestionIds.has(q.id) && !reviewedSkippedIds.has(q.id)
+        );
+      } else {
+        // Get questions that haven't been answered or skipped yet
+        availableQuestions = questions.filter(q => 
+          !answeredQuestionIds.has(q.id) && !skippedQuestionIds.has(q.id)
+        );
+      }
       
-      // Check if all questions have been answered
-      if (unansweredQuestions.length === 0) {
-        showCompletionMessage();
+      // Check if all questions have been completed
+      if (availableQuestions.length === 0) {
+        if (isInReviewMode) {
+          // All skipped questions have been answered, go back to completion
+          isInReviewMode = false;
+          filterQuestionsByTopics(); // Restore full question set
+          showCompletionMessage();
+        } else {
+          showCompletionMessage();
+        }
         return;
       }
 
-      // Pick a random question from unanswered ones
-      currentIndex = Math.floor(Math.random() * unansweredQuestions.length);
-      currentQuestion = unansweredQuestions[currentIndex];
+      // Pick a random question from available ones
+      currentIndex = Math.floor(Math.random() * availableQuestions.length);
+      currentQuestion = availableQuestions[currentIndex];
 
       // Shuffle choices for fairness
       const choices = shuffle([...currentQuestion.choices]);
@@ -256,8 +529,9 @@
         btn.setAttribute('aria-pressed', 'true');
         feedback.textContent = 'Correct!';
         nextBtn.style.display = 'inline-block';
-        // Mark question as answered
+        // Mark question as answered (remove from skipped if it was there)
         answeredQuestionIds.add(currentQuestion.id);
+        skippedQuestionIds.delete(currentQuestion.id);
       } else {
         // Wrong answer - keep buttons enabled for retry
         btn.classList.add('incorrect');
@@ -270,17 +544,22 @@
     function showCompletionMessage() {
       const totalQuestions = questions.length;
       const answeredCount = answeredQuestionIds.size;
+      const skippedCount = skippedQuestionIds.size;
+      const hasSkippedQuestions = skippedCount > 0;
       
       questionText.innerHTML = `
         <div style="text-align: center; padding: 2rem 0;">
           <h2 style="color: var(--primary); margin-bottom: 1rem;">🎉 Quiz Complete!</h2>
           <p style="font-size: 1.1rem; margin-bottom: 1rem;">
-            You've answered all ${totalQuestions} questions!
+            You've completed all ${totalQuestions} questions from your selected topics!
           </p>
-          <p style="margin-bottom: 2rem;">
+          <p style="margin-bottom: 0.5rem;">
             <strong>Questions answered: ${answeredCount}/${totalQuestions}</strong>
           </p>
-          <button id="restart-btn" style="
+          <p style="margin-bottom: 2rem;">
+            <strong>Questions skipped: ${skippedCount}/${totalQuestions}</strong>
+          </p>
+          <button id="back-to-skipped-btn" style="
             background: var(--primary);
             color: white;
             border: none;
@@ -289,8 +568,9 @@
             font-size: 1rem;
             cursor: pointer;
             margin-right: 1rem;
-          ">Start New Session</button>
-          <button id="reset-btn" style="
+            ${!hasSkippedQuestions ? 'opacity: 0.5; cursor: not-allowed;' : ''}
+          " ${!hasSkippedQuestions ? 'disabled' : ''}>Back to Skipped Questions</button>
+          <button id="new-topics-btn" style="
             background: var(--accent);
             color: white;
             border: none;
@@ -298,7 +578,7 @@
             border-radius: var(--radius);
             font-size: 1rem;
             cursor: pointer;
-          ">Reset Progress</button>
+          ">Change Topic Selection</button>
         </div>
       `;
       
@@ -309,18 +589,31 @@
       nextBtn.style.display = 'none';
       
       // Add event listeners for the new buttons
-      document.getElementById('restart-btn').addEventListener('click', () => {
-        answeredQuestionIds.clear();
-        showNextQuestion();
-      });
+      const backToSkippedBtn = document.getElementById('back-to-skipped-btn');
+      if (hasSkippedQuestions) {
+        backToSkippedBtn.addEventListener('click', () => {
+          startSkippedQuestionsReview();
+        });
+      }
       
-      document.getElementById('reset-btn').addEventListener('click', () => {
-        answeredQuestionIds.clear();
-        showNextQuestion();
+      document.getElementById('new-topics-btn').addEventListener('click', () => {
+        // Allow changing topics while preserving answered questions
+        document.getElementById('question-section').style.display = 'none';
+        document.getElementById('welcome-message').style.display = 'block';
       });
     }
 
     skipBtn.addEventListener('click', () => {
+      // Mark current question as skipped when skipped
+      if (currentQuestion && currentQuestion.id) {
+        if (isInReviewMode) {
+          // In review mode, mark as reviewed so it won't show again
+          reviewedSkippedIds.add(currentQuestion.id);
+        } else {
+          // In normal mode, mark as skipped
+          skippedQuestionIds.add(currentQuestion.id);
+        }
+      }
       showNextQuestion();
     });
 
@@ -338,8 +631,9 @@
       feedback.textContent = `The correct answer is: "${correct}".`;
       showAnswerBtn.style.display = 'none';
       nextBtn.style.display = 'inline-block';
-      // Mark question as answered
+      // Mark question as answered (remove from skipped if it was there)
       answeredQuestionIds.add(currentQuestion.id);
+      skippedQuestionIds.delete(currentQuestion.id);
     });
 
     nextBtn.addEventListener('click', () => {
@@ -353,6 +647,11 @@
         e.target.click();
       }
     });
+
+    // Event listeners
+    askButton.addEventListener('click', startQuizWithTopics);
+    selectAllButton.addEventListener('click', selectAllTopics);
+    unselectAllButton.addEventListener('click', unselectAllTopics);
 
     // Initial load
     window.addEventListener('DOMContentLoaded', loadQuestions);
