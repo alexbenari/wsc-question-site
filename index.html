@@ -230,8 +230,11 @@
     let currentIndex = -1;
     let currentQuestion = null;
     let hasAnswered = false;
-    let answeredQuestionIds = new Set(); // Track answered questions by ID
-    let skippedQuestionIds = new Set(); // Track skipped questions by ID
+    let answeredQuestionIds = new Set(); // Track answered questions by ID (all-time)
+    let skippedQuestionIds = new Set(); // Track skipped questions by ID (all-time)
+    let currentQuestionIds = new Set(); // Track unique questions in the current quiz
+    let sessionAnsweredIds = new Set(); // Track answers within the current quiz session
+    let sessionSkippedIds = new Set(); // Track skips within the current quiz session
     let reviewedSkippedIds = new Set(); // Track skipped questions that have been reviewed
     let isInReviewMode = false; // Track if we're in review mode
     let selectedTopics = new Set(); // Track selected topics
@@ -420,6 +423,15 @@
     }
 
     // Start quiz with selected topics
+    function rebuildCurrentQuestionIds() {
+      currentQuestionIds = new Set();
+      questions.forEach(question => {
+        if (question.id) {
+          currentQuestionIds.add(question.id);
+        }
+      });
+    }
+
     function startQuizWithTopics() {
       // Clear review mode flag
       isInReviewMode = false;
@@ -428,6 +440,11 @@
         alert('No questions available for the selected topics.');
         return;
       }
+      // Reset per-session tracking for the new quiz run
+      rebuildCurrentQuestionIds();
+      sessionAnsweredIds = new Set();
+      sessionSkippedIds = new Set();
+      reviewedSkippedIds.clear();
       // Don't clear answeredQuestionIds here - preserve answered questions
       document.getElementById('welcome-message').style.display = 'none';
       document.getElementById('question-section').style.display = 'block';
@@ -442,6 +459,7 @@
       reviewedSkippedIds.clear();
       // Restore the full question set from the original filtered questions
       filterQuestionsByTopics();
+      rebuildCurrentQuestionIds();
       if (questions.length === 0) {
         alert('No skipped questions to review.');
         return;
@@ -460,13 +478,13 @@
       let availableQuestions;
       if (isInReviewMode) {
         // In review mode, show skipped questions that haven't been reviewed yet
-        availableQuestions = questions.filter(q => 
-          skippedQuestionIds.has(q.id) && !reviewedSkippedIds.has(q.id)
+        availableQuestions = questions.filter(q =>
+          sessionSkippedIds.has(q.id) && !reviewedSkippedIds.has(q.id)
         );
       } else {
         // Get questions that haven't been answered or skipped yet
-        availableQuestions = questions.filter(q => 
-          !answeredQuestionIds.has(q.id) && !skippedQuestionIds.has(q.id)
+        availableQuestions = questions.filter(q =>
+          !sessionAnsweredIds.has(q.id) && !sessionSkippedIds.has(q.id)
         );
       }
       
@@ -476,6 +494,7 @@
           // All skipped questions have been answered, go back to completion
           isInReviewMode = false;
           filterQuestionsByTopics(); // Restore full question set
+          rebuildCurrentQuestionIds();
           showCompletionMessage();
         } else {
           showCompletionMessage();
@@ -530,8 +549,12 @@
         feedback.textContent = 'Correct!';
         nextBtn.style.display = 'inline-block';
         // Mark question as answered (remove from skipped if it was there)
-        answeredQuestionIds.add(currentQuestion.id);
-        skippedQuestionIds.delete(currentQuestion.id);
+        if (currentQuestion && currentQuestion.id) {
+          answeredQuestionIds.add(currentQuestion.id);
+          sessionAnsweredIds.add(currentQuestion.id);
+          skippedQuestionIds.delete(currentQuestion.id);
+          sessionSkippedIds.delete(currentQuestion.id);
+        }
       } else {
         // Wrong answer - keep buttons enabled for retry
         btn.classList.add('incorrect');
@@ -542,9 +565,9 @@
     }
 
     function showCompletionMessage() {
-      const totalQuestions = questions.length;
-      const answeredCount = answeredQuestionIds.size;
-      const skippedCount = skippedQuestionIds.size;
+      const totalQuestions = currentQuestionIds.size || questions.length;
+      const answeredCount = sessionAnsweredIds.size;
+      const skippedCount = sessionSkippedIds.size;
       const hasSkippedQuestions = skippedCount > 0;
       
       questionText.innerHTML = `
@@ -612,6 +635,7 @@
         } else {
           // In normal mode, mark as skipped
           skippedQuestionIds.add(currentQuestion.id);
+          sessionSkippedIds.add(currentQuestion.id);
         }
       }
       showNextQuestion();
@@ -632,8 +656,12 @@
       showAnswerBtn.style.display = 'none';
       nextBtn.style.display = 'inline-block';
       // Mark question as answered (remove from skipped if it was there)
-      answeredQuestionIds.add(currentQuestion.id);
-      skippedQuestionIds.delete(currentQuestion.id);
+      if (currentQuestion && currentQuestion.id) {
+        answeredQuestionIds.add(currentQuestion.id);
+        sessionAnsweredIds.add(currentQuestion.id);
+        skippedQuestionIds.delete(currentQuestion.id);
+        sessionSkippedIds.delete(currentQuestion.id);
+      }
     });
 
     nextBtn.addEventListener('click', () => {
