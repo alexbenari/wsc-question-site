@@ -116,6 +116,24 @@
     .topic-list {
       margin-bottom: 1.5rem;
     }
+    .category-filters {
+      margin-bottom: 1.5rem;
+      border: 1px solid #e0e0e0;
+      border-radius: var(--radius);
+      padding: 0.75rem 1rem 1rem;
+    }
+    .category-filters legend {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .category-option {
+      display: flex;
+      align-items: center;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      gap: 0.5rem;
+    }
     .topic-item {
       display: flex;
       align-items: center;
@@ -189,6 +207,21 @@
 <body>
   <aside class="sidebar">
     <h2 style="margin-top: 0; color: var(--primary); font-size: 1.2rem;">Select Topics</h2>
+    <fieldset class="category-filters">
+      <legend>Question Type</legend>
+      <label class="category-option">
+        <input type="radio" name="category-filter" value="challenge" checked>
+        Challenge questions
+      </label>
+      <label class="category-option">
+        <input type="radio" name="category-filter" value="single">
+        Single topic
+      </label>
+      <label class="category-option">
+        <input type="radio" name="category-filter" value="all">
+        All questions
+      </label>
+    </fieldset>
     <div style="margin-bottom: 1rem;">
       <button id="select-all-button" style="margin-right: 0.5rem; padding: 0.4rem 0.8rem; font-size: 0.9rem; border: none; border-radius: var(--radius); background: var(--primary); color: white; cursor: pointer;">Select All</button>
       <button id="unselect-all-button" style="padding: 0.4rem 0.8rem; font-size: 0.9rem; border: none; border-radius: var(--radius); background: #666; color: white; cursor: pointer;">Unselect All</button>
@@ -230,12 +263,16 @@
     let currentIndex = -1;
     let currentQuestion = null;
     let hasAnswered = false;
-    let answeredQuestionIds = new Set(); // Track answered questions by ID
-    let skippedQuestionIds = new Set(); // Track skipped questions by ID
+    let answeredQuestionIds = new Set(); // Track answered questions by ID (all-time)
+    let skippedQuestionIds = new Set(); // Track skipped questions by ID (all-time)
+    let currentQuestionIds = new Set(); // Track unique questions in the current quiz
+    let sessionAnsweredIds = new Set(); // Track answers within the current quiz session
+    let sessionSkippedIds = new Set(); // Track skips within the current quiz session
     let reviewedSkippedIds = new Set(); // Track skipped questions that have been reviewed
     let isInReviewMode = false; // Track if we're in review mode
     let selectedTopics = new Set(); // Track selected topics
     let topicQuestionCounts = {}; // Count questions per topic
+    let selectedCategoryFilter = 'challenge';
 
     // Elements
     const questionText = document.getElementById('question-text');
@@ -250,6 +287,30 @@
     const askButton = document.getElementById('ask-button');
     const selectAllButton = document.getElementById('select-all-button');
     const unselectAllButton = document.getElementById('unselect-all-button');
+    const categoryFilterRadios = document.querySelectorAll('input[name="category-filter"]');
+
+    const CATEGORY_FILTER_MAP = {
+      challenge: new Set(['comparative_consequences', 'thematic_synthesis', 'context_clues']),
+      single: new Set(['single_topic_understanding']),
+      all: null
+    };
+
+    const TOPIC_NAMES = [
+      "Introductory Questions",
+      "The Best is Yet to Be, or Not To Be?",
+      "In Futurity, Someone Prophetic Sees",
+      "The Future Wasn’t Meant to Be",
+      "If At First You Fall, Try, Try Again",
+      "Things Really Do Catch Fire",
+      "Speeches that Inspire, Speeches that Spit Fire",
+      "Reliving It Up",
+      "Entertaining Ourselves Back to Life",
+      "Much Excite, Much Ignite",
+      "The Generative Area A Mind for Imagination",
+      "No Backup, But Restore",
+      "Punky Futures",
+      "Concluding Questions"
+    ];
 
     // Fetch and parse JSONL from local file
     async function loadQuestions() {
@@ -278,7 +339,6 @@
         if (allQuestions.length === 0) throw new Error('No valid questions found.');
         
         // Build topic counts and create topic list
-        buildTopicCounts();
         createTopicList();
         
         loading.style.display = 'none';
@@ -299,10 +359,18 @@
       return array;
     }
 
+    function getQuestionsMatchingCategory() {
+      const allowedCategories = CATEGORY_FILTER_MAP[selectedCategoryFilter];
+      if (!allowedCategories) {
+        return allQuestions;
+      }
+      return allQuestions.filter(question => allowedCategories.has(question.category));
+    }
+
     // Build counts of questions per topic
-    function buildTopicCounts() {
+    function buildTopicCounts(sourceQuestions = allQuestions) {
       topicQuestionCounts = {};
-      allQuestions.forEach(question => {
+      sourceQuestions.forEach(question => {
         if (question.topics && Array.isArray(question.topics)) {
           question.topics.forEach(topic => {
             topicQuestionCounts[topic] = (topicQuestionCounts[topic] || 0) + 1;
@@ -312,51 +380,54 @@
     }
 
     // Create the topic list UI
-    function createTopicList() {
+    function createTopicList({ preserveSelection = false } = {}) {
+      const previousSelection = new Set(selectedTopics);
+      selectedTopics.clear();
       topicList.innerHTML = '';
-      
-      // Load topic names from the file
-      const topicNames = [
-        "Introductory Questions",
-        "The Best is Yet to Be, or Not To Be?",
-        "In Futurity, Someone Prophetic Sees",
-        "The Future Wasn’t Meant to Be",
-        "If At First You Fall, Try, Try Again",
-        "Things Really Do Catch Fire",
-        "Speeches that Inspire, Speeches that Spit Fire",
-        "Reliving It Up",
-        "Entertaining Ourselves Back to Life",
-        "Much Excite, Much Ignite",
-        "The Generative Area A Mind for Imagination",
-        "No Backup, But Restore",
-        "Punky Futures",
-        "Concluding Questions"
-      ];
 
-      topicNames.forEach(topicName => {
+      const categoryFilteredQuestions = getQuestionsMatchingCategory();
+      buildTopicCounts(categoryFilteredQuestions);
+
+      TOPIC_NAMES.forEach(topicName => {
         const count = topicQuestionCounts[topicName] || 0;
         const topicItem = document.createElement('div');
         const isSelectable = count > 0;
-        
-        // Select all topics with questions by default
-        if (isSelectable) {
+        const shouldSelect = isSelectable && (
+          (preserveSelection && previousSelection.has(topicName)) ||
+          (!preserveSelection)
+        );
+
+        if (shouldSelect) {
           selectedTopics.add(topicName);
         }
-        
-        topicItem.className = `topic-item ${!isSelectable ? 'disabled' : 'selected'}`;
+
+        const checkboxAttributes = [
+          'type="checkbox"',
+          'class="topic-checkbox"',
+          !isSelectable ? 'disabled' : '',
+          shouldSelect ? 'checked' : ''
+        ].filter(Boolean).join(' ');
+
+        topicItem.className = 'topic-item';
+        if (!isSelectable) {
+          topicItem.classList.add('disabled');
+        } else if (shouldSelect) {
+          topicItem.classList.add('selected');
+        }
+
         topicItem.innerHTML = `
-          <input type="checkbox" class="topic-checkbox" ${!isSelectable ? 'disabled' : 'checked'} />
+          <input ${checkboxAttributes} />
           <span class="topic-name">${topicName}</span>
           <span class="topic-count">(${count})</span>
         `;
-        
+
         if (isSelectable) {
           topicItem.addEventListener('click', () => toggleTopic(topicName, topicItem));
         }
-        
+
         topicList.appendChild(topicItem);
       });
-      
+
       // Update ask button state
       askButton.disabled = selectedTopics.size === 0;
     }
@@ -386,12 +457,20 @@
         questions = [];
         return;
       }
-      
+
       questions = allQuestions.filter(question => {
         if (!question.topics || !Array.isArray(question.topics)) {
           return false;
         }
-        return question.topics.some(topic => selectedTopics.has(topic));
+        const matchesTopic = question.topics.some(topic => selectedTopics.has(topic));
+        if (!matchesTopic) {
+          return false;
+        }
+        const allowedCategories = CATEGORY_FILTER_MAP[selectedCategoryFilter];
+        if (!allowedCategories) {
+          return true;
+        }
+        return allowedCategories.has(question.category);
       });
     }
 
@@ -420,6 +499,15 @@
     }
 
     // Start quiz with selected topics
+    function rebuildCurrentQuestionIds() {
+      currentQuestionIds = new Set();
+      questions.forEach(question => {
+        if (question.id) {
+          currentQuestionIds.add(question.id);
+        }
+      });
+    }
+
     function startQuizWithTopics() {
       // Clear review mode flag
       isInReviewMode = false;
@@ -428,6 +516,11 @@
         alert('No questions available for the selected topics.');
         return;
       }
+      // Reset per-session tracking for the new quiz run
+      rebuildCurrentQuestionIds();
+      sessionAnsweredIds = new Set();
+      sessionSkippedIds = new Set();
+      reviewedSkippedIds.clear();
       // Don't clear answeredQuestionIds here - preserve answered questions
       document.getElementById('welcome-message').style.display = 'none';
       document.getElementById('question-section').style.display = 'block';
@@ -442,6 +535,7 @@
       reviewedSkippedIds.clear();
       // Restore the full question set from the original filtered questions
       filterQuestionsByTopics();
+      rebuildCurrentQuestionIds();
       if (questions.length === 0) {
         alert('No skipped questions to review.');
         return;
@@ -460,13 +554,13 @@
       let availableQuestions;
       if (isInReviewMode) {
         // In review mode, show skipped questions that haven't been reviewed yet
-        availableQuestions = questions.filter(q => 
-          skippedQuestionIds.has(q.id) && !reviewedSkippedIds.has(q.id)
+        availableQuestions = questions.filter(q =>
+          sessionSkippedIds.has(q.id) && !reviewedSkippedIds.has(q.id)
         );
       } else {
         // Get questions that haven't been answered or skipped yet
-        availableQuestions = questions.filter(q => 
-          !answeredQuestionIds.has(q.id) && !skippedQuestionIds.has(q.id)
+        availableQuestions = questions.filter(q =>
+          !sessionAnsweredIds.has(q.id) && !sessionSkippedIds.has(q.id)
         );
       }
       
@@ -476,6 +570,7 @@
           // All skipped questions have been answered, go back to completion
           isInReviewMode = false;
           filterQuestionsByTopics(); // Restore full question set
+          rebuildCurrentQuestionIds();
           showCompletionMessage();
         } else {
           showCompletionMessage();
@@ -530,8 +625,12 @@
         feedback.textContent = 'Correct!';
         nextBtn.style.display = 'inline-block';
         // Mark question as answered (remove from skipped if it was there)
-        answeredQuestionIds.add(currentQuestion.id);
-        skippedQuestionIds.delete(currentQuestion.id);
+        if (currentQuestion && currentQuestion.id) {
+          answeredQuestionIds.add(currentQuestion.id);
+          sessionAnsweredIds.add(currentQuestion.id);
+          skippedQuestionIds.delete(currentQuestion.id);
+          sessionSkippedIds.delete(currentQuestion.id);
+        }
       } else {
         // Wrong answer - keep buttons enabled for retry
         btn.classList.add('incorrect');
@@ -542,9 +641,9 @@
     }
 
     function showCompletionMessage() {
-      const totalQuestions = questions.length;
-      const answeredCount = answeredQuestionIds.size;
-      const skippedCount = skippedQuestionIds.size;
+      const totalQuestions = currentQuestionIds.size || questions.length;
+      const answeredCount = sessionAnsweredIds.size;
+      const skippedCount = sessionSkippedIds.size;
       const hasSkippedQuestions = skippedCount > 0;
       
       questionText.innerHTML = `
@@ -612,6 +711,7 @@
         } else {
           // In normal mode, mark as skipped
           skippedQuestionIds.add(currentQuestion.id);
+          sessionSkippedIds.add(currentQuestion.id);
         }
       }
       showNextQuestion();
@@ -632,8 +732,12 @@
       showAnswerBtn.style.display = 'none';
       nextBtn.style.display = 'inline-block';
       // Mark question as answered (remove from skipped if it was there)
-      answeredQuestionIds.add(currentQuestion.id);
-      skippedQuestionIds.delete(currentQuestion.id);
+      if (currentQuestion && currentQuestion.id) {
+        answeredQuestionIds.add(currentQuestion.id);
+        sessionAnsweredIds.add(currentQuestion.id);
+        skippedQuestionIds.delete(currentQuestion.id);
+        sessionSkippedIds.delete(currentQuestion.id);
+      }
     });
 
     nextBtn.addEventListener('click', () => {
@@ -652,6 +756,14 @@
     askButton.addEventListener('click', startQuizWithTopics);
     selectAllButton.addEventListener('click', selectAllTopics);
     unselectAllButton.addEventListener('click', unselectAllTopics);
+    categoryFilterRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (radio.checked) {
+          selectedCategoryFilter = radio.value;
+          createTopicList({ preserveSelection: true });
+        }
+      });
+    });
 
     // Initial load
     window.addEventListener('DOMContentLoaded', loadQuestions);
