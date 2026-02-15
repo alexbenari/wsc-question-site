@@ -310,6 +310,20 @@
       topicNames = Array.from(uniqueTopics).sort((a, b) => a.localeCompare(b));
     }
 
+    function buildQuestionId(parsedQuestion, lineIndex) {
+      if (parsedQuestion.id && typeof parsedQuestion.id === 'string' && parsedQuestion.id.trim()) {
+        return parsedQuestion.id.trim();
+      }
+      const base = [
+        parsedQuestion.category || '',
+        parsedQuestion.question || '',
+        Array.isArray(parsedQuestion.choices) ? parsedQuestion.choices.join('|') : '',
+        Array.isArray(parsedQuestion.topics) ? parsedQuestion.topics.join('|') : '',
+        String(lineIndex)
+      ].join('::');
+      return `q-${btoa(unescape(encodeURIComponent(base))).replace(/=+$/,'')}`;
+    }
+
     // Fetch and parse JSONL from local file
     async function loadQuestions() {
       try {
@@ -320,13 +334,14 @@
           .split('\n')
           .map(line => line.trim())
           .filter(Boolean)
-          .map(line => {
+          .map((line, index) => {
             try {
               const parsed = JSON.parse(line);
               // Convert letter answer (A, B, C, etc.) to numeric index
               if (parsed.correct && typeof parsed.correct === 'string') {
                 parsed.answer = parsed.correct.charCodeAt(0) - 65; // A=0, B=1, C=2, etc.
               }
+              parsed.id = buildQuestionId(parsed, index);
               return parsed;
             } catch {
               return null;
