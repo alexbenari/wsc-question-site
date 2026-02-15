@@ -1,0 +1,133 @@
+{
+  "title": "Call of Duty-Free",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:46:20.4938940Z",
+  "bundle_or_page_sources": [
+    {
+      "type": "local_snapshot",
+      "path": "wsc-topics.html",
+      "description": "Authoritative local snapshot used for topic text and link extraction."
+    }
+  ],
+  "links": [
+    {
+      "url": "https://coursebible.com/posts/the-comprehensive-history-of-hotels-from-ancient-inns-to-modern-luxury",
+      "anchor_texts": ["history of inns and hotels"],
+      "classification": "general",
+      "status": "ok",
+      "title": "history of inns and hotels",
+      "summary_or_excerpt": "Linked as background reading on accommodation history.",
+      "fetched_at": "2026-02-14T23:46:20.4938940Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_8W2LIfl5RE",
+      "anchor_texts": ["oldest hotel in the world"],
+      "classification": "general",
+      "status": "ok",
+      "title": "oldest hotel in the world",
+      "summary_or_excerpt": "Video reference tied to oldest-hotel discussion.",
+      "fetched_at": "2026-02-14T23:46:20.4938940Z"
+    },
+    {
+      "url": "https://www.historic-uk.com/CultureUK/Grand-Tour/",
+      "anchor_texts": ["grand tours"],
+      "classification": "general",
+      "status": "ok",
+      "title": "grand tours",
+      "summary_or_excerpt": "Context source for early modern aristocratic travel.",
+      "fetched_at": "2026-02-14T23:46:20.4938940Z"
+    },
+    {
+      "url": "https://www.thoughtco.com/grand-tour-of-europe-1435014",
+      "anchor_texts": ["grand tourist itinerary"],
+      "classification": "general",
+      "status": "ok",
+      "title": "grand tourist itinerary",
+      "summary_or_excerpt": "Example itinerary for historical Grand Tour travel.",
+      "fetched_at": "2026-02-14T23:46:20.4938940Z"
+    },
+    {
+      "url": "https://www.bbc.co.uk/bitesize/guides/zkgxsbk/revision/3",
+      "anchor_texts": ["tourism to the masses"],
+      "classification": "general",
+      "status": "ok",
+      "title": "tourism to the masses",
+      "summary_or_excerpt": "Educational source on expansion of leisure travel.",
+      "fetched_at": "2026-02-14T23:46:20.4938940Z"
+    },
+    {
+      "url": "https://www.independent.co.uk/travel/news-and-advice/sean-duffy-transport-secretary-air-travel-thanksgiving-request-b2869798.html",
+      "anchor_texts": ["American politicians"],
+      "classification": "general",
+      "status": "ok",
+      "title": "American politicians",
+      "summary_or_excerpt": "Contemporary news reference used in the prompt narrative.",
+      "fetched_at": "2026-02-14T23:46:20.4938940Z"
+    },
+    {
+      "url": "https://www.theatlantic.com/newsletters/archive/2025/07/has-air-travel-ever-been-good/683584/",
+      "anchor_texts": ["historians have their doubts"],
+      "classification": "general",
+      "status": "ok",
+      "title": "historians have their doubts",
+      "summary_or_excerpt": "Counterpoint source questioning Golden Age of Travel nostalgia.",
+      "fetched_at": "2026-02-14T23:46:20.4938940Z"
+    },
+    {
+      "url": "https://web.archive.org/web/20250717203429/https:/www.theatlantic.com/newsletters/archive/2025/07/has-air-travel-ever-been-good/683584/",
+      "anchor_texts": ["alternate link"],
+      "classification": "general",
+      "status": "ok",
+      "title": "alternate link",
+      "summary_or_excerpt": "Archive copy of the Atlantic link.",
+      "fetched_at": "2026-02-14T23:46:20.4938940Z"
+    },
+    {
+      "url": "https://www.bbc.com/travel/article/20240718-why-do-tourists-behave-badly-on-holiday",
+      "anchor_texts": ["psychology behind tourist misbehavior"],
+      "classification": "general",
+      "status": "ok",
+      "title": "psychology behind tourist misbehavior",
+      "summary_or_excerpt": "Behavioral lens on why tourists may act differently.",
+      "fetched_at": "2026-02-14T23:46:20.4938940Z"
+    },
+    {
+      "url": "https://www.sixthtone.com/news/1016254",
+      "anchor_texts": ["social media"],
+      "classification": "general",
+      "status": "ok",
+      "title": "social media",
+      "summary_or_excerpt": "Reading prompt for social-media effects on travel behavior.",
+      "fetched_at": "2026-02-14T23:46:20.4938940Z"
+    }
+  ],
+  "derived_items": [
+    {"type":"concept","name":"heritage tourism","discovered_by":"unlinked_topic_item","supporting_references":["https://www.unwto.org/sustainable-development/cultural-tourism"]},
+    {"type":"concept","name":"ecotourism","discovered_by":"unlinked_topic_item","supporting_references":["https://www.unep.org/explore-topics/resource-efficiency/what-we-do/sustainable-lifestyles/ecotourism"]},
+    {"type":"concept","name":"gastrotourism","discovered_by":"unlinked_topic_item","supporting_references":["https://www.unwto.org/gastronomy-tourism"]},
+    {"type":"concept","name":"agritourism","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/money/agritourism"]},
+    {"type":"concept","name":"monastic retreats","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/topic/monasticism"]},
+    {"type":"concept","name":"voluntourism","discovered_by":"unlinked_topic_item","supporting_references":["https://www.nationalgeographic.com/travel/article/voluntourism"]},
+    {"type":"concept","name":"edutourism","discovered_by":"unlinked_topic_item","supporting_references":["https://www.unwto.org/education-tourism"]},
+    {"type":"concept","name":"wellness retreats","discovered_by":"unlinked_topic_item","supporting_references":["https://www.globalwellnessinstitute.org/what-is-wellness/wellness-tourism/"]},
+    {"type":"concept","name":"dark tourism","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/topic/dark-tourism"]},
+    {"type":"concept","name":"entrepot","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/dictionary/entrepot"]},
+    {"type":"concept","name":"waystation","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/dictionary/waystation"]},
+    {"type":"concept","name":"free-trade zone","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/money/free-trade-zone"]},
+    {"type":"concept","name":"transshipment","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/dictionary/transshipment"]},
+    {"type":"concept","name":"caravanserai","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/topic/caravanserai"]},
+    {"type":"concept","name":"Silk Road","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/place/Silk-Road-trade-route-Eurasia"]},
+    {"type":"concept","name":"Piraeus","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/place/Piraeus"]},
+    {"type":"concept","name":"Tyrus (Tyre)","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/place/Tyre-ancient-city-Lebanon"]},
+    {"type":"concept","name":"Lothal","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/place/Lothal"]},
+    {"type":"concept","name":"Carthage","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/place/Carthage-ancient-city-Tunisia"]},
+    {"type":"concept","name":"Shimoda","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/place/Shimoda"]},
+    {"type":"concept","name":"Hakodate","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/place/Hakodate"]},
+    {"type":"concept","name":"Malacca","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/place/Malacca-Malaysia"]},
+    {"type":"concept","name":"Istanbul","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/place/Istanbul"]},
+    {"type":"concept","name":"Chicago","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/place/Chicago"]},
+    {"type":"concept","name":"Hong Kong","discovered_by":"unlinked_topic_item","supporting_references":["https://www.britannica.com/place/Hong-Kong"]}
+  ]
+}

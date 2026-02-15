@@ -1,0 +1,99 @@
+{
+  "title": "Introductory Questions",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:02:47Z",
+  "topic_text": "- The journey of a thousand miles begins with a single step, but how does it end?\n- Have you ever asked someone, \u201cAre we there yet?\u201d If so, whom were you asking\u2014and where were you going? Did you ever get there?\n- Have you ever gotten there, then decided it wasn\u2019t worth it in the end?\n- \u201c And now, the end is near ,\u201d croons Frank Sinatra. But how do we know when we\u2019re getting to an ending\u2014or to a point of no return?\n- In 2003, millions of people gathered at theaters to watch the final Lord of the Rings movie. They watched it for a long time : three and a half hours. Many complained they kept thinking the movie was about to end, only to have it keep going; by most counts, the movie had five separate endings . Today, if you were streaming it at home, you\u2019d easily be able to check how much longer you had to go. Does it make a difference to your experience of a work to know how close you are to the end of it?\n- How about in the real world? Does knowing something in your life\u2014say, the school year, or a friendship\u2014is about to end change how it feels or what it means to you?\n- Has an ending ever taken you by surprise? If so, what kind of ending was it?\n- When you\u2019re working on a group project, how do you keep track of progress?\n- \u201cIt\u2019s not the destination, it\u2019s the journey,\u201d is a phrase often misattributed to the American writer Ralph Waldo Emerson. But is it ever just the destination?\n- Sometimes, not getting there\u2014or anywhere\u2014can be beautiful too. Are there places that were neither where you started nor where you were going, but were worthwhile destinations in their own right?\n- \u201c I just can\u2019t wait to be king ,\u201d complains Simba. He is not quite one thing, not quite another. Not everyone is the heir to the throne, but we do all spend time as teenagers, no longer children but not yet adults. Are there advantages to life in the in-between? Would it be better if we transitioned more quickly from childhood to adulthood?\n- Are there lessons we can learn from technologies that once seemed about to arrive\u2014 nuclear-powered cars , food pills , 3D televisions, and many more\u2014but haven\u2019t yet?\n- Do you keep a to-do list, or is it something you haven\u2019t gotten around to? How much of your to-do list do you usually end up doing?\n- The truth is that sometimes we\u2019ll never get there at all. Most videogames are left unfinished ; nearly half of those who start university don\u2019t get a degree. What do you think causes people to commit to things that they don\u2019t complete\u2014and are modern technologies making it easier or harder for us to get things done?\n- The question of whether we\u2019re there yet is asked in other fields, too, such as business and economics. Is a product ready to be launched? Have we reached the point of diminishing returns? Do these questions ever apply in everyday life as well?\n- Here, the answers are probably yes and we\u2019re getting there . So\u2014let\u2019s get started.",
+  "learning_guidelines": [],
+  "linked_text_entries": [
+    {
+      "url": "https://blakesnow.com/why-most-people-dont-finish-video-games/",
+      "anchor_texts": [
+        "videogames are left unfinished"
+      ],
+      "summary": "The piece reports that many players do not complete games and attributes this to limited time, competing digital distractions, and long campaign lengths."
+    }
+  ],
+  "artworks": [
+    {
+      "creator": "Paul Anka (English adaptation); originally Jacques Revaux, Gilles Thibaut, and Claude Francois; popularized by Frank Sinatra",
+      "title": "My Way",
+      "year": "1969",
+      "source_links": [
+        "https://www.youtube.com/watch?v=6pcwq2usV7Y",
+        "https://en.wikipedia.org/wiki/My_Way"
+      ],
+      "description": "A traditional pop song released as a Frank Sinatra single in 1969. It adapts the French song \"Comme d'habitude\" into a reflective first-person farewell voice. The work is associated with themes of endings, self-assessment, and personal agency, which directly fits this topic's questions about reaching an end point."
+    },
+    {
+      "creator": "Peter Jackson (director), from J. R. R. Tolkien's novel",
+      "title": "The Lord of the Rings: The Return of the King",
+      "year": "2003",
+      "source_links": [
+        "https://www.brightwalldarkroom.com/2019/04/17/return-of-the-king-2003/",
+        "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King"
+      ],
+      "description": "A 2003 epic fantasy film with a long theatrical runtime and multiple closing sequences that resolve different character arcs after the main conflict. It won 11 Academy Awards and is often discussed for how it stages closure. In this topic, it illustrates that endings can be layered, emotionally different, and not reducible to a single final moment."
+    },
+    {
+      "creator": "Elton John (music) and Tim Rice (lyrics)",
+      "title": "I Just Can't Wait to Be King",
+      "year": "1994",
+      "source_links": [
+        "https://www.youtube.com/watch?v=tTwokjazG5Y",
+        "https://en.wikipedia.org/wiki/I_Just_Can%27t_Wait_to_Be_King"
+      ],
+      "description": "A song from Disney's 1994 film The Lion King, performed in-film by young Simba's singing voice. Its content expresses impatience to arrive at a future role and status. That makes it a direct cultural example for this topic's focus on \"not yet\" phases and the tension between present growth and desired destinations."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Nuclear-powered cars",
+      "year": "1950s-1960s concept era",
+      "source_links": [
+        "https://www.smithsonianmag.com/history/visions-of-nuclear-powered-cars-captivated-cold-war-america-but-the-technology-never-really-worked-180985437/",
+        "https://en.wikipedia.org/wiki/Ford_Nucleon"
+      ],
+      "description": "A proposed automotive concept in which compact reactors would power vehicles for long ranges. Major engineering and safety limits, including shielding mass, reactor practicality, and waste handling, kept it at prototype or model stage. It is relevant as a case where anticipated technological arrival never fully happened."
+    },
+    {
+      "name": "Food pills (meal-in-a-pill idea)",
+      "year": "20th-century futurist trope to present",
+      "source_links": [
+        "https://www.bbc.com/future/article/20120221-food-pills-a-staple-of-sci-fi",
+        "https://en.wikipedia.org/wiki/Meal_replacement"
+      ],
+      "description": "A recurring futurist and science-fiction idea that complete meals could be condensed into pills. Real nutrition products exist as shakes and bars, but a true full-meal pill remains largely speculative in mainstream practice. For this topic, it represents a repeatedly promised destination that society has not fully reached."
+    },
+    {
+      "name": "3D television",
+      "year": "consumer peak in early 2010s",
+      "source_links": [
+        "https://en.wikipedia.org/wiki/3D_television"
+      ],
+      "description": "Television systems that create depth perception through stereoscopic or related display methods, often requiring special glasses. Consumer rollout was significant for a short period, but many manufacturers discontinued mainstream support after weak sustained demand. It exemplifies an innovation that seemed imminent and then receded."
+    },
+    {
+      "name": "Diminishing returns",
+      "year": "",
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Diminishing_returns",
+        "https://www.investopedia.com/terms/l/lawofdiminishingmarginalreturn.asp"
+      ],
+      "description": "An economic principle stating that adding more of one input, while holding others constant, eventually yields smaller incremental output gains. The concept helps decide whether continued effort is still efficient. In this topic, it connects progress questions in economics to everyday decision-making about effort and payoff."
+    }
+  ],
+  "persons": [
+    "Frank Sinatra",
+    "Ralph Waldo Emerson",
+    "Paul Anka",
+    "Peter Jackson",
+    "J. R. R. Tolkien",
+    "Elton John",
+    "Tim Rice",
+    "Jason Weaver",
+    "Rowan Atkinson",
+    "Blake Snow"
+  ]
+}

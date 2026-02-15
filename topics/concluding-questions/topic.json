@@ -1,0 +1,130 @@
+{
+  "title": "Concluding Questions",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:54:17.9036564Z",
+  "topic_text": "1. When is it a good idea to give up? Be sure to learn about the sunk cost fallacy. Does it imply that we should quit on things more often? How about on people?\n\n2. Is it always better to know how long it will take you to get somewhere? If not, what are examples of times when it would be better not to know?\n\n3. What if it takes us forever to get there? Consider the \"dichotomy paradox\" posed by the Greek philosopher Zeno. He observed that to walk across a thing, for instance Greenland (which belongs to Denmark), first you need to walk across half of it. Then you need to walk across half of what is left, then half of what is left after that, and so forth. Since there is always another half to go, you will never reach the other end. How would you solve this and his other paradoxes of motion?\n\n4. \"Are we there yet?\" is a question linked with impatience. Explore the psychology of patience: what makes some people willing to calmly wait a little longer? Is patience more valued in some cultures than in others? And does patience have downsides?\n\n5. World War I was \"the War to End All Wars\"; 1989 was, per Francis Fukuyama, \"The End of History\". The first meant achieving global peace; the second trumpeted the triumph of liberal democracy. The world is not there yet, in either case, but is it getting closer? Should one or both of these be our goals in the first place?\n\n6. I choose to believe. Endings are not always clear. In the final episode of Stargate Universe, a starship flies off into the vast emptiness between galaxies, its fate never to be resolved; cancellation left its crew's future ambiguous. Other works of fiction have ended with more deliberate uncertainty. The Sopranos infamously cut to black; the last chapter of Life of Pi lets us decide whether the main character really made friends with a tiger; Deckard may or may not be a replicant. How important is it that stories end definitively? Can you think of any that should have ended a little earlier or skipped their epilogues?\n\n7. This ending is clear: we are there. Where do we go next?",
+  "learning_guidelines": [
+    "Be sure to learn about the sunk cost fallacy.",
+    "Consider the dichotomy paradox posed by Zeno.",
+    "Explore the psychology of patience.",
+    "Discuss whether global peace and liberal democracy should be shared long-term goals.",
+    "Compare ambiguous fictional endings and evaluate whether definitive endings are necessary."
+  ],
+  "linked_text_entries": [
+    {
+      "url": "https://www.youtube.com/watch?v=Gn51xYvJhQI",
+      "anchor_texts": [
+        "linked with impatience"
+      ],
+      "summary": "A pop-culture reference used to frame the question \"Are we there yet?\" as a common expression of impatience."
+    }
+  ],
+  "artworks": [
+    {
+      "creator": "Brad Wright; Robert C. Cooper",
+      "title": "Stargate Universe",
+      "year": "2009",
+      "source_links": [
+        "https://staticonthetv.substack.com/p/in-hindsight-stargate-universes-abrupt",
+        "https://en.wikipedia.org/wiki/Stargate_Universe"
+      ],
+      "description": "A science-fiction television series about a stranded crew aboard the ancient ship Destiny in deep space. Created by Brad Wright and Robert C. Cooper, it aired from 2009 to 2011 and ended without full narrative closure after cancellation. In this topic, it functions as an example of unresolved endings and whether ambiguity can still feel meaningful."
+    },
+    {
+      "creator": "David Chase",
+      "title": "The Sopranos",
+      "year": "1999",
+      "source_links": [
+        "https://screenrant.com/the-sopranos-cut-to-black-ending-legacy-17-years-later/",
+        "https://www.britannica.com/topic/The-Sopranos"
+      ],
+      "description": "An American television drama centered on mob boss Tony Soprano and his family and criminal life. Created by David Chase, the series ran from 1999 to 2007 and is well known for its abrupt final cut to black. The work is used here to test whether viewers need explicit closure at a story's end."
+    },
+    {
+      "creator": "Yann Martel",
+      "title": "Life of Pi",
+      "year": "2001",
+      "source_links": [
+        "https://screenrant.com/life-of-pi-movie-ending-spoilers/",
+        "https://www.britannica.com/money/Life-of-Pi-by-Martel"
+      ],
+      "description": "A novel about Pi Patel, a shipwreck survivor adrift with a Bengal tiger, blending survival narrative with philosophical and religious reflection. Written by Yann Martel and published in 2001, it is known for an ending that leaves interpretation open. In this topic, it supports discussion of how uncertainty can be central to a story's meaning."
+    },
+    {
+      "creator": "J. K. Rowling",
+      "title": "Harry Potter and the Deathly Hallows",
+      "year": "2007",
+      "source_links": [
+        "https://screenrant.com/harry-potter-epilogue-problems/",
+        "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows"
+      ],
+      "description": "The seventh and final Harry Potter novel, concluding the conflict with Voldemort and adding a time-jump epilogue. Published in 2007 by J. K. Rowling, it is frequently debated for how much closure its epilogue provides. The topic uses it to question whether endings are stronger with or without postscript resolution."
+    },
+    {
+      "creator": "Ridley Scott",
+      "title": "Blade Runner",
+      "year": "1982",
+      "source_links": [
+        "https://www.britannica.com/topic/Blade-Runner"
+      ],
+      "description": "A neo-noir science-fiction film about blade runner Rick Deckard pursuing bioengineered replicants. Directed by Ridley Scott, it is famous for ambiguity around Deckard's own identity. The unlinked reference in the topic reinforces the broader question of whether unresolved endings deepen interpretation."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Sunk cost fallacy",
+      "year": null,
+      "source_links": [
+        "https://thedecisionlab.com/biases/the-sunk-cost-fallacy",
+        "https://www.britannica.com/topic/sunk-cost"
+      ],
+      "description": "The tendency to continue a course of action because prior time, money, or effort has already been invested. Economically, sunk costs should not drive forward-looking decisions, but people often let them do so. In this topic, it directly informs when giving up may be rational rather than a failure."
+    },
+    {
+      "name": "Zeno's paradoxes of motion (including the dichotomy paradox)",
+      "year": "5th century BCE",
+      "source_links": [
+        "https://www.thecollector.com/zeno-paradoxes-motion-time/",
+        "https://plato.stanford.edu/archives/spr2024/entries/paradox-zeno/"
+      ],
+      "description": "A set of ancient arguments, associated with Zeno of Elea, that challenge whether motion and change are coherent under infinite divisibility. The dichotomy paradox claims one must complete infinitely many halves to reach a destination. In this topic, it sharpens the theme of progress, delay, and whether reaching goals is conceptually straightforward."
+    },
+    {
+      "name": "The End of History thesis",
+      "year": "1989",
+      "source_links": [
+        "https://theconversation.com/the-end-of-history-francis-fukuyamas-controversial-idea-explained-193225",
+        "https://www.britannica.com/topic/The-End-of-History-and-the-Last-Man"
+      ],
+      "description": "Francis Fukuyama's post-Cold War argument that liberal democracy had emerged as the final ideological form of government. Expanded from a 1989 essay into a 1992 book, the thesis concerns ideological destination rather than the end of conflict itself. In this topic, it frames debate over whether humanity has collective end states and whether those ends are desirable."
+    },
+    {
+      "name": "Patience",
+      "year": null,
+      "source_links": [
+        "https://www.britannica.com/dictionary/patience"
+      ],
+      "description": "The ability to wait calmly, tolerate delay, and persist without excessive frustration. As a psychological and social trait, patience can support long-term goals but may also enable passivity in some contexts. In this topic, it anchors questions about whether waiting is a virtue, a strategy, or occasionally a liability."
+    },
+    {
+      "name": "Liberal democracy",
+      "year": null,
+      "source_links": [
+        "https://www.britannica.com/topic/liberal-democracy"
+      ],
+      "description": "A political system combining democratic representation with constitutional limits on power and protections for individual rights. It became central to late-20th-century claims about geopolitical convergence after the Cold War. In this topic, it appears as one proposed destination of historical development and a debated global goal."
+    }
+  ],
+  "persons": [
+    "Zeno of Elea",
+    "Francis Fukuyama",
+    "Brad Wright",
+    "Robert C. Cooper",
+    "David Chase",
+    "Yann Martel",
+    "J. K. Rowling",
+    "Ridley Scott"
+  ]
+}

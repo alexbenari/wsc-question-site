@@ -1,0 +1,235 @@
+{
+  "title": "There’s a Draft in Here",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:15:19Z",
+  "bundle_or_page_sources": [
+    {
+      "type": "local_topic_snapshot",
+      "path": "wsc-topics.html",
+      "note": "Authoritative source for topic text and in-topic links."
+    },
+    {
+      "type": "reference_page",
+      "url": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+      "note": "Reference only; live topic text not used for extraction because local snapshot was available."
+    }
+  ],
+  "links": [
+    {
+      "url": "https://artsandculture.google.com/asset/portrait-of-lisa-gherardini-wife-of-francesco-del-giocondo-known-as-monna-lisa-la-gioconda-or-mona-lisa-1503-1519-leonardo-di-ser-piero-da-vinci-dit-l%C3%A9onard-de-vinci-1452-1519-paris-mus%C3%A9e-du-louvre/uQGZ28lYUJ3OGw?hl=en",
+      "anchor_texts": [
+        "Mona Lisa (Louvre)"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Portrait of Lisa Gherardini... (Mona Lisa) - Google Arts & Culture",
+      "summary_or_excerpt": "Page metadata lists Leonardo da Vinci, date 1503/1519, and Louvre context for the Mona Lisa portrait.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Isleworthml.JPG",
+      "anchor_texts": [
+        "Mona Lisa (Isleworth)"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "File:Isleworthml.JPG - Wikimedia Commons",
+      "summary_or_excerpt": "File page identifies the Isleworth Mona Lisa image and notes attribution context linked to Leonardo da Vinci.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://artsandculture.google.com/asset/KwF-AdF1REQl6w",
+      "anchor_texts": [
+        "Bedroom in Arles"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "The Bedroom - Vincent van Gogh - Google Arts & Culture",
+      "summary_or_excerpt": "Metadata lists title The Bedroom, creator Vincent van Gogh, and date created October 1888 in Arles.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.artic.edu/artworks/28560/the-bedroom",
+      "anchor_texts": [
+        "Bedroom in Arles"
+      ],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Art Institute page could not be fetched in this environment.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://artsandculture.google.com/asset/kQEugEsNjGDZfw",
+      "anchor_texts": [
+        "Bedroom in Arles"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Van Gogh's Bedroom in Arles - Google Arts & Culture",
+      "summary_or_excerpt": "Metadata lists date 1889, painter Vincent van Gogh, and medium type oil on canvas.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.modernamuseet.se/stockholm/en/exhibitions/munch-by-himself/i-felt-the-great-scream-through-nature/",
+      "anchor_texts": [
+        "Despair"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "I felt the great scream through nature - Moderna Museet",
+      "summary_or_excerpt": "Exhibition text states Despair (1892) as an earlier version connected to The Scream (1893) motif.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.nasjonalmuseet.no/en/collection/object/NG.M.00939",
+      "anchor_texts": [
+        "The Scream"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "The Scream - Nasjonalmuseet Collection",
+      "summary_or_excerpt": "Collection page lists artist Edvard Munch and creation date 1893.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.moma.org/collection/works/79124",
+      "anchor_texts": [
+        "Dance (I)"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Henri Matisse. Dance (I) - MoMA",
+      "summary_or_excerpt": "MoMA page lists Dance (I), early 1909, medium oil on canvas, and gallery details.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.wikiart.org/en/henri-matisse/dance-ii-1910",
+      "anchor_texts": [
+        "Dance (II)"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Dance (II), 1910 - Henri Matisse - WikiArt",
+      "summary_or_excerpt": "WikiArt page lists Dance (II) with date 1910 and notes relation to Dance (I).",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=9Zwe1C1G2ak",
+      "anchor_texts": [
+        "Strawberry Fields Forever (Home Demo Sequence)"
+      ],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "YouTube page was inaccessible from the extraction environment.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=sf0qfktF44A",
+      "anchor_texts": [
+        "This One's Mine"
+      ],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "YouTube page was inaccessible from the extraction environment.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=BXGr0olrThk",
+      "anchor_texts": [
+        "Dead Mom (Demo)"
+      ],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "YouTube page was inaccessible from the extraction environment.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=FxEX_GWwE7M",
+      "anchor_texts": [
+        "various demos"
+      ],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "YouTube page was inaccessible from the extraction environment.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=W9ePWzAxO-s",
+      "anchor_texts": [
+        "Count on Me"
+      ],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "YouTube page was inaccessible from the extraction environment.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=r_j4ALKLrOk",
+      "anchor_texts": [
+        "First to Dance"
+      ],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "YouTube page was inaccessible from the extraction environment.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=txG99YiQcNk",
+      "anchor_texts": [
+        "Family Home Evening"
+      ],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "YouTube page was inaccessible from the extraction environment.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=cvf1ETgCMN4",
+      "anchor_texts": [
+        "In the Bedroom Down the Hall"
+      ],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "YouTube page was inaccessible from the extraction environment.",
+      "fetched_at": "2026-02-14T23:15:19Z"
+    }
+  ],
+  "derived_items": {
+    "concepts": [
+      {
+        "name": "Rough draft",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://www.merriam-webster.com/dictionary/rough%20draft",
+          "https://en.wikipedia.org/wiki/Drafting_%28writing%29"
+        ]
+      },
+      {
+        "name": "Demo (music)",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Demo_%28music%29"
+        ]
+      },
+      {
+        "name": "Mental rehearsal",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://www.sages.org/video/the-role-of-mental-rehearsal/"
+        ]
+      }
+    ],
+    "artworks": []
+  }
+}

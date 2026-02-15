@@ -1,0 +1,294 @@
+{
+  "title": "The Lovely and the Liminal",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:29:23.0005234Z",
+  "bundle_or_page_sources": [
+    "wsc-topics.html (The Lovely and the Liminal section, lines 2056-2112 in local snapshot)"
+  ],
+  "links": [
+    {
+      "url": "https://www.scientificamerican.com/article/why-walking-through-doorway-makes-you-forget/",
+      "anchor_texts": ["doorway effect"],
+      "classification": "concept",
+      "status": "ok",
+      "title": "doorway effect",
+      "summary_or_excerpt": "Used to introduce threshold-related short-term memory disruption in discussion of liminal spaces.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=H4dGpz6cnHo",
+      "anchor_texts": ["The Backrooms"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "The Backrooms",
+      "summary_or_excerpt": "Found-footage video example used to discuss uneasy liminal atmosphere.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://poolsthegame.com/",
+      "anchor_texts": ["this video game"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "POOLS",
+      "summary_or_excerpt": "Game cited as inspired by The Backrooms and relevant to liminal settings.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.stanleyparable.com/",
+      "anchor_texts": ["The Stanley Parable"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "The Stanley Parable",
+      "summary_or_excerpt": "Game example for analyzing liminal-space design.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.nationalgallery.org.uk/paintings/joseph-mallord-william-turner-rain-steam-and-speed-the-great-western-railway",
+      "anchor_texts": ["Rain, Steam, and Speed"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Rain, Steam, and Speed",
+      "summary_or_excerpt": "Transit-themed artwork in list of shared liminal spaces.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.rct.uk/collection/405292/the-railway-station",
+      "anchor_texts": ["The Railway Station"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "The Railway Station",
+      "summary_or_excerpt": "Railway artwork listed for liminal-setting analysis.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.visitpham.org/objects/330908",
+      "anchor_texts": ["Picture of the Railroad at Takanawa"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Picture of the Railroad at Takanawa",
+      "summary_or_excerpt": "Railroad depiction included in station/threshold set.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.nationalgallery.org.uk/paintings/claude-monet-the-gare-st-lazare",
+      "anchor_texts": ["Gare Saint-Lazare"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Gare Saint-Lazare",
+      "summary_or_excerpt": "Station painting listed as liminal setting.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://lyricstranslate.com/en/diu-diu-tong-zi-drip-drip-drip.html",
+      "anchor_texts": ["\"Drip, Drip, Drip\""],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Drip, Drip, Drip",
+      "summary_or_excerpt": "Folk-song entry in the transit-themed list.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.solldn.com/journal/journals-steve-mccurry-agra-fort-station/",
+      "anchor_texts": ["Train Station, Agra, 1983"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Train Station, Agra, 1983",
+      "summary_or_excerpt": "Photographic station image in liminal list.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://whitney.org/media/130",
+      "anchor_texts": ["Six in Four"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Six in Four",
+      "summary_or_excerpt": "Contemporary work included in shared-liminal-space set.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://artreview.com/just-passing-through-the-history-of-societys-non-places/",
+      "anchor_texts": ["architecture of waiting"],
+      "classification": "concept",
+      "status": "ok",
+      "title": "architecture of waiting",
+      "summary_or_excerpt": "Reference for waiting-room and non-place design discussion.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://medium.com/@oliviaturne442/the-psychology-of-waiting-rooms-how-design-influences-anxiety-5660fee79657",
+      "anchor_texts": ["decrease anxiety"],
+      "classification": "concept",
+      "status": "ok",
+      "title": "psychology of waiting rooms",
+      "summary_or_excerpt": "Design/psychology reference on anxiety effects in waiting rooms.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://collections.mfa.org/objects/32558/where-do-we-come-from-what-are-we-where-are-we-going",
+      "anchor_texts": ["Where Do We Come From? What Are We? Where Are We Going?"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Where Do We Come From? What Are We? Where Are We Going?",
+      "summary_or_excerpt": "Artwork included in debate over broad use of liminal.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.moma.org/slideshows/22/372",
+      "anchor_texts": ["The Treachery of Images"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "The Treachery of Images",
+      "summary_or_excerpt": "Artwork listed for discussion of liminal classification.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.moma.org/collection/works/79018",
+      "anchor_texts": ["The Persistence of Memory"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "The Persistence of Memory",
+      "summary_or_excerpt": "Artwork listed for discussion of liminal classification.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.moma.org/collection/works/78455",
+      "anchor_texts": ["Christina's World"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Christina's World",
+      "summary_or_excerpt": "Artwork listed for discussion of liminal classification.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.nga.gov/artworks/61281-ascending-and-descending",
+      "anchor_texts": ["Ascending and Descending"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Ascending and Descending",
+      "summary_or_excerpt": "Artwork listed for discussion of liminal classification.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://gagosian.com/exhibitions/2005/gregory-crewdson-beneath-the-roses/",
+      "anchor_texts": ["Beneath the Roses"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Beneath the Roses",
+      "summary_or_excerpt": "Artwork listed for discussion of liminal classification.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://fineacts.co/the-distant-is-imminent",
+      "anchor_texts": ["The Distant is Imminent"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "The Distant is Imminent",
+      "summary_or_excerpt": "Artwork listed for discussion of liminal classification.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.lsgalilei.org/images/FilesGalilei/Docenti/Dipartimenti/Lingue/WaitingForGodotGB.pdf",
+      "anchor_texts": ["Scene 2"],
+      "classification": "artwork",
+      "status": "skipped_non_html",
+      "title": "Waiting for Godot (Scene 2)",
+      "summary_or_excerpt": "PDF excerpt source for Beckett selection in liminal-duration section.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.mcgill.ca/poetrymatters/files/poetrymatters/neruda_-_keeping_still.pdf",
+      "anchor_texts": ["\"Keeping Still\""],
+      "classification": "artwork",
+      "status": "skipped_non_html",
+      "title": "Keeping Still",
+      "summary_or_excerpt": "PDF poem source used in liminal-duration section.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=cN0Ayw-1fgU",
+      "anchor_texts": ["I'll Wait for the Next One..."],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "I'll Wait for the Next One...",
+      "summary_or_excerpt": "Short film selection for discussing time spent in-between.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://shortstoryproject.com/stories/the-man-who-could-walk-through-walls/",
+      "anchor_texts": ["\"The Man Who Could Walk through Walls\""],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "The Man Who Could Walk through Walls",
+      "summary_or_excerpt": "Short story selection about crossing boundaries.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.cbsnews.com/news/book-excerpt-a-gentleman-in-moscow-by-amor-towles/",
+      "anchor_texts": ["Excerpt"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "A Gentleman in Moscow (Excerpt)",
+      "summary_or_excerpt": "Excerpt source for constrained-in-between living example.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=vNwYtllyt3Q",
+      "anchor_texts": ["Ambient 1: Music for Airports"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Ambient 1: Music for Airports",
+      "summary_or_excerpt": "Ambient listening example tied to airport stress reduction.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://youtu.be/Qj1Q-0d1WZo",
+      "anchor_texts": ["Music for Nine Postcards"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Music for Nine Postcards",
+      "summary_or_excerpt": "Ambient music example in final listening prompt.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=CWYA99Zb13Y",
+      "anchor_texts": ["Sleep"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Sleep",
+      "summary_or_excerpt": "Long-form ambient work in final listening prompt.",
+      "fetched_at": "2026-02-14T23:29:23.0005234Z"
+    }
+  ],
+  "derived_items": [
+    {
+      "type": "concept",
+      "name": "Liminality",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/topic/rite-of-passage",
+        "https://www.britannica.com/science/liminal"
+      ],
+      "notes": "Added because liminality is central to the topic prose but has no direct in-topic reference link."
+    },
+    {
+      "type": "concept",
+      "name": "Kantian purposiveness without purpose",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://plato.stanford.edu/entries/kant-aesthetics/"
+      ],
+      "notes": "Added from unlinked mention of Immanuel Kant's beauty framework."
+    },
+    {
+      "type": "concept",
+      "name": "Ambient music",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/art/ambient-music"
+      ],
+      "notes": "Added from unlinked genre mention in final paragraph."
+    }
+  ]
+}

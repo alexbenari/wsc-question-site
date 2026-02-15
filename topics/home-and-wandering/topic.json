@@ -1,0 +1,421 @@
+{
+  "title": "Home and Wandering",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:40:49.914026Z",
+  "topic_text": "The topic examines navigation across oceans, ecosystems, cultures, and borders. It begins with early modern European seafaring and the compass, then turns to animal navigation mechanisms and examples such as indigo buntings, dung beetles, honeybees, pigeons, sea turtles, and desert ants. It compares digital navigation with traditional wayfinding systems, including Polynesian and Inuit methods, and asks what is lost when people outsource orientation to phones. It also explores knowledge-limiting map design through Fog of World.\n\nThe section then shifts to legal and political liminality: people stranded in airports, refugee exclusion, asylum policy, and immigration thresholds. It pairs policy questions with literary and artistic works on migration and displacement. Terms highlighted include astrolabe, sextant, log tables and ephemerides, magnetic compass, log and line, chronometer, latitude and longitude, magnetoreception, cryptochromes, olfactory navigation, echolocation, zugunruhe, constant frequency, frequency modulation, sunlight polarization, and spatial memory.",
+  "learning_guidelines": [
+    "Learn about key innovations that helped early European explorers navigate, then discuss how history might differ if they had stayed home.",
+    "Learn about animal migration patterns and processes, then consider navigation vs instinct and human-caused disruption.",
+    "Explore traditional non-instrument navigation methods and discuss how mental mapping changes journeys.",
+    "Examine the Fog of World app and debate whether limiting easy information access can enrich experience.",
+    "Watch highlights from The Terminal and compare the dramatized story with the real case of Mehran Karimi Nasser.",
+    "Explore rationales for anti-immigrant policies and debate how open countries should be to asylum seekers.",
+    "Analyze selected immigrant-experience poems for universality and liminality.",
+    "Analyze selected artworks and songs about migration and in-between identity states."
+  ],
+  "linked_text_entries": [
+    {
+      "url": "https://www.smh.com.au/traveller/travel-news/how-people-end-up-living-at-airports-for-months--even-years--at-a-time-20221116-h27w1y.html",
+      "anchor_texts": [
+        "more recent examples"
+      ],
+      "summary": "News feature about contemporary cases of people stranded in airports for extended periods, used as policy-discussion context."
+    }
+  ],
+  "artworks": [
+    {
+      "creator": "Unknown (Disney production team)",
+      "title": "\"We Know the Way\" (Moana ancestors sequence)",
+      "year": "2016",
+      "source_links": [
+        "https://www.youtube.com/watch?v=ubZrAmRxy_M"
+      ],
+      "description": "Song sequence from Disney's Moana depicting ancestral Polynesian navigation. It emphasizes memory, stars, and ocean reading over instruments. In this topic, it frames navigation as cultural knowledge rather than device use."
+    },
+    {
+      "creator": "Steven Spielberg (director)",
+      "title": "The Terminal",
+      "year": "2004",
+      "source_links": [
+        "https://www.youtube.com/playlist?list=PLZbXA4lyCtqqUoWrFzmaFPYt9enUvRK3b"
+      ],
+      "description": "Film about a traveler trapped in legal limbo inside an airport after state collapse voids his documents. Inspired by a real prolonged airport-stay case. It illustrates migration liminality between home and destination."
+    },
+    {
+      "creator": "Emma Lazarus",
+      "title": "\"The New Colossus\"",
+      "year": "1883",
+      "source_links": [
+        "https://www.poetryfoundation.org/poems/46550/the-new-colossus"
+      ],
+      "description": "Poem associated with the Statue of Liberty and U.S. immigration symbolism. It contrasts exclusion with welcome and has shaped public rhetoric on refuge. Relevant as a benchmark for debates on border openness."
+    },
+    {
+      "creator": "Adrienne Rich",
+      "title": "\"Prospective Immigrants Please Note\"",
+      "year": "1963",
+      "source_links": [
+        "https://www.getty.edu/education/teachers/classroom_resources/curricula/dorothea_lange/downloads/lange_lesson11_adriennerich.rtf"
+      ],
+      "description": "Poem warning that migration narratives can hide danger and ambiguity. Rich complicates the promise of arrival and belonging. It fits the topic's concern with thresholds and uncertainty."
+    },
+    {
+      "creator": "Marilyn Chin",
+      "title": "\"We Are Americans Now, We Live in the Tundra\"",
+      "year": "1987",
+      "source_links": [
+        "https://poets.org/poem/we-are-americans-now-we-live-tundra"
+      ],
+      "description": "Poem on immigrant identity, adaptation, and dislocation in a new country. It blends irony and estrangement to depict cultural transition. It speaks to wandering as both movement and identity shift."
+    },
+    {
+      "creator": "Adrian Castro",
+      "title": "\"The Sound of One Immigrant Clapping\"",
+      "year": "2005",
+      "source_links": [
+        "https://poets.org/poem/sound-one-immigrant-clapping"
+      ],
+      "description": "Poetic meditation on immigration, perception, and social invisibility. It uses compressed language to stage belonging and alienation at once. Relevant to liminal social status in migrant life."
+    },
+    {
+      "creator": "Richard Blanco",
+      "title": "\"Mother Country\"",
+      "year": "2019",
+      "source_links": [
+        "https://poets.org/poem/mother-country"
+      ],
+      "description": "Poem reflecting on homeland memory and diasporic identity. Blanco juxtaposes inherited place with lived displacement. It aligns with the topic's home-versus-wandering tension."
+    },
+    {
+      "creator": "Frida Kahlo",
+      "title": "The Bus",
+      "year": "1929",
+      "source_links": [
+        "https://www.fridakahlo.org/the-bus.jsp"
+      ],
+      "description": "Painting of passengers from different social positions sharing one bus interior. Kahlo uses ordinary transit as a social cross-section. It can be read as a threshold scene linking class, mobility, and modern movement."
+    },
+    {
+      "creator": "Jacob Lawrence",
+      "title": "The Migration Series",
+      "year": "1941",
+      "source_links": [
+        "https://lawrencemigration.phillipscollection.org/the-migration-series"
+      ],
+      "description": "Multi-panel painting series chronicling the Great Migration of African Americans from the U.S. South. Lawrence combines historical events with strong visual rhythm and compressed narrative. It directly addresses forced and strategic movement in search of safer life."
+    },
+    {
+      "creator": "Led Zeppelin",
+      "title": "\"Immigrant Song\"",
+      "year": "1970",
+      "source_links": [
+        "https://www.youtube.com/watch?v=P3Y8OWkiUts"
+      ],
+      "description": "Rock song using mythic Norse imagery of travel, conquest, and displacement. Its energy romanticizes movement while invoking conflict. It broadens migration discussion beyond policy into cultural imagination."
+    },
+    {
+      "creator": "Jerry Bock, Sheldon Harnick, and Jerry Robbins (musical creators)",
+      "title": "\"Far From the Home I Love\" (Fiddler on the Roof)",
+      "year": "1971",
+      "source_links": [
+        "https://www.youtube.com/watch?v=MasUusA6F4k"
+      ],
+      "description": "Musical number about leaving home under social and familial pressure. The song foregrounds emotional cost of relocation. It complements the topic's focus on attachment, identity, and departure."
+    },
+    {
+      "creator": "Genesis",
+      "title": "\"Illegal Alien\"",
+      "year": "1983",
+      "source_links": [
+        "https://www.youtube.com/watch?v=aqQv3qef21A"
+      ],
+      "description": "Pop song that references undocumented migration through satire. Its reception is contested because of caricature and tone. It is useful for discussing how art can reinforce or challenge migration stereotypes."
+    },
+    {
+      "creator": "Brendan Graham",
+      "title": "\"Isle of Hope, Isle of Tears\"",
+      "year": "1995",
+      "source_links": [
+        "https://www.youtube.com/watch?v=0zGMfqHciP0"
+      ],
+      "description": "Ballad associated with Irish emigration memory and arrival at Ellis Island. It emphasizes separation, grief, and hope. The work frames migration as both loss and renewal."
+    },
+    {
+      "creator": "Kovi Konowiecki",
+      "title": "Borderlands",
+      "year": "2016",
+      "source_links": [
+        "https://phmuseum.com/projects/borderlands-1"
+      ],
+      "description": "Documentary photo project focused on border landscapes and migrant realities. The work highlights physical barriers and lived uncertainty. It visualizes liminal zones between legal categories and territories."
+    },
+    {
+      "creator": "Los Tigres del Norte",
+      "title": "\"Somos Mas Americanos\"",
+      "year": "2013",
+      "source_links": [
+        "https://www.youtube.com/watch?v=OljZou-Z1Ps"
+      ],
+      "description": "Regional Mexican song asserting migrant belonging and historical presence in the Americas. It rebuts exclusionary nationalism through music. Relevant to debates over identity, borders, and legitimacy."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Compass",
+      "year": null,
+      "source_links": [
+        "https://education.nationalgeographic.org/resource/compass/"
+      ],
+      "description": "A navigation instrument that aligns with Earth's magnetic field to indicate direction. It enabled more reliable open-water travel. In this topic it anchors discussion of technological shifts that changed world history."
+    },
+    {
+      "name": "Polynesian wayfinding",
+      "year": null,
+      "source_links": [
+        "https://hokulea.com/polynesian-wayfinding/"
+      ],
+      "description": "Non-instrument navigation tradition using stars, swells, winds, birds, and accumulated memory. It reflects deep environmental literacy. It challenges assumptions that modern tools are required for precision travel."
+    },
+    {
+      "name": "Inuit navigation markers",
+      "year": null,
+      "source_links": [
+        "https://www.terrain.org/2019/nonfiction/arctic-wayfinders/"
+      ],
+      "description": "Arctic wayfinding practices that combine sky knowledge, ice reading, landmarks, and local memory. These methods are adapted to low-contrast environments. They show navigation as situated cultural practice."
+    },
+    {
+      "name": "Viking non-compass navigation hypotheses",
+      "year": null,
+      "source_links": [
+        "https://www.scientificamerican.com/article/did-vikings-navigate/"
+      ],
+      "description": "Research and debate over methods such as solar cues and possible sunstone use in Viking voyages. Evidence is mixed and partly inferential. The topic uses this to discuss boundaries between legend and method."
+    },
+    {
+      "name": "Fog of World (mapping app)",
+      "year": null,
+      "source_links": [
+        "https://fogofworld.app/en/"
+      ],
+      "description": "A location-tracking app that reveals map areas only after physical travel through them. It gamifies exploration and partial knowledge. Relevant to whether deliberate information limits can enrich experience."
+    },
+    {
+      "name": "Mehran Karimi Nasser airport-limbo case",
+      "year": "1988-2006",
+      "source_links": [
+        "https://screenrant.com/the-terminal-true-story-every-change-movie/"
+      ],
+      "description": "Real case of a man who spent years in a Paris airport transit zone after document and legal complications. It inspired The Terminal but was altered for fiction. The case illustrates statelessness and administrative liminality."
+    },
+    {
+      "name": "Edward Snowden airport-transit episode",
+      "year": "2013",
+      "source_links": [
+        "https://www.reuters.com/article/world/uk/russian-airport-limbo-ends-for-snowden-new-life-begins-idUSBRE9710U0/"
+      ],
+      "description": "Snowden remained in Moscow airport transit while asylum options were negotiated. The situation became a high-profile example of legal-geopolitical in-between status. It parallels the topic's airport-threshold theme."
+    },
+    {
+      "name": "MS St. Louis refugee ship case",
+      "year": "1939",
+      "source_links": [
+        "https://www.history.com/articles/wwii-jewish-refugee-ship-st-louis-1939"
+      ],
+      "description": "Ocean liner carrying Jewish refugees that was denied disembarkation in Cuba, the U.S., and Canada. Many passengers later faced Nazi persecution after return to Europe. The case is central to moral debates about asylum refusal."
+    },
+    {
+      "name": "European anti-immigrant policy surge",
+      "year": "2010s-present",
+      "source_links": [
+        "https://www.axios.com/2018/08/24/migration-drives-populist-surge-across-europe"
+      ],
+      "description": "Rise of restrictive migration rhetoric and policy in several European states, often linked to populist politics. It reflects conflicts among security, sovereignty, and humanitarian commitments. It supports comparative border-policy discussion."
+    },
+    {
+      "name": "Astrolabe",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Astrolabe"
+      ],
+      "description": "Historical astronomical instrument used to solve problems related to time and star position. Mariners used variants for latitude estimation. It belongs to premodern navigation toolkits discussed in this topic."
+    },
+    {
+      "name": "Sextant",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Sextant"
+      ],
+      "description": "Optical instrument for measuring angular distance between celestial objects and horizon. It enabled precise celestial navigation at sea. It represents technical refinement in long-distance travel."
+    },
+    {
+      "name": "Log tables and ephemerides",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Ephemeris"
+      ],
+      "description": "Reference tables used for astronomical and trigonometric calculations in navigation. They translated observations into usable position estimates. They show navigation as computation as well as observation."
+    },
+    {
+      "name": "Log and line",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Chip_log"
+      ],
+      "description": "Traditional method to estimate ship speed by timing a weighted line overboard. Speed estimates informed dead reckoning. It illustrates practical measurement before electronic sensors."
+    },
+    {
+      "name": "Chronometer",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Marine_chronometer"
+      ],
+      "description": "Highly accurate clock used at sea to determine longitude via time difference. It solved a major historical navigation problem. Its adoption reshaped maritime accuracy and safety."
+    },
+    {
+      "name": "Latitude and longitude",
+      "year": null,
+      "source_links": [
+        "https://education.nationalgeographic.org/resource/latitude-and-longitude/"
+      ],
+      "description": "Coordinate system for locating positions on Earth by angular measurements. It underpins modern cartography and navigation. The topic uses it to contrast measured grids with older uncertainty."
+    },
+    {
+      "name": "Magnetoreception",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Magnetoreception"
+      ],
+      "description": "Biological ability to detect magnetic fields for orientation. Documented in multiple taxa including birds and turtles. It is a core mechanism in animal navigation debates."
+    },
+    {
+      "name": "Cryptochromes",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Cryptochrome"
+      ],
+      "description": "Light-sensitive proteins implicated in circadian rhythms and possibly magnetic sensing. They are often discussed in avian navigation research. They connect molecular biology to migration behavior."
+    },
+    {
+      "name": "Olfactory navigation",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Olfaction#Navigation"
+      ],
+      "description": "Use of smell gradients and odor maps to orient in space. Studied in birds, fish, and insects. It expands navigation beyond vision and geomagnetism."
+    },
+    {
+      "name": "Echolocation",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Animal_echolocation"
+      ],
+      "description": "Emission and interpretation of reflected sound for positioning and object detection. Common in bats and toothed whales. It demonstrates acoustic strategies for movement in low-visibility conditions."
+    },
+    {
+      "name": "Zugunruhe",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Zugunruhe"
+      ],
+      "description": "Seasonal migratory restlessness in captive birds, indicating internal migration timing. It supports evidence for endogenous migratory programs. It informs instinct-versus-learning debates in this topic."
+    },
+    {
+      "name": "Constant frequency",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Frequency_modulation"
+      ],
+      "description": "Signal property where waveform frequency remains stable over time. In bioacoustics and sonar contexts, frequency design affects detectability and range. It relates to sensory-navigation mechanisms."
+    },
+    {
+      "name": "Frequency modulation",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Frequency_modulation"
+      ],
+      "description": "Varying signal frequency over time to encode information or improve detection. FM components appear in animal calls and human navigation technologies. It supports discussion of communication and orientation cues."
+    },
+    {
+      "name": "Sunlight polarization",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Polarization_(waves)"
+      ],
+      "description": "Pattern of polarized light in the sky that can provide directional information. Some insects and birds use polarization cues for orientation. It offers a non-magnetic celestial navigation channel."
+    },
+    {
+      "name": "Spatial memory",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Spatial_memory"
+      ],
+      "description": "Cognitive storage of environmental layouts and routes. It enables return travel, foraging efficiency, and landmark-based movement. It links biological navigation to human mental mapping."
+    },
+    {
+      "name": "Indigo bunting star navigation evidence",
+      "year": null,
+      "source_links": [
+        "https://www.birdwatching.com/stories/indigobunting-stars.html"
+      ],
+      "description": "Indigo buntings are classic examples in studies suggesting use of stellar cues during migration. Experiments in planetariums informed this model. They are cited in the topic as animal-navigation exemplars."
+    },
+    {
+      "name": "Dung beetle celestial orientation",
+      "year": null,
+      "source_links": [
+        "https://www.science.org/content/article/dung-beetles-navigate-milky-way"
+      ],
+      "description": "Evidence indicates some dung beetles orient using celestial light patterns, including the Milky Way band. This helps maintain straight-line movement from dung piles. It expands navigation examples beyond vertebrates."
+    },
+    {
+      "name": "Honeybee landmark navigation",
+      "year": null,
+      "source_links": [
+        "https://www.popsci.com/environment/honeybees-landmarks/"
+      ],
+      "description": "Honeybees use combinations of landmarks, sun position, and learned routes to reach resources. Their behavior integrates innate and learned components. This informs the instinct-versus-navigation prompt."
+    },
+    {
+      "name": "Homing pigeon orientation",
+      "year": null,
+      "source_links": [
+        "https://ssec.si.edu/stemvisions-blog/how-do-birds-navigate"
+      ],
+      "description": "Homing pigeons rely on multimodal cues, including sun compass, landmarks, and possibly magnetic information. They are a longstanding model in orientation science. They provide a concrete comparison case in the topic."
+    },
+    {
+      "name": "Sea turtle geomagnetic map",
+      "year": null,
+      "source_links": [
+        "https://www.nsf.gov/news/geomagnetic-landmarks-give-turtles-sense-where"
+      ],
+      "description": "Research suggests sea turtles use Earth's magnetic signatures as positional cues across ocean migrations. Geomagnetic landmarks help route and destination finding. The example highlights long-distance non-human navigation precision."
+    },
+    {
+      "name": "Desert ant path integration",
+      "year": null,
+      "source_links": [
+        "https://serres-lab.com/navigation-news-from-the-royal-institute-of-navigation-path-integration-lessons-from-the-desert-ants/"
+      ],
+      "description": "Desert ants compute return vectors from outbound movement cues, a process called path integration. This allows efficient homing in sparse terrain. It exemplifies compact but robust navigation algorithms in nature."
+    }
+  ],
+  "persons": [
+    "Christopher Columbus",
+    "Steven Spielberg",
+    "Mehran Karimi Nasser",
+    "Edward Snowden",
+    "Emma Lazarus",
+    "Adrienne Rich",
+    "Marilyn Chin",
+    "Adrian Castro",
+    "Richard Blanco",
+    "Frida Kahlo",
+    "Jacob Lawrence",
+    "Brendan Graham",
+    "Kovi Konowiecki"
+  ]
+}

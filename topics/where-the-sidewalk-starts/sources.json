@@ -1,0 +1,136 @@
+{
+  "title": "Where the Sidewalk Starts",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:21:43.6377471Z",
+  "bundle_or_page_sources": [
+    {
+      "type": "local_snapshot",
+      "path": "wsc-topics.html",
+      "topic_match": "Where the Sidewalk Starts",
+      "line_context": "2012-2035"
+    }
+  ],
+  "links": [
+    {
+      "url": "https://www.smithsonianmag.com/history/moving-sidewalks-before-the-jetsons-17484942/",
+      "anchor_texts": ["historical efforts"],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Moving Sidewalks Before the Jetsons",
+      "summary_or_excerpt": "Historical review of moving-sidewalk proposals and deployments before their modern airport use.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    },
+    {
+      "url": "https://www.npr.org/2023/05/09/1174962751/paved-paradise-examines-how-parking-has-changed-the-american-landscape",
+      "anchor_texts": ["history of parking"],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Paved Paradise examines how parking has changed the American landscape",
+      "summary_or_excerpt": "Interview coverage of how parking policy and supply reshaped U.S. cities and daily life.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    },
+    {
+      "url": "https://archeyes.com/temple-street-parking-garage-paul-rudolph/",
+      "anchor_texts": ["Temple Street Parking Garage"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Temple Street Parking Garage, New Haven, Connecticut",
+      "summary_or_excerpt": "Architecture profile of Paul Rudolph's Brutalist parking garage in New Haven.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    },
+    {
+      "url": "https://www.dezeen.com/2019/12/23/lego-car-park-billund-denmark-cebra/",
+      "anchor_texts": ["Lego Parking House"],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Primary linked page was not retrievable in this run; supplemental architecture source used for context.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    },
+    {
+      "url": "https://en.visiterlyon.com/discover/heritage-unesco/contemporary/parking-des-celestins",
+      "anchor_texts": ["Parc des Celestins"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Parking des Celestins",
+      "summary_or_excerpt": "Lyon tourism source describing an underground parking project with noted architecture/art collaborators.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    },
+    {
+      "url": "https://weburbanist.com/2011/01/01/detroits-michigan-theater-the-worlds-most-beautiful-parking-lot/",
+      "anchor_texts": ["Michigan Theater"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Detroit's Michigan Theater: The World's Most Beautiful Parking Lot?",
+      "summary_or_excerpt": "Feature on the former theater space in Detroit reused as a parking lot.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    },
+    {
+      "url": "https://www.ignant.com/2012/06/08/garagenatelier/",
+      "anchor_texts": ["Garagenatelier Car Park"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Garage Atelier by Peter Kunz",
+      "summary_or_excerpt": "Design-media article on a Swiss parking structure presented as architecture-focused work.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    },
+    {
+      "url": "https://www.fastcompany.com/90784597/today-its-a-multi-story-parking-lot-tomorrow-it-could-be-your-new-home",
+      "anchor_texts": ["9th Avenue Parkade"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Today it's a multi-story parking lot. Tomorrow it could be your new home",
+      "summary_or_excerpt": "Case discussion of Calgary's 9th Avenue Parkade as a conversion-ready structure.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    },
+    {
+      "url": "https://www.jalopnik.com/this-is-a-snout-house-the-mid-size-crossover-of-homes-1850736863/",
+      "anchor_texts": ["snout houses"],
+      "classification": "concept",
+      "status": "ok",
+      "title": "This Is a 'Snout House'",
+      "summary_or_excerpt": "Article defining and critiquing suburban houses where garages dominate the facade.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    },
+    {
+      "url": "https://www.gearpatrol.com/archive/a177905/automotive-architecture-frank-lloyd-wright/",
+      "anchor_texts": ["living inside of houses"],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Automotive Architecture: Frank Lloyd Wright",
+      "summary_or_excerpt": "Overview of Wright's thinking on integrating cars into residential architecture.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    },
+    {
+      "url": "https://flwright.org/explore/frederick-c-robie-house",
+      "anchor_texts": ["Robie House"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Frederick C. Robie House",
+      "summary_or_excerpt": "Official site overview of Frank Lloyd Wright's Robie House and its design significance.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    },
+    {
+      "url": "https://landezine.com/grand-park-the-park-for-everyone-by-rios/",
+      "anchor_texts": ["new community gathering place"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Grand Park, The Park for Everyone by RIOS",
+      "summary_or_excerpt": "Landscape-architecture presentation of Grand Park in Los Angeles as a civic public-space project.",
+      "fetched_at": "2026-02-14T23:21:43.6377471Z"
+    }
+  ],
+  "derived_items": [
+    {
+      "item_type": "artwork",
+      "name": "Lego Parking House",
+      "discovered_by": "linked_topic_item",
+      "supporting_references": [
+        "https://www.archdaily.com/931987/lego-park-and-play-cebra-plus-jds-architects"
+      ],
+      "notes": "Used supplemental reference because the primary linked page returned an access error during extraction."
+    }
+  ]
+}

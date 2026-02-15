@@ -1,0 +1,132 @@
+{
+  "title": "More To Do Than Can Ever Be Listed",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:09:52Z",
+  "bundle_or_page_sources": [
+    {
+      "type": "local_snapshot",
+      "path": "wsc-topics.html",
+      "topic_title": "More To Do Than Can Ever Be Listed",
+      "notes": "Authoritative source for topic section text and in-topic links."
+    }
+  ],
+  "links": [
+    {
+      "url": "https://www.theatlantic.com/health/archive/2012/02/a-brief-history-of-the-to-do-list-and-the-psychology-of-its-success/252826/",
+      "anchor_texts": [
+        "history of the to-do list"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "A Brief History of the To-Do List and the Psychology of Its Success",
+      "summary_or_excerpt": "Article discussing historical and psychological perspectives on to-do lists, including prioritization and unfinished-task cognition.",
+      "fetched_at": "2026-02-14T23:09:52Z"
+    },
+    {
+      "url": "https://web.archive.org/web/20120215211320/https://www.theatlantic.com/health/archive/2012/02/a-brief-history-of-the-to-do-list-and-the-psychology-of-its-success/252826/",
+      "anchor_texts": [
+        "alternate link"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Wayback capture of A Brief History of the To-Do List and the Psychology of Its Success",
+      "summary_or_excerpt": "Archived copy of the same Atlantic article used as fallback access for the to-do-list history reference.",
+      "fetched_at": "2026-02-14T23:09:52Z"
+    },
+    {
+      "url": "https://www.psychologytoday.com/us/basics/zeigarnik-effect",
+      "anchor_texts": [
+        "Zeigarnik Effect"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Zeigarnik Effect | Psychology Today",
+      "summary_or_excerpt": "Overview of the Zeigarnik Effect, including memory for unfinished tasks and practical implications for planning and procrastination.",
+      "fetched_at": "2026-02-14T23:09:52Z"
+    },
+    {
+      "url": "https://www.oliverburkeman.com/donelist",
+      "anchor_texts": [
+        "done list"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "What if you're already on top of things?",
+      "summary_or_excerpt": "Essay advocating a done list to emphasize completed work and reduce productivity anxiety tied to endless to-do backlogs.",
+      "fetched_at": "2026-02-14T23:09:52Z"
+    },
+    {
+      "url": "https://www.theguardian.com/books/2009/dec/12/umberto-eco-lists-book-review",
+      "anchor_texts": [
+        "a book on the topic"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "The Infinity of Lists by Umberto Eco | The Guardian",
+      "summary_or_excerpt": "Review describing Eco\u2019s distinction between practical and poetic lists and situating lists in literary and cultural history.",
+      "fetched_at": "2026-02-14T23:09:52Z"
+    }
+  ],
+  "derived_items": [
+    {
+      "item_type": "concept",
+      "name": "Eisenhower Method",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.eisenhower.me/eisenhower-matrix/"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "1-2-3 Method",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.inloox.com/company/blog/articles/how-to-prioritize-daily-personal-tasks-using-the-1-2-3-method/"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Ivy Lee Method",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.theweek.com/articles/647288/daily-routine-help-achieve-peak-productivity"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "4-D Method",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://uaoa.gov.in/sites/default/files/2025-09/Effective%20time%20management%20%28%20In%20workplace%20%26%20Personal%20life%29.pdf"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Eat That Frog",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.briantracy.com/catalog/eat-that-frog"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Must-Do list",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.todoist.com/help/articles/eisenhower-matrix-with-todoist-kj0Eru",
+        "https://get.todoist.help/hc/en-us/articles/205873321-Introduction-to-Priorities"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Bullet Journal",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://help.bulletjournal.com/en-US/articles/about-the-bullet-journal-method-270207",
+        "https://en.wikipedia.org/wiki/Bullet_journal"
+      ]
+    }
+  ]
+}

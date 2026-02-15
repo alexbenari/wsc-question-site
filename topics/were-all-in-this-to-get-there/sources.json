@@ -1,0 +1,342 @@
+{
+  "title": "We’re All in This to Get There",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:19:47Z",
+  "bundle_or_page_sources": [
+    {
+      "type": "local_snapshot",
+      "path": "wsc-topics.html",
+      "notes": "Authoritative source for topic text and in-topic links."
+    }
+  ],
+  "links": [
+    {
+      "url": "https://archive.org/details/principlesofscie00taylrich/page/n5/mode/2up",
+      "anchor_texts": [
+        "Principles of Scientific Management"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "The principles of scientific management",
+      "summary_or_excerpt": "Primary text entry for Frederick W. Taylor’s 1911 work on scientific management.",
+      "fetched_at": "2026-02-14T23:19:47Z"
+    },
+    {
+      "url": "https://asiatimes.com/2025/12/indonesias-new-capital-falls-victim-to-the-politics-of-forgetting/",
+      "anchor_texts": [
+        "Nusantara Capital City"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Indonesia’s new capital falls victim to the politics of forgetting",
+      "summary_or_excerpt": "Analysis arguing Nusantara lost political momentum after leadership transition and budget reprioritization.",
+      "fetched_at": "2026-02-14T23:19:47Z"
+    },
+    {
+      "url": "https://www.businessinsider.com/crazy-horse-monument-isnt-finished-70-years-on-photos-2019-9",
+      "anchor_texts": [
+        "Crazy Horse Memorial"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Inside the controversial 70-year journey to build Crazy Horse",
+      "summary_or_excerpt": "Photo-report on prolonged construction, intended final scale, and public controversy around the monument.",
+      "fetched_at": "2026-02-14T23:19:47Z"
+    },
+    {
+      "url": "https://www.cipd.org/en/views-and-insights/thought-leadership/insight/monitoring-measures/",
+      "anchor_texts": [
+        "remote work monitoring"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "What monitoring measures are acceptable when managing remote workers?",
+      "summary_or_excerpt": "CIPD analysis of employer monitoring practices and acceptability in remote work settings.",
+      "fetched_at": "2026-02-14T23:19:47Z"
+    },
+    {
+      "url": "https://www.forbes.com/advisor/business/software/what-is-a-gantt-chart/",
+      "anchor_texts": [
+        "Gantt chart"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "What Is A Gantt Chart? The Ultimate Beginner’s Guide",
+      "summary_or_excerpt": "Explainer covering Gantt chart structure, uses, and practical advantages/limitations.",
+      "fetched_at": "2026-02-14T23:19:47Z"
+    },
+    {
+      "url": "https://www.guinnessworldrecords.com/news/2025/1/oldest-active-construction-project-la-sagrada-familia-to-finish-in-2026",
+      "anchor_texts": [
+        "La Sagrada Familia"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Oldest active construction project La Sagrada Família to finish in 2026",
+      "summary_or_excerpt": "News feature on long-running construction timeline and planned 2026 completion window.",
+      "fetched_at": "2026-02-14T23:19:47Z"
+    },
+    {
+      "url": "https://www.projectmanagertemplate.com/post/the-history-of-project-management-ancient-to-modern-day",
+      "anchor_texts": [
+        "history of project management"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "The History of Project Management Ancient to Modern Day",
+      "summary_or_excerpt": "Overview article connecting ancient large works to modern PM methodologies and tools.",
+      "fetched_at": "2026-02-14T23:19:47Z"
+    },
+    {
+      "url": "https://www.simplypsychology.org/pareto-principle.html",
+      "anchor_texts": [
+        "pareto principle"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Pareto Principle (The 80-20 Rule): Examples & More",
+      "summary_or_excerpt": "Explainer defining the 80/20 heuristic and common applications.",
+      "fetched_at": "2026-02-14T23:19:47Z"
+    }
+  ],
+  "derived_items": {
+    "artworks": [
+      {
+        "name": "Ryugyong Hotel",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Ryugyong_Hotel"
+        ]
+      },
+      {
+        "name": "Wonderland Amusement Park (Beijing)",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Wonderland_Amusement_Park_(Beijing)"
+        ]
+      },
+      {
+        "name": "Berlin Brandenburg Airport",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Berlin_Brandenburg_Airport"
+        ]
+      },
+      {
+        "name": "Milan Cathedral",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Milan_Cathedral",
+          "https://www.britannica.com/place/Milan-Cathedral"
+        ]
+      }
+    ],
+    "concepts": [
+      {
+        "name": "Iron Triangle (scope-time-cost)",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Project_management_triangle"
+        ]
+      },
+      {
+        "name": "Kanban",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Kanban"
+        ]
+      },
+      {
+        "name": "Harmonogram",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Gantt_chart"
+        ]
+      },
+      {
+        "name": "Task dependencies",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Task_dependency"
+        ]
+      },
+      {
+        "name": "Risk register",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Risk_register"
+        ]
+      },
+      {
+        "name": "Stakhanovite movement",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Stakhanovite_movement"
+        ]
+      },
+      {
+        "name": "Critical Path Method (CPM)",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Critical_path_method"
+        ]
+      },
+      {
+        "name": "Program Evaluation and Review Technique (PERT)",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Program_evaluation_and_review_technique"
+        ]
+      },
+      {
+        "name": "Waterfall method",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Waterfall_model"
+        ]
+      },
+      {
+        "name": "Command and control management",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Command_and_control"
+        ]
+      },
+      {
+        "name": "Toyota Production System",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Toyota_Production_System"
+        ]
+      },
+      {
+        "name": "Chaos engineering",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://principlesofchaos.org/"
+        ]
+      },
+      {
+        "name": "Agile Manifesto",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://agilemanifesto.org/"
+        ]
+      },
+      {
+        "name": "Six Sigma",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://www.britannica.com/money/Six-Sigma"
+        ]
+      },
+      {
+        "name": "Sashimi model",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Sashimi_(software_development)"
+        ]
+      },
+      {
+        "name": "The Three Ways",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://itrevolution.com/articles/the-three-ways-principles-underpinning-devops/"
+        ]
+      },
+      {
+        "name": "The Phoenix Project philosophy",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://itrevolution.com/the-phoenix-project/"
+        ]
+      },
+      {
+        "name": "Taylorism",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Scientific_management"
+        ]
+      },
+      {
+        "name": "Max Weber's bureaucracy",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://www.britannica.com/topic/bureaucracy"
+        ]
+      },
+      {
+        "name": "Ford assembly line",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://www.history.com/this-day-in-history/fords-assembly-line-starts-rolling"
+        ]
+      },
+      {
+        "name": "Total Quality Management (TQM)",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Total_quality_management"
+        ]
+      },
+      {
+        "name": "Hawthorne effect",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Hawthorne_effect"
+        ]
+      },
+      {
+        "name": "Hofstadter's law",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Hofstadter%27s_law"
+        ]
+      },
+      {
+        "name": "Ninety-ninety rule",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Ninety%E2%80%93ninety_rule"
+        ]
+      },
+      {
+        "name": "Conway's law",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Conway%27s_law"
+        ]
+      },
+      {
+        "name": "Putt's Law",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Putt%27s_Law_and_the_Successful_Technocrat"
+        ]
+      },
+      {
+        "name": "Illich's Law",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://www.yahoo.com/lifestyle/articles/illichs-law-help-more-productive-133000817.html"
+        ]
+      },
+      {
+        "name": "Laborit's Law",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://www.lifehack.org/articles/productivity/laborits-law-why-you-only-do-what-you-want-to-do.html"
+        ]
+      },
+      {
+        "name": "Brooks's Law",
+        "discovered_by": "unlinked_topic_item",
+        "supporting_references": [
+          "https://en.wikipedia.org/wiki/Brooks%27s_law"
+        ]
+      }
+    ]
+  }
+}

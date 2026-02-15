@@ -1,0 +1,305 @@
+{
+  "title": "Next Year in Futurism",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:51:38Z",
+  "bundle_or_page_sources": [
+    {
+      "name": "WSC guiding questions local snapshot",
+      "location": "wsc-topics.html",
+      "topic_section": "Next Year in Futurism"
+    }
+  ],
+  "links": [
+    {
+      "url": "https://kindredcapital.medium.com/take-me-to-the-year-2028-1dd405bd30b6",
+      "anchor_texts": [
+        "these predictions"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "Take me to the Year 2028 (Kindred Capital)",
+      "summary_or_excerpt": "2018 predictions for 2028 across mobility, labor, energy, and lifestyle trends.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://teslasciencecenter.org/history/tower/",
+      "anchor_texts": [
+        "Wardenclyffe Tower"
+      ],
+      "classification": "concept",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Could not fetch in this environment (HTTP 406), but used as source link for Wardenclyffe Tower concept.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://www.bbc.com/news/articles/cly1w9z72r6o",
+      "anchor_texts": [
+        "organ transplants"
+      ],
+      "classification": "concept",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Could not fetch in this environment due robots policy; link context is organ-transplant longevity discussion.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://rarehistoricalphotos.com/retro-future-predictions/",
+      "anchor_texts": [
+        "predicted in the past"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "Retro Future Predictions That Show How People From the Past Imagined the Future",
+      "summary_or_excerpt": "Gallery of historical retrofuturist predictions from the 1900s-1970s.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=UOtb5jUogXw",
+      "anchor_texts": [
+        "watch this video"
+      ],
+      "classification": "general",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Video page could not be parsed in this environment.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://www.popularmechanics.com/science/energy/a29563154/google-achieves-quantum-supremacy/",
+      "anchor_texts": [
+        "achieved it"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "What Is Quantum Supremacy? | Google Achieves Quantum Supremacy",
+      "summary_or_excerpt": "Explains Google’s 2019 quantum-supremacy claim and its significance.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://www.cnbc.com/2025/06/27/quantum-computing-applications-how-it-works.html",
+      "anchor_texts": [
+        "no practical purpose"
+      ],
+      "classification": "concept",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Could not fetch in this environment; linked in topic as practical-use critique of current quantum computing.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://www.wired.com/story/q-day-apocalypse-quantum-computers-encryption/",
+      "anchor_texts": [
+        "much-dreaded Q-Day"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "The Quantum Apocalypse Is Coming. Be Very Afraid",
+      "summary_or_excerpt": "Discusses “Q-Day” risk: cryptography breaking once large quantum machines are viable.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+      "anchor_texts": [
+        "Wikipedia has compiled a list"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Wikipedia:Signs of AI writing",
+      "summary_or_excerpt": "Community-maintained indicators often associated with machine-generated prose.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://www.huffpost.com/entry/history-professor-ai-cheating-students_n_69178150e4b0781acfd62540",
+      "anchor_texts": [
+        "deliberate traps"
+      ],
+      "classification": "general",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Could not fetch in this environment; linked as example of AI-cheating detection traps.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://www.sciencefocus.com/future-technology/hidden-forces-ai-bubble",
+      "anchor_texts": [
+        "artificial general intelligence (AGI)"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "We might finally know what will burst the AI bubble",
+      "summary_or_excerpt": "Popular-science discussion questioning current trajectories toward AGI.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://www.bbc.com/future/article/20190503-the-deepest-hole-we-have-ever-dug",
+      "anchor_texts": [
+        "launched rival projects"
+      ],
+      "classification": "concept",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Could not fetch in this environment due robots policy; linked as background on deep-drilling rivalry.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    },
+    {
+      "url": "https://orionmagazine.org/article/kola-borehole-russia-scientific-dig/",
+      "anchor_texts": [
+        "Kola Superdeep Borehole"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Inside the Deepest Artificial Hole on Earth",
+      "summary_or_excerpt": "Long-form account of the Kola Superdeep Borehole and its scientific context.",
+      "fetched_at": "2026-02-14T23:51:38Z"
+    }
+  ],
+  "derived_items": [
+    {
+      "item_type": "concept",
+      "name": "Fusion power",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Fusion_power"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Cure for cancer",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.cancer.gov/about-cancer/understanding/what-is-cancer"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Graphene",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/science/graphene"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Flying cars",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.nasa.gov/aeroresearch/programs/aam/"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Virtual reality",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/technology/virtual-reality"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Nanotechnology",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/science/nanotechnology"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Space elevator",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/technology/space-elevator"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Food pills",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/science/nutrition"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Organoids",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.nature.com/subjects/organoids"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Bioprinting",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.nature.com/subjects/bioprinting"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Plasma transfusion",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/information-source-plasma-donors"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Senotherapeutics",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.nia.nih.gov/research/dab/senolytics-and-senostatics-aging-and-age-related-diseases"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Cellular reprogramming",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.nobelprize.org/prizes/medicine/2012/press-release/"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Cellular rejuvenation",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.nature.com/articles/d41586-024-00620-9"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Telomere extension",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/science/telomere"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Caloric restriction",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.nia.nih.gov/health/calorie-restriction-and-fasting-diets-what-do-we-know"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Digital immortality",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/topic/mind-uploading"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Cryonics",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/science/cryonics"
+      ]
+    }
+  ]
+}

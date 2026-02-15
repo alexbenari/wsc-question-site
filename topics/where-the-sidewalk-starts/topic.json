@@ -1,0 +1,137 @@
+{
+  "title": "Where the Sidewalk Starts",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:21:43.6377471Z",
+  "topic_text": "Dubai barely has sidewalks; in New York they are busy with pedestrians and street vendors. The topic asks teams to examine sidewalks as a liminal space between street and building, and compare how sidewalk history and design vary across places.\n\nIt then moves to moving sidewalks, airport walkways, and the history of parking in the United States, including whether free parking should be treated as a right.\n\nThe section highlights parking lots as architecture, with examples including Temple Street Parking Garage, Lego Parking House, Parc des Celestins, Michigan Theater, Garagenatelier Car Park, and 9th Avenue Parkade.\n\nIt also raises suburban \"snout houses,\" Frank Lloyd Wright's car-oriented residential ideas, and Robie House. The topic closes by looking at Los Angeles downtown lots converted into Grand Park as a model of turning car space into public gathering space.",
+  "learning_guidelines": [
+    "Research the history of sidewalks, including where they first emerged and when modern sidewalks were built.",
+    "Learn more about historical efforts to popularize moving sidewalks.",
+    "Investigate the history of parking and debate whether free parking should be a right.",
+    "Read about Temple Street Parking Garage and compare it with other architecturally notable parking lots.",
+    "Consider examples of snout houses and discuss whether garages should be more hidden.",
+    "Explore Frank Lloyd Wright's automotive architecture and the design history of Robie House.",
+    "Observe how Los Angeles converted parking lots into Grand Park and discuss comparable opportunities in your city."
+  ],
+  "linked_text_entries": [],
+  "artworks": [
+    {
+      "creator": "Paul Rudolph",
+      "title": "Temple Street Parking Garage",
+      "year": null,
+      "source_links": [
+        "https://archeyes.com/temple-street-parking-garage-paul-rudolph/"
+      ],
+      "description": "A Brutalist multi-level parking structure in New Haven, Connecticut. It is associated with architect Paul Rudolph and is often discussed as a landmark case of expressive parking-garage design. The work is relevant because the topic asks whether utilitarian car infrastructure should also be architecturally significant."
+    },
+    {
+      "creator": "Cebra; JDS Architects",
+      "title": "Lego Parking House",
+      "year": "2019",
+      "source_links": [
+        "https://www.dezeen.com/2019/12/23/lego-car-park-billund-denmark-cebra/",
+        "https://www.archdaily.com/931987/lego-park-and-play-cebra-plus-jds-architects"
+      ],
+      "description": "A car park in Billund designed as a playful public-facing structure rather than a hidden service building. Coverage describes it as combining parking with child-friendly urban space ideas. It supports the topic's question of whether parking structures can contribute to civic identity instead of remaining invisible."
+    },
+    {
+      "creator": "Michel Targe; Jean-Michel Wilmotte; Daniel Buren",
+      "title": "Parc des Celestins",
+      "year": "1994",
+      "source_links": [
+        "https://en.visiterlyon.com/discover/heritage-unesco/contemporary/parking-des-celestins"
+      ],
+      "description": "An underground parking project in Lyon with a distinctive public-space treatment above and a visual artwork component linked to Daniel Buren. It demonstrates collaboration between architecture and art in a mobility structure. The project directly fits the section's emphasis on parking lots as designed places."
+    },
+    {
+      "creator": "C. Howard Crane (original theater architect)",
+      "title": "Michigan Theater (parking conversion)",
+      "year": null,
+      "source_links": [
+        "https://weburbanist.com/2011/01/01/detroits-michigan-theater-the-worlds-most-beautiful-parking-lot/"
+      ],
+      "description": "Detroit's former ornate theater interior later repurposed as a parking facility. The visual contrast between theatrical architecture and automobile use makes it a well-known example of adaptive reuse. It is relevant as an extreme case of liminal urban space between cultural memory and current utility."
+    },
+    {
+      "creator": "Peter Kunz",
+      "title": "Garagenatelier Car Park",
+      "year": null,
+      "source_links": [
+        "https://www.ignant.com/2012/06/08/garagenatelier/"
+      ],
+      "description": "A Swiss car-park project presented as a design-focused structure rather than purely infrastructure. The project is cited in architecture-media contexts as an example of materially and spatially deliberate parking design. It reinforces the topic's prompt about architectural flourish in parking lots."
+    },
+    {
+      "creator": null,
+      "title": "9th Avenue Parkade",
+      "year": null,
+      "source_links": [
+        "https://www.fastcompany.com/90784597/today-its-a-multi-story-parking-lot-tomorrow-it-could-be-your-new-home"
+      ],
+      "description": "A Calgary multi-story parkade discussed in relation to possible future conversion into housing. The case highlights how parking structures can be treated as flexible long-term urban assets. This matches the topic's focus on rethinking car-oriented spaces for new community uses."
+    },
+    {
+      "creator": "Frank Lloyd Wright",
+      "title": "Frederick C. Robie House",
+      "year": "1910",
+      "source_links": [
+        "https://flwright.org/explore/frederick-c-robie-house"
+      ],
+      "description": "A major Prairie School house in Chicago designed by Frank Lloyd Wright. Its horizontal lines, integrated site relationship, and approach to circulation are central to Wright's architectural philosophy. In this topic, it is used to discuss boundaries between house, street, and transitional space."
+    },
+    {
+      "creator": "RIOS",
+      "title": "Grand Park (Los Angeles)",
+      "year": null,
+      "source_links": [
+        "https://landezine.com/grand-park-the-park-for-everyone-by-rios/"
+      ],
+      "description": "A downtown Los Angeles public-space redevelopment highlighted as converting former car-dominated ground into civic gathering space. The project is framed as a people-first urban intervention. It is directly relevant to the topic's question of whether parking land should be repurposed for community use."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Moving sidewalks",
+      "year": null,
+      "source_links": [
+        "https://www.smithsonianmag.com/history/moving-sidewalks-before-the-jetsons-17484942/"
+      ],
+      "description": "Mechanized pedestrian conveyors intended to move standing or walking people through busy areas. Historical adoption attempts predate modern airport travelators by decades. They are relevant because the topic asks why this technology remained niche despite clear convenience in certain settings."
+    },
+    {
+      "name": "History of parking in the United States",
+      "year": null,
+      "source_links": [
+        "https://www.npr.org/2023/05/09/1174962751/paved-paradise-examines-how-parking-has-changed-the-american-landscape"
+      ],
+      "description": "The expansion of off-street and on-street parking as a defining feature of car-oriented planning in the United States. Parking supply has deeply affected land use, housing form, and street design. This concept anchors the topic's policy question about whether free parking should be treated as an entitlement."
+    },
+    {
+      "name": "Snout house",
+      "year": null,
+      "source_links": [
+        "https://www.jalopnik.com/this-is-a-snout-house-the-mid-size-crossover-of-homes-1850736863/"
+      ],
+      "description": "A residential form where the garage projects prominently toward the street relative to the rest of the facade. The term is usually critical, emphasizing car storage over pedestrian-facing design. It is relevant because the topic asks whether suburban garage visibility should be reduced."
+    },
+    {
+      "name": "Automotive architecture (Frank Lloyd Wright)",
+      "year": null,
+      "source_links": [
+        "https://www.gearpatrol.com/archive/a177905/automotive-architecture-frank-lloyd-wright/",
+        "https://flwright.org/explore/frederick-c-robie-house"
+      ],
+      "description": "A design approach that integrates automobile movement and storage into residential and urban architecture rather than treating them as detached add-ons. Frank Lloyd Wright's work is often cited in this context. The concept connects directly to the topic's debate over liminal space between homes and streets."
+    }
+  ],
+  "persons": [
+    "Frank Lloyd Wright",
+    "Paul Rudolph",
+    "Michel Targe",
+    "Jean-Michel Wilmotte",
+    "Daniel Buren",
+    "Peter Kunz",
+    "C. Howard Crane"
+  ]
+}

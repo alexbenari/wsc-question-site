@@ -1,0 +1,266 @@
+{
+  "title": "Progress, Not Regress",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:07:16Z",
+  "bundle_or_page_sources": [
+    {
+      "type": "local_snapshot",
+      "path": "wsc-topics.html",
+      "topic_match": "Progress, Not Regress",
+      "notes": "Topic section extracted from local snapshot lines 1831-1859; local file treated as authoritative."
+    }
+  ],
+  "links": [
+    {
+      "url": "https://gizmodo.com/where-the-progress-bar-came-from-1538713383",
+      "anchor_texts": [
+        "history of the progress bar"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Where the Progress Bar Came From",
+      "summary_or_excerpt": "Discusses adoption of percent-done indicators and their role in reducing uncertainty for computer users.",
+      "fetched_at": "2026-02-14T23:07:16Z"
+    },
+    {
+      "url": "https://youarenotsosmart.com/2010/02/10/placebo-buttons/",
+      "anchor_texts": [
+        "placebo buttons"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Placebo Buttons – You Are Not So Smart",
+      "summary_or_excerpt": "Argues many public buttons are psychologically reassuring signals rather than fully functional controls.",
+      "fetched_at": "2026-02-14T23:07:16Z"
+    },
+    {
+      "url": "https://www.psychologicalscience.org/news/why-waiting-is-torture.html",
+      "anchor_texts": [
+        "one airport discovered"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "Why Waiting Is Torture – Association for Psychological Science – APS",
+      "summary_or_excerpt": "Recounts an airport intervention where longer walking reduced complaints about baggage waits.",
+      "fetched_at": "2026-02-14T23:07:16Z"
+    },
+    {
+      "url": "https://uxdesign.cc/from-rpgs-to-ux-how-progress-indicators-affect-user-engagement-8748f02d766a",
+      "anchor_texts": [
+        "more likely to complete tasks"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "From RPGs to UX: How progress indicators affect user engagement",
+      "summary_or_excerpt": "Describes how progress indicators and gamified framing can increase completion behavior in digital products.",
+      "fetched_at": "2026-02-14T23:07:16Z"
+    },
+    {
+      "url": "https://www.polygon.com/2015/1/13/7540047/a-secret-slice-of-loading-screen-history/",
+      "anchor_texts": [
+        "loading screens"
+      ],
+      "classification": "artwork",
+      "status": "error",
+      "title": "",
+      "summary_or_excerpt": "Fetch failed in this run; retained as an artwork source link from the WSC topic.",
+      "fetched_at": "2026-02-14T23:07:16Z"
+    },
+    {
+      "url": "https://blog.google/products-and-platforms/products/chrome/chrome-dino/",
+      "anchor_texts": [
+        "Dinosaur Game"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "As the Chrome dino runs, we caught up with the Googlers who built it",
+      "summary_or_excerpt": "Google interview about design and rollout of the Chrome offline dinosaur mini-game.",
+      "fetched_at": "2026-02-14T23:07:16Z"
+    },
+    {
+      "url": "https://www.nbcchicago.com/news/local/beware-the-table-game-consumers-complain-about-restaurant-table-games-little-known-fee/57696/",
+      "anchor_texts": [
+        "for a fee"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "‘Beware the Table Game’: Consumers Complain About Restaurant Table Games’ Little-Known Fee – NBC Chicago",
+      "summary_or_excerpt": "Reports diner complaints about unclear charges on restaurant table-game terminals.",
+      "fetched_at": "2026-02-14T23:07:16Z"
+    },
+    {
+      "url": "https://www.theatlantic.com/business/archive/2016/11/progress-isnt-natural-mokyr/507740/",
+      "anchor_texts": [
+        "relatively new one"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Joel Mokyr: Progress Isn't Natural - The Atlantic",
+      "summary_or_excerpt": "Essay arguing that belief in historical progress is a human-made modern idea, not a natural constant.",
+      "fetched_at": "2026-02-14T23:07:16Z"
+    },
+    {
+      "url": "https://web.archive.org/web/20161117103456/https://www.theatlantic.com/business/archive/2016/11/progress-isnt-natural-mokyr/507740/",
+      "anchor_texts": [
+        "alternate link"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Joel Mokyr: Progress Isn't Natural - The Atlantic (Web Archive snapshot)",
+      "summary_or_excerpt": "Archived copy of the Atlantic article to preserve access to the same argument about progress as a historical construct.",
+      "fetched_at": "2026-02-14T23:07:16Z"
+    },
+    {
+      "url": "https://randomdailyart.com/art/2025-03-19/",
+      "anchor_texts": [
+        "1909 painting"
+      ],
+      "classification": "artwork",
+      "status": "error",
+      "title": "",
+      "summary_or_excerpt": "Fetch failed in this run; painting details were corroborated via Library of Congress-linked records.",
+      "fetched_at": "2026-02-14T23:07:16Z"
+    }
+  ],
+  "derived_items": [
+    {
+      "type": "artwork",
+      "name": "Galaxian",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Galaxian"
+      ]
+    },
+    {
+      "type": "artwork",
+      "name": "Surely the world is growing better",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.loc.gov/pictures/item/2011647517/",
+        "https://www.theodorerooseveltcenter.org/digital-library/o288522/"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Indeterminate progress bar",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Progress_bar"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Splash screen",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Splash_screen"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Console output",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Standard_streams"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Skeleton screen",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://mui.com/material-ui/react-skeleton/"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Throbber",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Throbber"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Gross Domestic Product (GDP)",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://databank.worldbank.org/metadataglossary/world-development-indicators/series/NY.GDP.MKTP.CD/~/home"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Gross National Income (GNI)",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://datahelpdesk.worldbank.org/knowledgebase/articles/378831-why-use-gni-per-capita-to-classify-economies-into"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Gini coefficient",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://data.worldbank.org/indicator/SI-POV-GINI"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Human Development Index (HDI)",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://hdr.undp.org/data-center/human-development-index"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Multidimensional Poverty Index (MPI)",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.undp.org/press-releases/11-billion-people-live-multidimensional-poverty-nearly-half-billion-these-live-conflict-settings"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Labor productivity",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.oecd.org/en/data/indicators/labour-productivity-and-utilisation.html"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Happiness Index (World Happiness Report ranking)",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://worldhappiness.report/"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Passport Index (Henley Passport Index)",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.henleyglobal.com/passport-index/ranking"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Big Mac Index",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Big_Mac_Index"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Second Law of Thermodynamics",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/science/second-law-of-thermodynamics"
+      ]
+    }
+  ]
+}

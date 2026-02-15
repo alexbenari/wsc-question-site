@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/wsc-question.schema.json",
+  "title": "WSC Question",
+  "type": "object",
+  "required": ["category", "question", "choices", "correct", "topics"],
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": [
+        "single_topic_understanding",
+        "context_clues",
+        "comparative_consequences",
+        "thematic_synthesis"
+      ]
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "choices": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "correct": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "E"]
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,102 @@
+{
+  "title": "Introductory Questions",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:02:47Z",
+  "bundle_or_page_sources": [
+    {
+      "type": "local_topic_snapshot",
+      "file": "wsc-topics.html",
+      "topic_title": "Introductory Questions",
+      "notes": "Authoritative source for topic prose and discovered links."
+    }
+  ],
+  "links": [
+    {
+      "url": "https://www.youtube.com/watch?v=6pcwq2usV7Y",
+      "classification": "artwork",
+      "status": "error",
+      "title": "YouTube link (inaccessible during extraction)",
+      "summary_or_excerpt": "Anchor text references Frank Sinatra lyric opening to \"My Way\".",
+      "anchor_texts": [
+        "And now, the end is near"
+      ],
+      "fetched_at": "2026-02-14T23:02:47Z"
+    },
+    {
+      "url": "https://www.brightwalldarkroom.com/2019/04/17/return-of-the-king-2003/",
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Here at the End of All Things: In Defense of The Return of the King\u2019s Five Separate Endings",
+      "summary_or_excerpt": "Essay argues the film\u2019s multiple ending sequences each close a different narrative thread.",
+      "anchor_texts": [
+        "five separate endings"
+      ],
+      "fetched_at": "2026-02-14T23:02:47Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=tTwokjazG5Y",
+      "classification": "artwork",
+      "status": "error",
+      "title": "YouTube link (inaccessible during extraction)",
+      "summary_or_excerpt": "Anchor text references \"I Just Can't Wait to Be King\" from The Lion King.",
+      "anchor_texts": [
+        "I just can\u2019t wait to be king"
+      ],
+      "fetched_at": "2026-02-14T23:02:47Z"
+    },
+    {
+      "url": "https://www.smithsonianmag.com/history/visions-of-nuclear-powered-cars-captivated-cold-war-america-but-the-technology-never-really-worked-180985437/",
+      "classification": "concept",
+      "status": "ok",
+      "title": "Visions of Nuclear-Powered Cars Captivated Cold War America, but the Technology Never Really Worked",
+      "summary_or_excerpt": "Cold War prototypes promised long range but shielding, reactor size, waste, and cost blocked practical deployment.",
+      "anchor_texts": [
+        "nuclear-powered cars"
+      ],
+      "fetched_at": "2026-02-14T23:02:47Z"
+    },
+    {
+      "url": "https://www.bbc.com/future/article/20120221-food-pills-a-staple-of-sci-fi",
+      "classification": "concept",
+      "status": "error",
+      "title": "BBC Future link (inaccessible during extraction)",
+      "summary_or_excerpt": "Linked by WSC as a reference for \"food pills\"; page fetch failed in this run.",
+      "anchor_texts": [
+        "food pills"
+      ],
+      "fetched_at": "2026-02-14T23:02:47Z"
+    },
+    {
+      "url": "https://blakesnow.com/why-most-people-dont-finish-video-games/",
+      "classification": "general",
+      "status": "ok",
+      "title": "Why most people don\u2019t finish video games",
+      "summary_or_excerpt": "Article discusses low completion rates and cites time limits, distractions, and game length as factors.",
+      "anchor_texts": [
+        "videogames are left unfinished"
+      ],
+      "fetched_at": "2026-02-14T23:02:47Z"
+    }
+  ],
+  "derived_items": [
+    {
+      "item_type": "concept",
+      "name": "3D television",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/3D_television"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Diminishing returns",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Diminishing_returns",
+        "https://www.investopedia.com/terms/l/lawofdiminishingmarginalreturn.asp"
+      ]
+    }
+  ]
+}

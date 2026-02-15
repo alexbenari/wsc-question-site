@@ -1,0 +1,97 @@
+{
+  "title": "Call of Duty-Free",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:46:20.4938940Z",
+  "topic_text": "People on the road have historically needed places to park themselves too. With your team, explore the history of inns and hotels, including what might be the oldest hotel in the world. What differentiates a hotel from earlier forms of accommodation, such as post houses.\n\nThe rise of hotels coincided with the rise of tourism, travel for leisure instead of for migration or business. Historians trace the roots of modern tourism to the grand tours of the 17th and 18th centuries, in which young aristocrats would travel across Europe as a rite of passage. Review a typical grand tourist itinerary, then discuss with your team: in what sense does this tradition continue today.\n\nThe grand tour was a privilege afforded mainly to the nobility and the wealthy. It took the emergence of the railway, the ocean liner, and the passenger jet, along with the rise of a middle class with enough disposable income, to bring tourism to the masses. Explore the history of leisure travel, then discuss with your team: why do certain places attract more tourists. Is it possible to attract too many.\n\nSome people (and American politicians) long for the so-called Golden Age of Travel: an era of opulent ocean liners, spacious flying boats, and wealthy travelers dressed to impress. They contrast this glowing picture with the cramped seats on modern airplanes and images of barefooted passengers clipping their nails at 30,000 feet. Whether or not such a golden era ever existed, historians have their doubts. Discuss with your team: what, if anything, should be done to improve the travel experience today. Be sure to consider the psychology behind tourist misbehavior: is there something about traveling that encourages people to act in ways they would not at home.\n\nAlthough nothing beats a Jet2 Holiday, tourists are increasingly avoiding tours that shuffle everyone through the same overcrowded museums and restaurants in favor of more authentic travel experiences. Explore the following niche forms of travel and consider what role social media may have had in promoting them. How realistic is it to engage in deep exchange and learning while on holiday.\n\nheritage tourism | ecotourism | gastrotourism | agritourism | monastic retreats\nvoluntourism | edutourism | wellness retreats | dark tourism\n\nPeople are not the only things that travel; goods do too. Before the era of long-distance shipping, a trader who did not want to confront the full length of a trade road might transport goods to or from an entrepot. These market towns were waystations where goods were imported, stored, and traded again without being subject to local duties. Learn more about the terms and places below as you explore the history of getting goods from here to there to an Amazon Prime truck.\n\nentrepots | waystations | free-trade zones | transshipment | caravanserai\nSilk Road | Piraeus | Tyrus | Lothal | Carthage\nShimoda & Hakodate | Malacca | Istanbul | Chicago | Hong Kong",
+  "learning_guidelines": [
+    "With your team, explore the history of inns and hotels, including what might be the oldest hotel in the world.",
+    "Review a typical grand tourist itinerary, then discuss with your team in what sense this tradition continues today.",
+    "Explore the history of leisure travel, then discuss with your team why some places attract more tourists and whether places can attract too many.",
+    "Discuss with your team what should be done to improve travel experiences today, including the psychology behind tourist misbehavior.",
+    "Explore niche forms of travel and consider what role social media has in promoting them.",
+    "Learn more about trade-road terms and places as you explore the history of moving goods."
+  ],
+  "linked_text_entries": [
+    {
+      "url": "https://coursebible.com/posts/the-comprehensive-history-of-hotels-from-ancient-inns-to-modern-luxury",
+      "anchor_texts": ["history of inns and hotels"],
+      "summary": "Background reading on the development of inns and hotels over time."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_8W2LIfl5RE",
+      "anchor_texts": ["oldest hotel in the world"],
+      "summary": "Video reference connected to claims about one of the oldest continuously operating hotels."
+    },
+    {
+      "url": "https://www.historic-uk.com/CultureUK/Grand-Tour/",
+      "anchor_texts": ["grand tours"],
+      "summary": "Overview of the European Grand Tour tradition and its social role among elites."
+    },
+    {
+      "url": "https://www.thoughtco.com/grand-tour-of-europe-1435014",
+      "anchor_texts": ["grand tourist itinerary"],
+      "summary": "Example itinerary and contextual explanation of Grand Tour travel patterns."
+    },
+    {
+      "url": "https://www.bbc.co.uk/bitesize/guides/zkgxsbk/revision/3",
+      "anchor_texts": ["tourism to the masses"],
+      "summary": "Educational overview of how technology and social change expanded mass tourism."
+    },
+    {
+      "url": "https://www.independent.co.uk/travel/news-and-advice/sean-duffy-transport-secretary-air-travel-thanksgiving-request-b2869798.html",
+      "anchor_texts": ["American politicians"],
+      "summary": "Example contemporary commentary invoked in discussion of travel quality and behavior."
+    },
+    {
+      "url": "https://www.theatlantic.com/newsletters/archive/2025/07/has-air-travel-ever-been-good/683584/",
+      "anchor_texts": ["historians have their doubts"],
+      "summary": "Referenced argument that the so-called Golden Age of Travel may be nostalgic mythmaking."
+    },
+    {
+      "url": "https://web.archive.org/web/20250717203429/https:/www.theatlantic.com/newsletters/archive/2025/07/has-air-travel-ever-been-good/683584/",
+      "anchor_texts": ["alternate link"],
+      "summary": "Archive backup of the Atlantic article used as a stability fallback."
+    },
+    {
+      "url": "https://www.bbc.com/travel/article/20240718-why-do-tourists-behave-badly-on-holiday",
+      "anchor_texts": ["psychology behind tourist misbehavior"],
+      "summary": "Behavioral framing for why people may act differently while traveling."
+    },
+    {
+      "url": "https://www.sixthtone.com/news/1016254",
+      "anchor_texts": ["social media"],
+      "summary": "Prompt source for discussing social media influence on niche travel trends."
+    }
+  ],
+  "artworks": [],
+  "concepts": [
+    {"name":"heritage tourism","year":null,"source_links":["https://www.unwto.org/sustainable-development/cultural-tourism"],"description":"Travel centered on historic sites, traditions, and cultural inheritance. It often overlaps with museums, monuments, and local intangible heritage. In this topic it helps compare education, identity, and commercialization in travel."},
+    {"name":"ecotourism","year":null,"source_links":["https://www.unep.org/explore-topics/resource-efficiency/what-we-do/sustainable-lifestyles/ecotourism"],"description":"Nature-focused travel intended to reduce environmental harm and support conservation or local communities. It is frequently marketed as low-impact alternative tourism. In this topic it raises authenticity and sustainability tradeoffs."},
+    {"name":"gastrotourism","year":null,"source_links":["https://www.unwto.org/gastronomy-tourism"],"description":"Travel motivated by food experiences, local cuisine, and culinary culture. It can support local producers and place branding. In this topic it illustrates niche tourism built around lifestyle and identity."},
+    {"name":"agritourism","year":null,"source_links":["https://www.britannica.com/money/agritourism"],"description":"Farm- and rural-based visitor activities such as farm stays and agricultural experiences. It blends leisure with exposure to food production and rural economies. In this topic it represents alternatives to mass urban tourism."},
+    {"name":"monastic retreats","year":null,"source_links":["https://www.britannica.com/topic/monasticism"],"description":"Short stays at monasteries or similar religious communities for contemplation or spiritual practice. These trips emphasize discipline, silence, or reflection over consumption. In this topic they test whether tourism can be inward-looking and transformative."},
+    {"name":"voluntourism","year":null,"source_links":["https://www.nationalgeographic.com/travel/article/voluntourism"],"description":"Travel combining leisure with volunteer work, often in education, health, or conservation projects. It is promoted as socially meaningful but criticized when poorly designed. In this topic it directly raises ethical questions about authenticity and impact."},
+    {"name":"edutourism","year":null,"source_links":["https://www.unwto.org/education-tourism"],"description":"Travel primarily for learning experiences such as courses, exchanges, or cultural study. It can overlap with language programs and study tours. In this topic it supports discussion of whether holidays can deliver deep learning."},
+    {"name":"wellness retreats","year":null,"source_links":["https://www.globalwellnessinstitute.org/what-is-wellness/wellness-tourism/"],"description":"Trips focused on health, stress reduction, and wellbeing practices, often through structured programs. The sector includes spa, mindfulness, and fitness-oriented travel. In this topic it shows how tourism markets personal optimization."},
+    {"name":"dark tourism","year":null,"source_links":["https://www.britannica.com/topic/dark-tourism"],"description":"Visitation to sites associated with death, tragedy, or disaster. It raises questions about memory, ethics, and commercialization of suffering. In this topic it contrasts educational intent with voyeurism risk."},
+    {"name":"entrepot","year":null,"source_links":["https://www.britannica.com/dictionary/entrepot"],"description":"A trade center where imported goods are stored and re-exported, often with favorable duty arrangements. Historically, entrepots reduced risk and distance for merchants. In this topic the term anchors premodern and modern logistics networks."},
+    {"name":"waystation","year":null,"source_links":["https://www.britannica.com/dictionary/waystation"],"description":"A stopping place on a long route for rest, exchange, or transfer. Waystations supported overland trade and travel infrastructure. In this topic they connect movement of goods to travel systems."},
+    {"name":"free-trade zone","year":null,"source_links":["https://www.britannica.com/money/free-trade-zone"],"description":"A designated area with reduced customs or regulatory barriers to facilitate trade and manufacturing. Such zones shape global supply chains and port competitiveness. In this topic they update the entrepot idea for modern commerce."},
+    {"name":"transshipment","year":null,"source_links":["https://www.britannica.com/dictionary/transshipment"],"description":"Transfer of cargo from one vehicle or vessel to another during shipment. It is common at hubs linking regional and intercontinental routes. In this topic it explains how goods travel in multi-leg systems."},
+    {"name":"caravanserai","year":null,"source_links":["https://www.britannica.com/topic/caravanserai"],"description":"Roadside inn used historically by caravan traders, especially across Asia and the Middle East. These structures supported long-distance commerce and security. In this topic they represent earlier hospitality and logistics infrastructure."},
+    {"name":"Silk Road","year":null,"source_links":["https://www.britannica.com/place/Silk-Road-trade-route-Eurasia"],"description":"Interconnected Eurasian trade routes linking East Asia, Central Asia, the Middle East, and Europe. Beyond goods, the routes transmitted religions, technologies, and ideas. In this topic it is a model of long-distance exchange before modern shipping."},
+    {"name":"Piraeus","year":null,"source_links":["https://www.britannica.com/place/Piraeus"],"description":"Port city serving Athens and a major maritime node in the eastern Mediterranean. It has long strategic value in regional trade and naval logistics. In this topic it is an example of a key transit and exchange point."},
+    {"name":"Tyrus (Tyre)","year":null,"source_links":["https://www.britannica.com/place/Tyre-ancient-city-Lebanon"],"description":"Ancient Phoenician port city, widely known in English as Tyre, with strong historical maritime trade influence. It played a major role in Mediterranean commerce. In this topic it illustrates long-standing port-based exchange networks."},
+    {"name":"Lothal","year":null,"source_links":["https://www.britannica.com/place/Lothal"],"description":"Indus Valley archaeological site in present-day India associated with early urban trade and dock infrastructure. Evidence suggests organized commerce and craft production. In this topic it extends logistics history deep into antiquity."},
+    {"name":"Carthage","year":null,"source_links":["https://www.britannica.com/place/Carthage-ancient-city-Tunisia"],"description":"Ancient North African city and maritime power central to Mediterranean trade and conflict. Its strategic location enabled broad commercial reach. In this topic it is a historical example of trade-network competition."},
+    {"name":"Shimoda","year":null,"source_links":["https://www.britannica.com/place/Shimoda"],"description":"Japanese port city associated with reopening Japan to foreign contact in the 19th century. It became significant in treaty-port dynamics. In this topic it marks how policy changes can rewire trade routes."},
+    {"name":"Hakodate","year":null,"source_links":["https://www.britannica.com/place/Hakodate"],"description":"Port city in Hokkaido, Japan, historically important in maritime trade and modernization-era international contact. It developed as a gateway in northern Japan. In this topic it complements Shimoda as an opening-era node."},
+    {"name":"Malacca","year":null,"source_links":["https://www.britannica.com/place/Malacca-Malaysia"],"description":"Historic Malaysian port city on the Strait of Malacca, one of the world’s most important sea corridors. Its location made it a major transshipment and trading center. In this topic it highlights chokepoints in global movement."},
+    {"name":"Istanbul","year":null,"source_links":["https://www.britannica.com/place/Istanbul"],"description":"City straddling Europe and Asia along the Bosporus, with long-standing commercial and geopolitical significance. Its position links Black Sea and Mediterranean systems. In this topic it exemplifies crossroads logistics and culture."},
+    {"name":"Chicago","year":null,"source_links":["https://www.britannica.com/place/Chicago"],"description":"Major U.S. transportation and distribution hub shaped by rail, waterways, and highway connectivity. It became central to continental freight movement and markets. In this topic it represents inland logistics infrastructure at scale."},
+    {"name":"Hong Kong","year":null,"source_links":["https://www.britannica.com/place/Hong-Kong"],"description":"Global port and finance center with historic entrepot functions linking China and world markets. Its legal and commercial institutions supported high-volume trade. In this topic it is a modern benchmark for trade intermediation."}
+  ],
+  "persons": []
+}

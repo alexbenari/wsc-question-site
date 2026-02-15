@@ -1,0 +1,265 @@
+{
+  "title": "Monkey See, Monkey Prototype",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:27:37Z",
+  "bundle_or_page_sources": [
+    {
+      "type": "local_snapshot",
+      "path": "wsc-topics.html",
+      "role": "authoritative_wsc_topic_text_and_links"
+    },
+    {
+      "type": "reference_page",
+      "url": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+      "role": "page_identity_reference_only"
+    }
+  ],
+  "links": [
+    {
+      "url": "https://www.techeblog.com/10-early-and-rarely-seen-prototypes-of-now-famous-gadgets/",
+      "anchor_texts": [
+        "some examples"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "10 Early and Rarely Seen Prototypes of Now Famous Gadgets - TechEBlog",
+      "summary_or_excerpt": "Examples of early gadget prototypes used to illustrate how rough early versions evolve into mainstream products.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://wccftech.com/feast-your-eyes-on-the-original-iphone-m68-prototype/",
+      "anchor_texts": [
+        "the iPhone"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "Feast Your Eyes On The Original 'iPhone M68' Prototype",
+      "summary_or_excerpt": "Coverage of an early iPhone prototype used as a concrete case of major design change between prototype and launch.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://hollowaygroup.com.au/blogs/news/the-prototyping-process-explained-from-concept-to-final-design",
+      "anchor_texts": [
+        "prototyping cycle"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "The Prototyping Process Explained: From Concept to Final Design",
+      "summary_or_excerpt": "Explains prototyping stages from low-fidelity to high-fidelity models and iterative feedback loops.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://www.biography.com/inventors/sarah-boone",
+      "anchor_texts": [
+        "Sarah Boone"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "Sarah Boone - Biography, Inventor of the Modern-Day Ironing Board",
+      "summary_or_excerpt": "Biographical context for Sarah Boone, referenced in the topic as an inventor role model.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://www.ruthtrumpold.id.au/destech/?page_id=607",
+      "anchor_texts": [
+        "rapid prototyping"
+      ],
+      "classification": "concept",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Source page inaccessible during extraction; concept supplemented with Autodesk and Wikipedia references.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://www.ibm.com/think/topics/vibe-coding",
+      "anchor_texts": [
+        "vibe coding"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "What is Vibe Coding? | IBM",
+      "summary_or_excerpt": "Describes AI-assisted coding workflows and potential benefits such as rapid MVP experimentation.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://www.linkedin.com/pulse/vibe-coding-creates-nightmare-computer-scientists-fix-yerramsetti-b5pjc",
+      "anchor_texts": [
+        "uncertain quality"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "Vibe coding creates nightmare for computer scientists to fix",
+      "summary_or_excerpt": "Opinion source emphasizing downstream quality and maintenance risks in AI-generated code.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://slate.com/human-interest/2015/08/the-turk-a-chess-playing-robot-was-a-hoax-that-started-an-early-conversation-about-ai.html",
+      "anchor_texts": [
+        "not an early example of AI"
+      ],
+      "classification": "concept",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Slate page inaccessible during extraction; Mechanical Turk concept supported with Britannica and Wikipedia references.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://www.thisisservicedesigndoing.com/methods/wizard-of-oz-approaches",
+      "anchor_texts": [
+        "Wizard of Oz testing"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "#TiSDD Method: Wizard of Oz approaches",
+      "summary_or_excerpt": "Describes simulated automation where hidden operators generate responses to test service interactions.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://www.theguardian.com/technology/video/2021/aug/20/elon-musk-plan-tesla-bot-man-dancing-bodysuit-video",
+      "anchor_texts": [
+        "dancer in a costume"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "Elon Musk unveils plan for 'Tesla Bot' with man dancing in a bodysuit - video",
+      "summary_or_excerpt": "Coverage of Tesla's 2021 event segment where a performer represented the proposed humanoid robot.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://futurism.com/future-society/tesla-teleoperator-headset-optimus-fall",
+      "anchor_texts": [
+        "still not quite there"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "Amazing Video Shows Tesla Optimus Teleoperator Taking Off Headset, Causing Robot to Stumble and Collapse",
+      "summary_or_excerpt": "Report arguing recent Optimus demonstrations still involve substantial human teleoperation.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://sea.mashable.com/tech/34699/fake-tech-demos-a-brief-history",
+      "anchor_texts": [
+        "some other examples"
+      ],
+      "classification": "general",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Linked historical roundup of fake demos; page inaccessible during extraction.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "http://arstechnica.com/gadgets/2024/04/amazon-ends-ai-powered-store-checkout-which-needed-1000-video-reviewers/",
+      "anchor_texts": [
+        "thousands of low-paid workers"
+      ],
+      "classification": "general",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Linked reporting on human labor in Just Walk Out operations; page inaccessible during extraction.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    },
+    {
+      "url": "https://www.linkedin.com/posts/sudotong_we-charged-100month-for-an-ai-that-was-activity-7393690382884044800-9X8J",
+      "anchor_texts": [
+        "founders listening in"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "We charged $100/month for an AI that was really just two guys surviving on pizza...",
+      "summary_or_excerpt": "Founder post describing early manual intervention in an AI notetaking service before model maturity.",
+      "fetched_at": "2026-02-14T23:27:37Z"
+    }
+  ],
+  "derived_items": [
+    {
+      "item_type": "concept",
+      "name": "Sketches",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Sketch_(drawing)"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Storyboarding",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Storyboard"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Paper prototypes",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.interaction-design.org/literature/topics/paper-prototyping"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Low-fidelity prototypes",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://hollowaygroup.com.au/blogs/news/the-prototyping-process-explained-from-concept-to-final-design"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "High-fidelity prototypes",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://hollowaygroup.com.au/blogs/news/the-prototyping-process-explained-from-concept-to-final-design"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Wireframing",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.figma.com/resource-library/wireframe-vs-mockup/"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Mockup",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.figma.com/resource-library/wireframe-vs-mockup/"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Proof of concept",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Proof_of_concept"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "User testing",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Usability_testing"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Minimum viable product",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.atlassian.com/agile/product-management/minimum-viable-product"
+      ]
+    },
+    {
+      "item_type": "concept",
+      "name": "Minimum marketable feature",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Incremental_funding_methodology"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "title": "Home and Wandering",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:40:49.914026Z",
+  "bundle_or_page_sources": [
+    {
+      "type": "local_snapshot",
+      "path": "wsc-topics.html",
+      "topic_title": "Home and Wandering",
+      "line_span": "2163-2213"
+    }
+  ],
+  "links": [
+    {
+      "url": "https://education.nationalgeographic.org/resource/compass/",
+      "anchor_texts": [
+        "the compass"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Compass overview used to frame maritime navigation technology.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.birdwatching.com/stories/indigobunting-stars.html",
+      "anchor_texts": [
+        "indigo bunting"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Example source on stellar navigation in migratory birds.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.science.org/content/article/dung-beetles-navigate-milky-way",
+      "anchor_texts": [
+        "dung beetle"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Article on dung beetle celestial orientation behavior.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.popsci.com/environment/honeybees-landmarks/",
+      "anchor_texts": [
+        "honeybees"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Source about bee use of landmarks in navigation.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://ssec.si.edu/stemvisions-blog/how-do-birds-navigate",
+      "anchor_texts": [
+        "homing pigeons"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Educational overview of avian navigation mechanisms.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.nsf.gov/news/geomagnetic-landmarks-give-turtles-sense-where",
+      "anchor_texts": [
+        "sea turtles"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Report on sea turtle geomagnetic orientation findings.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://serres-lab.com/navigation-news-from-the-royal-institute-of-navigation-path-integration-lessons-from-the-desert-ants/",
+      "anchor_texts": [
+        "desert ants"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Summary of path integration lessons from desert ant research.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ubZrAmRxy_M",
+      "anchor_texts": [
+        "sang Moana’s ancestors"
+      ],
+      "classification": "artwork",
+      "status": "skipped_non_html",
+      "title": null,
+      "summary_or_excerpt": "Video clip associated with Moana navigation song sequence.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://hokulea.com/polynesian-wayfinding/",
+      "anchor_texts": [
+        "a complex system"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Polynesian non-instrument wayfinding overview.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.terrain.org/2019/nonfiction/arctic-wayfinders/",
+      "anchor_texts": [
+        "the night sky and other markers"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Essay on Inuit and Arctic wayfinding practices.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.scientificamerican.com/article/did-vikings-navigate/",
+      "anchor_texts": [
+        "may be legendary"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Discussion of Viking navigation hypotheses and evidence.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://fogofworld.app/en/",
+      "anchor_texts": [
+        "Fog of World"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "App page for map fog-of-war style exploration tracking.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PLZbXA4lyCtqqUoWrFzmaFPYt9enUvRK3b",
+      "anchor_texts": [
+        "highlights from the film"
+      ],
+      "classification": "artwork",
+      "status": "skipped_non_html",
+      "title": null,
+      "summary_or_excerpt": "Playlist of scenes from The Terminal.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://screenrant.com/the-terminal-true-story-every-change-movie/",
+      "anchor_texts": [
+        "Mehran Karimi Nasser"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Comparison between real case and film adaptation.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.smh.com.au/traveller/travel-news/how-people-end-up-living-at-airports-for-months--even-years--at-a-time-20221116-h27w1y.html",
+      "anchor_texts": [
+        "more recent examples"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Examples of prolonged airport stays in recent years.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.reuters.com/article/world/uk/russian-airport-limbo-ends-for-snowden-new-life-begins-idUSBRE9710U0/",
+      "anchor_texts": [
+        "Edward Snowden"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "News report on end of Snowden airport transit limbo.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.history.com/articles/wwii-jewish-refugee-ship-st-louis-1939",
+      "anchor_texts": [
+        "the case of the St. Louis"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "History summary of the 1939 refugee ship rejection case.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.axios.com/2018/08/24/migration-drives-populist-surge-across-europe",
+      "anchor_texts": [
+        "European countries"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Article on migration politics and populist trends in Europe.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.poetryfoundation.org/poems/46550/the-new-colossus",
+      "anchor_texts": [
+        "“The New Colossus”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Poem text and context for Lazarus’s immigration poem.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.getty.edu/education/teachers/classroom_resources/curricula/dorothea_lange/downloads/lange_lesson11_adriennerich.rtf",
+      "anchor_texts": [
+        "“Prospective Immigrants Please Note”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Rich poem source material.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://poets.org/poem/we-are-americans-now-we-live-tundra",
+      "anchor_texts": [
+        "“We Are Americans Now, We Live in the Tundra”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Poem page from Poets.org.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://poets.org/poem/sound-one-immigrant-clapping",
+      "anchor_texts": [
+        "“The Sound of One Immigrant Clapping”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Poem page from Poets.org.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://poets.org/poem/mother-country",
+      "anchor_texts": [
+        "“Mother Country”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Poem page from Poets.org.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.fridakahlo.org/the-bus.jsp",
+      "anchor_texts": [
+        "The Bus"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Artwork overview page.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://lawrencemigration.phillipscollection.org/the-migration-series",
+      "anchor_texts": [
+        "Migration"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Digital presentation of Lawrence’s Migration Series.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=P3Y8OWkiUts",
+      "anchor_texts": [
+        "“Immigrant Song”"
+      ],
+      "classification": "artwork",
+      "status": "skipped_non_html",
+      "title": null,
+      "summary_or_excerpt": "Song video.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=MasUusA6F4k",
+      "anchor_texts": [
+        "“Far From the Home I Love”"
+      ],
+      "classification": "artwork",
+      "status": "skipped_non_html",
+      "title": null,
+      "summary_or_excerpt": "Song performance clip.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=aqQv3qef21A",
+      "anchor_texts": [
+        "“Illegal Alien”"
+      ],
+      "classification": "artwork",
+      "status": "skipped_non_html",
+      "title": null,
+      "summary_or_excerpt": "Song video.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=0zGMfqHciP0",
+      "anchor_texts": [
+        "“Isle of Hope, Isle of Tears”"
+      ],
+      "classification": "artwork",
+      "status": "skipped_non_html",
+      "title": null,
+      "summary_or_excerpt": "Song video.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://phmuseum.com/projects/borderlands-1",
+      "anchor_texts": [
+        "Borderlands"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": null,
+      "summary_or_excerpt": "Photo project page.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=OljZou-Z1Ps",
+      "anchor_texts": [
+        "“Somos Mas Americanos”"
+      ],
+      "classification": "artwork",
+      "status": "skipped_non_html",
+      "title": null,
+      "summary_or_excerpt": "Song video.",
+      "fetched_at": "2026-02-14T23:40:49.914026Z"
+    }
+  ],
+  "derived_items": [
+    {
+      "type": "concept",
+      "name": "Astrolabe",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Astrolabe"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Sextant",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Sextant"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Log tables and ephemerides",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Ephemeris"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Log and line",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Chip_log"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Chronometer",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Marine_chronometer"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Magnetoreception",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Magnetoreception"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Cryptochromes",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Cryptochrome"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Olfactory navigation",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Olfaction#Navigation"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Echolocation",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Animal_echolocation"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Zugunruhe",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Zugunruhe"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Constant frequency",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Frequency_modulation"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Frequency modulation",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Frequency_modulation"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Sunlight polarization",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Polarization_(waves)"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Spatial memory",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Spatial_memory"
+      ]
+    }
+  ]
+}

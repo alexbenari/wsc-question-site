@@ -1,0 +1,498 @@
+{
+  "title": "Where We’re Going, We’ll Still Need Them",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:44:56Z",
+  "topic_text": "\"All roads lead to Rome,\" insisted one medieval European proverb. (In other parts of the world, roads led elsewhere.) While Roman roads may be the most famous for their longevity and scale, they were far from the first road network.\n\nExplore the history of roads and the related terms below. Then, consider some of the most famous roads in the world both today and in ancient times.\n\nModern engineering is moving toward roads that do more than just sit on the ground: they participate actively in transport.\n\nAs you explore the innovations below, consider what problems they are trying to solve, what new ethical or environmental problems they might create, and whether the future of the road is paved at all.\n\nUrban designers describe desire paths as unofficial trails that show how travelers choose routes in practice rather than in plans.\n\nWith your team, consider the logic of shortcuts and scenic routes, including how humans, animals, and even slime molds decide where to go.\n\nExplore what makes stroads different from, and often more dangerous than, traditional streets and roads.\n\nIn the literary works below, the road is treated as a psychological landscape as much as a physical one.\n\nThe topic asks students to compare travel by choice and by necessity, and to examine why road trips became so associated with the United States.\n\nIt also asks whether long overland bus journeys count as road trips, why Route 66 remains culturally powerful, how motels shaped road travel, and whether art and music about roads idealize or critique car-based mobility.\n\nThe section closes by inviting reflection on circular versus straight-line travel through William Least Heat-Moon's Blue Highways.",
+  "learning_guidelines": [
+    "Explore the history of roads and related terms, then compare famous roads from today and ancient times.",
+    "Evaluate road-technology innovations by asking what problems they solve and what ethical or environmental tradeoffs they introduce.",
+    "Discuss with your team how shortcuts and scenic routes are chosen by people, animals, and other systems.",
+    "Discuss with your team whether stroads in your community are always harmful or sometimes useful.",
+    "As you read the listed works, compare travel by choice versus necessity and whether staying home can be preferable.",
+    "Read about the history of the road trip, then discuss why it is strongly associated with the United States.",
+    "Investigate long overland journeys such as London-Calcutta and Transoceánica, and debate what counts as a road trip.",
+    "Study Route 66 and compare it with a famous road in your own country.",
+    "Read about the emergence of motels and compare motel-like travel lodging in your own context.",
+    "Analyze whether the listed art and music works romanticize road travel or critique it.",
+    "Read the opening page of Blue Highways and discuss circular travel versus straight-line travel."
+  ],
+  "linked_text_entries": [
+    {
+      "url": "https://affinitymag.co.uk/most-famous-roads-in-the-world/",
+      "anchor_texts": [
+        "both today"
+      ],
+      "summary": "List-style overview of famous roads used as a comparative prompt for contemporary examples."
+    },
+    {
+      "url": "https://medium.com/@anmol.v1/where-history-walked-the-worlds-most-legendary-roads-9226002af3d1",
+      "anchor_texts": [
+        "ancient times"
+      ],
+      "summary": "General-interest article highlighting historically notable roads and their cultural memory."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ngSgEAbQWGs",
+      "anchor_texts": [
+        "this video"
+      ],
+      "summary": "Video resource offered as an alternative format for learning about Route 66 and its legacy."
+    }
+  ],
+  "artworks": [
+    {
+      "creator": "Du Fu",
+      "title": "Travelling Again",
+      "year": "761 CE",
+      "source_links": [
+        "http://www.chinese-poems.com/d21t.html"
+      ],
+      "description": "A classical Chinese poem about movement and distance. Key context: Du Fu is a major Tang poet whose work often reflects displacement and social instability. In this topic, the poem frames travel as emotionally and politically charged rather than purely practical."
+    },
+    {
+      "creator": "William Shakespeare",
+      "title": "Sonnet 50",
+      "year": "1609",
+      "source_links": [
+        "https://poets.org/poem/how-heavy-do-i-journey-way-sonnet-50"
+      ],
+      "description": "A sonnet describing weary travel and emotional burden. Key facts: Sonnet 50 belongs to Shakespeare's 1609 sequence and links physical journeying to inward struggle. It supports the topic's contrast between chosen and constrained movement."
+    },
+    {
+      "creator": "John Masefield",
+      "title": "Sea Fever",
+      "year": "1902",
+      "source_links": [
+        "https://www.poetryfoundation.org/poems/54932/sea-fever-56d235e0d871e"
+      ],
+      "description": "A lyric poem expressing a powerful longing for the sea. Key context: Masefield's speaker is drawn to perpetual travel and open horizons. The poem highlights travel as desire and identity, not just transportation."
+    },
+    {
+      "creator": "Carl Sandburg",
+      "title": "Window",
+      "year": "1914",
+      "source_links": [
+        "https://poets.org/poem/window-0"
+      ],
+      "description": "A short modern poem that treats a view outward as a prompt for imagination and movement. Sandburg's early 20th-century work often centers ordinary American life. Here it complements the theme of roads as psychological space."
+    },
+    {
+      "creator": "Robert Frost",
+      "title": "The Road Not Taken",
+      "year": "1915",
+      "source_links": [
+        "https://www.poetryfoundation.org/poems/44272/the-road-not-taken"
+      ],
+      "description": "A poem about choosing between diverging paths. Frost uses the road as metaphor for decision, memory, and self-narration. It directly reinforces the topic's focus on routes, choices, and consequences."
+    },
+    {
+      "creator": "W. B. Yeats",
+      "title": "Sailing to Byzantium",
+      "year": "1927",
+      "source_links": [
+        "https://www.poetryfoundation.org/poems/43291/sailing-to-byzantium"
+      ],
+      "description": "A poem of symbolic journey toward artistic and spiritual transformation. Yeats frames travel as movement between stages of life and value systems. It broadens the topic from literal roads to existential passage."
+    },
+    {
+      "creator": "Rüştü Onur",
+      "title": "The Journey",
+      "year": "early 20th century",
+      "source_links": [
+        "https://www.poetryfoundation.org/poetrymagazine/poems/1614984/the-journey"
+      ],
+      "description": "A poem centered on travel's emotional and reflective dimensions. In context, the work emphasizes journey as process rather than destination. It supports discussion of why and how people move."
+    },
+    {
+      "creator": "Czesław Miłosz",
+      "title": "This Only",
+      "year": "1988",
+      "source_links": [
+        "https://nexusonline.org/this-only-czeslaw-milosz/"
+      ],
+      "description": "A late poem reflecting on time, transience, and lived experience. Miłosz's perspective connects movement through places with movement through memory and history. The piece supports the topic's reflective treatment of travel."
+    },
+    {
+      "creator": "Richard Russo",
+      "title": "Just Drive",
+      "year": "1992",
+      "source_links": [
+        "https://www.infinityplus.co.uk/stories/justdrive.htm"
+      ],
+      "description": "A short story focused on driving as action and mental state. Key context: road movement becomes a frame for character and decision. It contributes to debate about whether driving liberates or isolates."
+    },
+    {
+      "creator": "Rita Dove",
+      "title": "Vacation",
+      "year": "1994",
+      "source_links": [
+        "https://poets.org/poem/vacation"
+      ],
+      "description": "A poem engaging temporary escape and travel perspective. Dove often compresses social observation into concise imagery. Here the work helps examine expectations versus realities of leisure travel."
+    },
+    {
+      "creator": "Nat King Cole",
+      "title": "(Get Your Kicks on) Route 66",
+      "year": "1946",
+      "source_links": [
+        "https://www.youtube.com/watch?v=9nuDE1SJlPo"
+      ],
+      "description": "A popular song celebrating U.S. highway travel by listing destinations along Route 66. The recording helped mythologize the road-trip experience in mass culture. It reflects how music can romanticize mobility."
+    },
+    {
+      "creator": "Edward Hopper",
+      "title": "Western Motel",
+      "year": "1957",
+      "source_links": [
+        "https://www.edwardhopper.net/western-motel.jsp"
+      ],
+      "description": "An oil painting of a roadside motel scene with a solitary figure and car-oriented setting. Hopper's work often highlights isolation in modern environments. It offers a more ambiguous, less celebratory view of road culture."
+    },
+    {
+      "creator": "Ed Ruscha",
+      "title": "Standard Station",
+      "year": "1966",
+      "source_links": [
+        "https://www.moma.org/collection/works/76637"
+      ],
+      "description": "A painting/print image of a gas station rendered as a bold modern icon. Ruscha's Pop-inflected approach turns roadside infrastructure into visual symbol. The work links roads to consumer culture and modern design."
+    },
+    {
+      "creator": "Willie Nelson",
+      "title": "On the Road Again",
+      "year": "1980",
+      "source_links": [
+        "https://www.youtube.com/watch?v=dBN86y30Ufc"
+      ],
+      "description": "A country song about constant touring and the pleasures of movement. It became a widely recognized anthem of life on the move. In this topic, it represents the optimistic narrative of road travel."
+    },
+    {
+      "creator": "David Hockney",
+      "title": "Pearblossom Hwy., 11-18th April 1986, #2",
+      "year": "1986",
+      "source_links": [
+        "https://davidhockneyexhibition.weebly.com/artwork-critiques.html"
+      ],
+      "description": "A large photographic collage of a California highway assembled from multiple viewpoints. Hockney challenges single-point perspective and fixed visual direction. The piece complicates how roads are seen and experienced."
+    },
+    {
+      "creator": "Tom Cochrane",
+      "title": "Life Is a Highway",
+      "year": "1991",
+      "source_links": [
+        "https://www.youtube.com/watch?v=U3sMjm9Eloo"
+      ],
+      "description": "A rock song using the highway as a metaphor for life's momentum and obstacles. Its chorus helped embed road imagery in popular motivational language. It supports analysis of idealized road metaphors."
+    },
+    {
+      "creator": "Bic Runga",
+      "title": "Drive",
+      "year": "1996",
+      "source_links": [
+        "https://www.youtube.com/watch?v=xHGUh30U4tQ"
+      ],
+      "description": "A pop song that uses driving imagery to express emotional distance and connection. The work treats movement as intimate and psychological rather than geographic. It aligns with the topic's interior view of travel."
+    },
+    {
+      "creator": "Norah Jones",
+      "title": "Come Away with Me",
+      "year": "2002",
+      "source_links": [
+        "https://www.youtube.com/watch?v=lbjZPFBD6JU"
+      ],
+      "description": "A song inviting shared departure and quiet escape. Though not strictly about roads, its travel invitation fits mobility as emotional choice. It contributes a softer alternative to highway anthems."
+    },
+    {
+      "creator": "William Least Heat-Moon",
+      "title": "Blue Highways",
+      "year": "1982",
+      "source_links": [
+        "https://www.scribd.com/document/119462191/Blue-Highways"
+      ],
+      "description": "A travel memoir about back-road journeys through the United States. Key facts: the title references blue secondary roads on old maps and emphasizes local encounters over speed. In this topic, it anchors reflection on purposeful wandering versus direct transit."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Roman roads",
+      "year": null,
+      "source_links": [
+        "https://www.history.com/articles/ancient-roman-roads-network"
+      ],
+      "description": "An extensive engineered road network built across the Roman world. Key context: routes supported military movement, administration, and trade over long distances. Relevance: the topic uses Roman roads as a benchmark for durability and scale."
+    },
+    {
+      "name": "Desire paths",
+      "year": null,
+      "source_links": [
+        "https://www.theguardian.com/cities/2018/oct/05/desire-paths-the-illicit-trails-that-defy-the-urban-planners"
+      ],
+      "description": "Informal paths created by repeated foot traffic outside planned routes. Key context: they reveal collective route choices and practical optimization. Relevance: they frame discussion of efficiency versus design intent."
+    },
+    {
+      "name": "Stroad",
+      "year": null,
+      "source_links": [
+        "https://theconversation.com/not-quite-a-street-not-quite-a-road-why-stroads-are-disasters-of-urban-planning-and-how-to-fix-them-232485"
+      ],
+      "description": "A hybrid corridor combining high-speed road functions with local street access. Key context: critics argue stroads are unsafe and economically inefficient because they do neither role well. Relevance: students are asked to evaluate local examples and tradeoffs."
+    },
+    {
+      "name": "Bertha Benz long-distance drive",
+      "year": "1888",
+      "source_links": [
+        "https://www.hagerty.co.uk/articles/136-years-ago-bertha-benz-did-more-than-just-take-a-drive/"
+      ],
+      "description": "A pioneering long-distance automobile trip from Mannheim to Pforzheim. Key context: Bertha Benz's journey demonstrated practical viability of early motor cars and prompted technical refinements. Relevance: it marks an origin point for modern road-trip culture."
+    },
+    {
+      "name": "Great American road trip",
+      "year": null,
+      "source_links": [
+        "https://www.openculture.com/2019/09/a-brief-history-of-the-great-american-road-trip.html"
+      ],
+      "description": "A cultural practice of long-distance leisure travel by car in the United States. Key context: it grew with mass car ownership, highways, and roadside services. Relevance: the topic questions why this idea is strongly associated with America."
+    },
+    {
+      "name": "London-Calcutta overland bus service",
+      "year": null,
+      "source_links": [
+        "https://secretldn.com/longest-bus-route-in-the-world-london-to-calcutta/"
+      ],
+      "description": "A historically notable long-distance intercontinental bus route linking Europe and South Asia. Key context: it represented extended overland mobility across multiple countries. Relevance: it complicates car-centric definitions of road trips."
+    },
+    {
+      "name": "Transoceánica bus route (Brazil-Peru)",
+      "year": null,
+      "source_links": [
+        "https://www.riotimesonline.com/brazil-news/rio-travel/the-worlds-longest-bus-route-leaves-brazil-and-lasts-5-days-its-surreal/"
+      ],
+      "description": "A very long contemporary bus journey crossing from Brazil toward Peru via transcontinental corridors. Key context: multi-day bus routes sustain long-form travel outside private cars. Relevance: it supports debate over what qualifies as a road trip."
+    },
+    {
+      "name": "Route 66",
+      "year": "1926",
+      "source_links": [
+        "https://www.youtube.com/watch?v=ngSgEAbQWGs"
+      ],
+      "description": "A historic U.S. highway popularly called the Mother Road. Key context: despite decommissioning as a through route, it remains a major cultural symbol. Relevance: the topic asks why its symbolic pull persists."
+    },
+    {
+      "name": "Motel",
+      "year": null,
+      "source_links": [
+        "https://www.pbssocal.org/shows/artbound/swimming-pools-and-movie-stars-a-history-of-the-worlds-first-motel",
+        "https://sah-archipedia.org/essays/CA-01-ART-01"
+      ],
+      "description": "A motor hotel designed for travelers arriving by car with direct parking access. Key context: motels expanded with highway travel and reshaped roadside architecture and tourism. Relevance: they show how infrastructure creates new social and economic forms."
+    },
+    {
+      "name": "Macadam",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Macadam"
+      ],
+      "description": "A road-building method using compacted layers of broken stone. Key context: developed in the early 19th century and foundational to modern paved roads. Relevance: one of the core technical terms in the topic's vocabulary list."
+    },
+    {
+      "name": "Pavement",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Road_surface"
+      ],
+      "description": "The engineered surface layer of a road used for vehicle and pedestrian movement. Key context: materials and structure affect durability, safety, and maintenance costs. Relevance: central to discussions of road design and innovation."
+    },
+    {
+      "name": "Asphalt",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Asphalt_concrete"
+      ],
+      "description": "A common paving material made from aggregates bound with bitumen. Key context: widely used because of smoothness, reparability, and cost profile. Relevance: appears in both traditional and self-healing road discussions."
+    },
+    {
+      "name": "Corduroy road",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Corduroy_road"
+      ],
+      "description": "A road made by laying logs perpendicular to travel direction over soft ground. Key context: used historically in muddy or swampy terrain to improve passability. Relevance: illustrates premodern and improvised road engineering."
+    },
+    {
+      "name": "Gallery road",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Avalanche_gallery"
+      ],
+      "description": "A road section protected by a covered gallery, often in mountain areas prone to rockfall or avalanches. Key context: these structures shield traffic from environmental hazards. Relevance: shows how terrain shapes road architecture."
+    },
+    {
+      "name": "Holloway",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Holloway"
+      ],
+      "description": "A sunken lane worn below surrounding land level by long-term erosion and traffic. Key context: common in older rural landscapes. Relevance: demonstrates how repeated movement physically sculpts routes over time."
+    },
+    {
+      "name": "Ridgeway",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Ridgeway_(road)"
+      ],
+      "description": "A route running along higher ground or ridge lines. Key context: ridge routes can offer drainage and visibility advantages. Relevance: contrasts with lowland paths in route-choice logic."
+    },
+    {
+      "name": "Milestone",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Milestone"
+      ],
+      "description": "A marker indicating distance along a route. Key context: milestones support navigation, administration, and maintenance. Relevance: highlights measurement and wayfinding on road networks."
+    },
+    {
+      "name": "Trackway",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Trackway"
+      ],
+      "description": "A basic route formed by repeated passage rather than full engineered paving. Key context: trackways represent early or low-infrastructure circulation. Relevance: useful for comparing formal roads with emergent paths."
+    },
+    {
+      "name": "Solar roadway",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Solar_roadway"
+      ],
+      "description": "A proposed or experimental road surface integrating photovoltaic elements. Key context: promoted as a way to co-produce transport and energy infrastructure, but challenged by cost and durability issues. Relevance: directly tied to the topic's innovation-and-tradeoff prompt."
+    },
+    {
+      "name": "Piezoelectric materials in roads",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Piezoelectricity"
+      ],
+      "description": "Materials that generate electrical charge under mechanical stress, potentially from passing traffic. Key context: road-energy harvesting is experimental and context-dependent. Relevance: exemplifies technologically active road surfaces."
+    },
+    {
+      "name": "Inductive charging road systems",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Inductive_charging"
+      ],
+      "description": "Wireless power transfer systems that can charge vehicles via embedded roadway infrastructure. Key context: dynamic charging is under development in multiple transport pilots. Relevance: addresses electrification and range concerns in future mobility."
+    },
+    {
+      "name": "DSRC (Dedicated Short-Range Communications)",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Dedicated_short-range_communications"
+      ],
+      "description": "A wireless communication standard for vehicle-to-vehicle and vehicle-to-infrastructure signaling. Key context: supports safety messaging and intelligent transport applications. Relevance: part of the topic's smart-road innovation set."
+    },
+    {
+      "name": "Self-healing asphalt",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Self-healing_material"
+      ],
+      "description": "Asphalt systems engineered to reduce or repair cracking through embedded mechanisms or treatments. Key context: intended to extend pavement life and reduce maintenance. Relevance: connects engineering innovation to cost and sustainability questions."
+    },
+    {
+      "name": "Modular pavement",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Pavers_(flooring)"
+      ],
+      "description": "Pavement built from repeatable units or panels that can be replaced individually. Key context: modularity can simplify maintenance and adaptation. Relevance: one candidate approach for flexible future roads."
+    },
+    {
+      "name": "Permeable pavement",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Permeable_paving"
+      ],
+      "description": "A pavement type that allows water infiltration through or between surface materials. Key context: used to reduce runoff and support stormwater management. Relevance: ties road design to environmental performance."
+    },
+    {
+      "name": "Traveling salesman problem",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Travelling_salesman_problem"
+      ],
+      "description": "A classic optimization problem seeking the shortest route visiting a set of locations once. Key context: central in operations research and computational complexity. Relevance: formalizes route-planning tradeoffs highlighted in the topic."
+    },
+    {
+      "name": "Vector-based navigation",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Vector_map"
+      ],
+      "description": "Navigation based on geometric vector representations of roads and features. Key context: supports scalable digital maps and routing systems. Relevance: links computational representation to real-world route choice."
+    },
+    {
+      "name": "Explore-exploit problem",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Exploration-exploitation_dilemma"
+      ],
+      "description": "A decision framework balancing use of known good options against searching for potentially better ones. Key context: appears in machine learning, economics, and behavior. Relevance: maps directly onto shortcut versus discovery choices in travel."
+    },
+    {
+      "name": "Route elasticity",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Induced_demand"
+      ],
+      "description": "The responsiveness of route choice and traffic patterns to changes in travel time, capacity, or cost. Key context: traveler behavior can shift when network conditions change. Relevance: helps explain why traffic outcomes can defy intuition."
+    },
+    {
+      "name": "Braess's paradox",
+      "year": "1968",
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Braess%27s_paradox"
+      ],
+      "description": "A network effect where adding a route can worsen overall traffic performance. Key context: local optimization by individuals can reduce system-wide efficiency. Relevance: supports critical evaluation of road-expansion assumptions."
+    },
+    {
+      "name": "Dead reckoning",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Dead_reckoning"
+      ],
+      "description": "Navigation by projecting position from a known point using speed, heading, and elapsed time. Key context: used historically at sea and in other transport contexts. Relevance: contrasts with modern sensor-rich routing methods."
+    },
+    {
+      "name": "Steiner tree problem",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Steiner_tree_problem"
+      ],
+      "description": "An optimization problem for connecting points with minimum total network length, possibly adding intermediate nodes. Key context: relevant to infrastructure and network design. Relevance: frames efficient path construction beyond simple shortest-path logic."
+    }
+  ],
+  "persons": [
+    "Bertha Benz",
+    "Bic Runga",
+    "Carl Sandburg",
+    "Czesław Miłosz",
+    "David Hockney",
+    "Du Fu",
+    "Ed Ruscha",
+    "Edward Hopper",
+    "John Masefield",
+    "Nat King Cole",
+    "Norah Jones",
+    "Richard Russo",
+    "Rita Dove",
+    "Robert Frost",
+    "Rüştü Onur",
+    "Tom Cochrane",
+    "W. B. Yeats",
+    "William Least Heat-Moon",
+    "William Shakespeare",
+    "Willie Nelson"
+  ]
+}

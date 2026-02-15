@@ -1,0 +1,120 @@
+{
+  "title": "Concluding Questions",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:54:56.5373102Z",
+  "bundle_or_page_sources": [
+    {
+      "type": "local_snapshot",
+      "path": "wsc-topics.html",
+      "section_title": "Concluding Questions",
+      "line_hint_start": 2350,
+      "line_hint_end": 2365,
+      "notes": "Authoritative source for topic prose and in-topic links."
+    }
+  ],
+  "links": [
+    {
+      "url": "https://thedecisionlab.com/biases/the-sunk-cost-fallacy",
+      "anchor_texts": ["the sunk cost fallacy"],
+      "classification": "concept",
+      "status": "ok",
+      "title": "The Sunk Cost Fallacy",
+      "summary_or_excerpt": "Explains how prior investments bias people toward continuing failing commitments.",
+      "fetched_at": "2026-02-14T23:54:56.5373102Z"
+    },
+    {
+      "url": "https://www.thecollector.com/zeno-paradoxes-motion-time/",
+      "anchor_texts": ["paradoxes of motion"],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Zeno's Paradoxes of Motion and Time",
+      "summary_or_excerpt": "Overview of Zeno's motion paradoxes, including the dichotomy argument about infinite subdivision.",
+      "fetched_at": "2026-02-14T23:54:56.5373102Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Gn51xYvJhQI",
+      "anchor_texts": ["linked with impatience"],
+      "classification": "general",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Link target was not retrievable in this run; retained as a cultural reference attached to impatience.",
+      "fetched_at": "2026-02-14T23:54:56.5373102Z"
+    },
+    {
+      "url": "https://theconversation.com/the-end-of-history-francis-fukuyamas-controversial-idea-explained-193225",
+      "anchor_texts": ["The End of History"],
+      "classification": "concept",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Link target was not retrievable in this run; concept captured via external corroborating sources.",
+      "fetched_at": "2026-02-14T23:54:56.5373102Z"
+    },
+    {
+      "url": "https://staticonthetv.substack.com/p/in-hindsight-stargate-universes-abrupt",
+      "anchor_texts": ["cancellation"],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "In hindsight: Stargate Universe's abrupt cancellation and unresolved ending",
+      "summary_or_excerpt": "Discusses how cancellation left Stargate Universe without narrative closure.",
+      "fetched_at": "2026-02-14T23:54:56.5373102Z"
+    },
+    {
+      "url": "https://screenrant.com/the-sopranos-cut-to-black-ending-legacy-17-years-later/",
+      "anchor_texts": ["cut to black"],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Link target was not retrievable in this run; topic context identifies The Sopranos ending reference.",
+      "fetched_at": "2026-02-14T23:54:56.5373102Z"
+    },
+    {
+      "url": "https://screenrant.com/life-of-pi-movie-ending-spoilers/",
+      "anchor_texts": ["last chapter"],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Link target was not retrievable in this run; topic context uses Life of Pi as an ambiguous ending example.",
+      "fetched_at": "2026-02-14T23:54:56.5373102Z"
+    },
+    {
+      "url": "https://screenrant.com/harry-potter-epilogue-problems/",
+      "anchor_texts": ["skipped their epilogues"],
+      "classification": "artwork",
+      "status": "error",
+      "title": null,
+      "summary_or_excerpt": "Link target was not retrievable in this run; topic context references debate over ending epilogues.",
+      "fetched_at": "2026-02-14T23:54:56.5373102Z"
+    }
+  ],
+  "derived_items": [
+    {
+      "type": "artwork",
+      "name": "Blade Runner",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/topic/Blade-Runner"
+      ],
+      "notes": "Inferred from unlinked text: 'Deckard may or may not be a replicant.'"
+    },
+    {
+      "type": "concept",
+      "name": "Patience",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/dictionary/patience"
+      ],
+      "notes": "Inferred from unlinked text: 'Explore the psychology of patience.'"
+    },
+    {
+      "type": "concept",
+      "name": "Liberal democracy",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://www.britannica.com/topic/liberal-democracy"
+      ],
+      "notes": "Inferred from unlinked text discussing Fukuyama's End of History framing."
+    }
+  ]
+}

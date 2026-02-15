@@ -1,0 +1,207 @@
+{
+  "title": "There’s a Draft in Here",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:15:19Z",
+  "topic_text": "Finished works do not materialize out of thin air. Authors, artists, musicians, architects, animators-nearly all creators go through one or more rough drafts before coming up with a finished product. For the drafts below, consider how much the work changes from one iteration to the next, and research the techniques that artists can use to transfer their sketches onto canvases.\n\nLeonardo da Vinci | Mona Lisa (Louvre) & Mona Lisa (Isleworth) (c. 16th century)\nVincent van Gogh | Bedroom in Arles (1888), Bedroom in Arles (1889), & Bedroom in Arles (1889)\nEdvard Munch | Despair (1892) & The Scream (1893)\nHenri Matisse | Dance (I) (1909) & Dance (II) (1910)\n\nIn songwriting, early drafts are called demos. Sometimes, the songwriter will perform them him or herself, even if the song is intended for someone else to sing. Consider the following demos and then the finished product, then ask yourself: what changed along the way? What makes the finished product feel more done?\n\nThe Beatles | Strawberry Fields Forever (Home Demo Sequence) (1966)\nLin-Manuel Miranda | This One's Mine (2018)\nSophia Anne Caruso | Dead Mom (Demo) (2019)\nEJAE | Golden (various demos) (2025)\n\nIn musical theatre, not all demos end up in the final product-but the Internet has allowed these unproduced numbers to find an audience. Consider the following demos that never quite got there. For each, discuss with your team: why do you think it was left out of the finished product?\n\nAladdin | Count on Me (1994)\nPocahontas | First to Dance (1995)\nBook of Mormon | Family Home Evening (2009)\nDear Evan Hansen | In the Bedroom Down the Hall (2017)\n\nMost performers rehearse before they go on stage; some people even rehearse before difficult conversations. Investigate the psychology of rehearsal. What parts of the brain does it affect? How do you know when you have rehearsed enough?",
+  "learning_guidelines": [
+    "Consider how much the work changes from one iteration to the next.",
+    "Research the techniques artists use to transfer sketches onto canvases.",
+    "Compare the demo versions with finished songs and identify what changed.",
+    "Discuss why particular musical-theatre demos may have been cut from final productions.",
+    "Investigate the psychology of rehearsal and its effects on the brain.",
+    "Reflect on how to tell when rehearsal is sufficient."
+  ],
+  "linked_text_entries": [],
+  "artworks": [
+    {
+      "creator": "Leonardo da Vinci",
+      "title": "Mona Lisa (Louvre)",
+      "year": "1503/1519",
+      "source_links": [
+        "https://artsandculture.google.com/asset/portrait-of-lisa-gherardini-wife-of-francesco-del-giocondo-known-as-monna-lisa-la-gioconda-or-mona-lisa-1503-1519-leonardo-di-ser-piero-da-vinci-dit-l%C3%A9onard-de-vinci-1452-1519-paris-mus%C3%A9e-du-louvre/uQGZ28lYUJ3OGw?hl=en"
+      ],
+      "description": "Oil portrait identified as Lisa Gherardini, with a seated figure against a distant landscape. Google Arts & Culture metadata identifies Leonardo da Vinci and a 1503/1519 date range, with Louvre provenance context. In this topic, it functions as a draft/iteration comparison baseline for later versions and attribution debates."
+    },
+    {
+      "creator": "Attributed to Leonardo da Vinci",
+      "title": "Mona Lisa (Isleworth)",
+      "year": "c. 16th century",
+      "source_links": [
+        "https://commons.wikimedia.org/wiki/File:Isleworthml.JPG"
+      ],
+      "description": "Wikimedia Commons file page presents the so-called Isleworth Mona Lisa, attributed on that page to Leonardo da Vinci. The source frames it as a related Mona Lisa variant rather than the Louvre painting. In this topic, it supports discussion of alternate versions and how works change across drafts or parallel iterations."
+    },
+    {
+      "creator": "Vincent van Gogh",
+      "title": "The Bedroom (Arles version)",
+      "year": "1888",
+      "source_links": [
+        "https://artsandculture.google.com/asset/KwF-AdF1REQl6w"
+      ],
+      "description": "Google Arts & Culture lists this Bedroom painting as created in October 1888 in Arles, France. The composition depicts Van Gogh's bedroom interior with simplified furniture, bold contouring, and expressive color. As a draft-comparison case, it helps students track what remained stable versus what changed in later versions."
+    },
+    {
+      "creator": "Vincent van Gogh",
+      "title": "The Bedroom (Art Institute link target)",
+      "year": "1889",
+      "source_links": [
+        "https://www.artic.edu/artworks/28560/the-bedroom"
+      ],
+      "description": "The WSC topic points to the Art Institute of Chicago page for The Bedroom, but that URL was inaccessible from the extraction environment. From the topic context, this link is one of the compared Bedroom versions in Van Gogh's iterative sequence. Its relevance is the same: evaluating revision across near-duplicate works."
+    },
+    {
+      "creator": "Vincent van Gogh",
+      "title": "Van Gogh's Bedroom in Arles",
+      "year": "1889",
+      "source_links": [
+        "https://artsandculture.google.com/asset/kQEugEsNjGDZfw"
+      ],
+      "description": "Google Arts & Culture metadata identifies this as the 1889 Musee d'Orsay version, oil on canvas. It repeats the bedroom motif with adjusted color, balance, and handling compared with the 1888 work. In the topic, this gives a concrete example of artistic reworking between drafts/versions."
+    },
+    {
+      "creator": "Edvard Munch",
+      "title": "Despair",
+      "year": "1892",
+      "source_links": [
+        "https://www.modernamuseet.se/stockholm/en/exhibitions/munch-by-himself/i-felt-the-great-scream-through-nature/"
+      ],
+      "description": "Moderna Museet describes Despair (1892) as the first version of the motif that develops into The Scream (1893). The work centers anxiety and melancholy in a fjord-side scene connected to Munch's diary text. In this topic, it illustrates how an early concept is transformed into a more universal later image."
+    },
+    {
+      "creator": "Edvard Munch",
+      "title": "The Scream",
+      "year": "1893",
+      "source_links": [
+        "https://www.nasjonalmuseet.no/en/collection/object/NG.M.00939"
+      ],
+      "description": "Nasjonalmuseet lists The Scream as a 1893 painting by Edvard Munch. The composition intensifies emotional distortion and existential anxiety relative to Despair. In this unit, the pair demonstrates iterative refinement from a related earlier work."
+    },
+    {
+      "creator": "Henri Matisse",
+      "title": "Dance (I)",
+      "year": "1909",
+      "source_links": [
+        "https://www.moma.org/collection/works/79124"
+      ],
+      "description": "MoMA identifies Dance (I) as an early-1909 oil on canvas study with large-format dimensions. The painting shows circularly linked nude dancers in a simplified landscape, emphasizing movement and rhythm. In this topic, it operates as a preparatory version for comparison with Dance (II)."
+    },
+    {
+      "creator": "Henri Matisse",
+      "title": "Dance (II)",
+      "year": "1910",
+      "source_links": [
+        "https://www.wikiart.org/en/henri-matisse/dance-ii-1910"
+      ],
+      "description": "WikiArt lists Dance (II) as a 1910 work by Henri Matisse, often presented as the developed successor to Dance (I). The scene retains the same dancing-figure motif while intensifying compositional and color decisions. For the guiding question, it is a direct case of draft-to-final evolution."
+    },
+    {
+      "creator": "The Beatles",
+      "title": "Strawberry Fields Forever (Home Demo Sequence)",
+      "year": "1966",
+      "source_links": [
+        "https://www.youtube.com/watch?v=9Zwe1C1G2ak"
+      ],
+      "description": "The topic presents this as an early demo sequence linked to a finished song. The YouTube link could not be fetched in this environment, so details are taken from WSC text only. It serves as an example of how arrangement and production can change between draft and release."
+    },
+    {
+      "creator": "Lin-Manuel Miranda",
+      "title": "This One's Mine",
+      "year": "2018",
+      "source_links": [
+        "https://www.youtube.com/watch?v=sf0qfktF44A"
+      ],
+      "description": "Listed by WSC as a demo-to-finished-product comparison item in songwriting. The linked YouTube page was inaccessible during extraction; no additional metadata was recovered. Its pedagogical role is to compare lyrical, structural, and performance differences across versions."
+    },
+    {
+      "creator": "Sophia Anne Caruso",
+      "title": "Dead Mom (Demo)",
+      "year": "2019",
+      "source_links": [
+        "https://www.youtube.com/watch?v=BXGr0olrThk"
+      ],
+      "description": "Included in the WSC list as a demo example for draft analysis in songwriting. The linked YouTube page was inaccessible from this environment. The item is used to discuss how vocal delivery, orchestration, and editing can affect perceived completeness."
+    },
+    {
+      "creator": "EJAE",
+      "title": "Golden (various demos)",
+      "year": "2025",
+      "source_links": [
+        "https://www.youtube.com/watch?v=FxEX_GWwE7M"
+      ],
+      "description": "WSC frames this as multiple demo iterations tied to a 2025 context. The linked YouTube source was inaccessible during extraction, so only local-topic evidence is used here. It represents iterative songwriting through several draft states."
+    },
+    {
+      "creator": "Aladdin (musical/theatrical context in topic list)",
+      "title": "Count on Me",
+      "year": "1994",
+      "source_links": [
+        "https://www.youtube.com/watch?v=W9ePWzAxO-s"
+      ],
+      "description": "Presented as an unproduced or cut musical-theatre demo that found an online audience. The YouTube source could not be fetched in this environment. In-topic relevance: understanding why promising draft material may be removed before final release."
+    },
+    {
+      "creator": "Pocahontas (musical/theatrical context in topic list)",
+      "title": "First to Dance",
+      "year": "1995",
+      "source_links": [
+        "https://www.youtube.com/watch?v=r_j4ALKLrOk"
+      ],
+      "description": "Listed in WSC as a demo that did not make the final product. The YouTube page was inaccessible during extraction. It supports discussion of editorial choices and production constraints in final-stage selection."
+    },
+    {
+      "creator": "Book of Mormon (musical/theatrical context in topic list)",
+      "title": "Family Home Evening",
+      "year": "2009",
+      "source_links": [
+        "https://www.youtube.com/watch?v=txG99YiQcNk"
+      ],
+      "description": "WSC includes this as an example of a song draft left out of the final production. The link target on YouTube could not be fetched from this environment. In this topic, it illustrates that draft quality alone does not guarantee inclusion."
+    },
+    {
+      "creator": "Dear Evan Hansen (musical/theatrical context in topic list)",
+      "title": "In the Bedroom Down the Hall",
+      "year": "2017",
+      "source_links": [
+        "https://www.youtube.com/watch?v=cvf1ETgCMN4"
+      ],
+      "description": "Referenced by WSC as a cut or unproduced number accessible online. The YouTube source was inaccessible during extraction. It functions as a case study in narrative fit, pacing, and final-curation decisions."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Rough draft",
+      "year": null,
+      "source_links": [
+        "https://www.merriam-webster.com/dictionary/rough%20draft",
+        "https://en.wikipedia.org/wiki/Drafting_%28writing%29"
+      ],
+      "description": "A rough draft is an initial version of a work created before revision and polishing. Dictionary and writing-process references describe it as a working form used to develop and organize ideas before finalization. This topic is built around comparing those early forms with finished outcomes."
+    },
+    {
+      "name": "Demo (music)",
+      "year": null,
+      "source_links": [
+        "https://en.wikipedia.org/wiki/Demo_%28music%29"
+      ],
+      "description": "A demo is a reference recording made for limited circulation, creative testing, or pitching rather than full release. It is typically used to capture a song concept before final production decisions. That directly matches this topic's songwriting prompts."
+    },
+    {
+      "name": "Mental rehearsal",
+      "year": null,
+      "source_links": [
+        "https://www.sages.org/video/the-role-of-mental-rehearsal/"
+      ],
+      "description": "Mental rehearsal is a cognitive practice method in which performance is simulated internally before execution. Educational and training materials summarize evidence that rehearsal supports motor planning and skill acquisition. It is relevant to the closing prompt about rehearsal, brain effects, and readiness."
+    }
+  ],
+  "persons": [
+    "Leonardo da Vinci",
+    "Vincent van Gogh",
+    "Edvard Munch",
+    "Henri Matisse",
+    "Lin-Manuel Miranda",
+    "Sophia Anne Caruso"
+  ]
+}

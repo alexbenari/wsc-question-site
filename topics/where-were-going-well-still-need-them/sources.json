@@ -1,0 +1,543 @@
+{
+  "title": "Where We’re Going, We’ll Still Need Them",
+  "year": "2026",
+  "source_page": "https://themes.scholarscup.org/#/themes/2026/guidingquestions",
+  "source_file": "wsc-topics.html",
+  "extracted_at": "2026-02-14T23:44:56Z",
+  "bundle_or_page_sources": [
+    {
+      "type": "local_snapshot",
+      "path": "wsc-topics.html",
+      "notes": "Authoritative local source for topic section text and all in-section links."
+    }
+  ],
+  "links": [
+    {
+      "url": "https://www.history.com/articles/ancient-roman-roads-network",
+      "anchor_texts": [
+        "longevity and scale"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "longevity and scale",
+      "summary_or_excerpt": "Roman roads overview used to frame durability and network scale.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://affinitymag.co.uk/most-famous-roads-in-the-world/",
+      "anchor_texts": [
+        "both today"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "both today",
+      "summary_or_excerpt": "General list of famous modern roads for comparison exercises.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://medium.com/@anmol.v1/where-history-walked-the-worlds-most-legendary-roads-9226002af3d1",
+      "anchor_texts": [
+        "ancient times"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "ancient times",
+      "summary_or_excerpt": "General overview of historically notable roads.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.theguardian.com/cities/2018/oct/05/desire-paths-the-illicit-trails-that-defy-the-urban-planners",
+      "anchor_texts": [
+        "desire paths"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "desire paths",
+      "summary_or_excerpt": "Background on informal paths and planning tensions.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://theconversation.com/not-quite-a-street-not-quite-a-road-why-stroads-are-disasters-of-urban-planning-and-how-to-fix-them-232485",
+      "anchor_texts": [
+        "crossed the stroad"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "crossed the stroad",
+      "summary_or_excerpt": "Explanation of stroad design and safety critiques.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "http://www.chinese-poems.com/d21t.html",
+      "anchor_texts": [
+        "“Travelling Again”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Travelling Again",
+      "summary_or_excerpt": "Poem text/source for Du Fu entry.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://poets.org/poem/how-heavy-do-i-journey-way-sonnet-50",
+      "anchor_texts": [
+        "“Sonnet 50”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Sonnet 50",
+      "summary_or_excerpt": "Poem page for Shakespeare's Sonnet 50.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.poetryfoundation.org/poems/54932/sea-fever-56d235e0d871e",
+      "anchor_texts": [
+        "“Sea Fever”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Sea Fever",
+      "summary_or_excerpt": "Poem page for Sea Fever.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://poets.org/poem/window-0",
+      "anchor_texts": [
+        "“Window”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Window",
+      "summary_or_excerpt": "Poem page for Window.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.poetryfoundation.org/poems/44272/the-road-not-taken",
+      "anchor_texts": [
+        "“The Road Not Taken”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "The Road Not Taken",
+      "summary_or_excerpt": "Poem page for The Road Not Taken.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.poetryfoundation.org/poems/43291/sailing-to-byzantium",
+      "anchor_texts": [
+        "“Sailing to Byzantium”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Sailing to Byzantium",
+      "summary_or_excerpt": "Poem page for Sailing to Byzantium.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.poetryfoundation.org/poetrymagazine/poems/1614984/the-journey",
+      "anchor_texts": [
+        "“The Journey”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "The Journey",
+      "summary_or_excerpt": "Poem page for The Journey.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://nexusonline.org/this-only-czeslaw-milosz/",
+      "anchor_texts": [
+        "“This Only”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "This Only",
+      "summary_or_excerpt": "Poem page for This Only.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.infinityplus.co.uk/stories/justdrive.htm",
+      "anchor_texts": [
+        "“Just Drive”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Just Drive",
+      "summary_or_excerpt": "Short-story page for Just Drive.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://poets.org/poem/vacation",
+      "anchor_texts": [
+        "“Vacation”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Vacation",
+      "summary_or_excerpt": "Poem page for Vacation.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.hagerty.co.uk/articles/136-years-ago-bertha-benz-did-more-than-just-take-a-drive/",
+      "anchor_texts": [
+        "in Germany"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "in Germany",
+      "summary_or_excerpt": "Article on Bertha Benz's 1888 long-distance drive.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.openculture.com/2019/09/a-brief-history-of-the-great-american-road-trip.html",
+      "anchor_texts": [
+        "its history"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "its history",
+      "summary_or_excerpt": "Road-trip history context in U.S. culture.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://secretldn.com/longest-bus-route-in-the-world-london-to-calcutta/",
+      "anchor_texts": [
+        "London to Calcutta bus service"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "London to Calcutta bus service",
+      "summary_or_excerpt": "Overview of historic overland London-Calcutta bus route.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.riotimesonline.com/brazil-news/rio-travel/the-worlds-longest-bus-route-leaves-brazil-and-lasts-5-days-its-surreal/",
+      "anchor_texts": [
+        "Transoceánica from Brazil to Peru"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "Transoceánica from Brazil to Peru",
+      "summary_or_excerpt": "Coverage of long overland Brazil-Peru bus travel.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ngSgEAbQWGs",
+      "anchor_texts": [
+        "this video"
+      ],
+      "classification": "general",
+      "status": "ok",
+      "title": "this video",
+      "summary_or_excerpt": "Video reference for Route 66 background.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.pbssocal.org/shows/artbound/swimming-pools-and-movie-stars-a-history-of-the-worlds-first-motel",
+      "anchor_texts": [
+        "world’s first motel"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "world’s first motel",
+      "summary_or_excerpt": "Historical context for the first motel.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://sah-archipedia.org/essays/CA-01-ART-01",
+      "anchor_texts": [
+        "history of motels since"
+      ],
+      "classification": "concept",
+      "status": "ok",
+      "title": "history of motels since",
+      "summary_or_excerpt": "Architectural history of motels and roadside culture.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=9nuDE1SJlPo",
+      "anchor_texts": [
+        "“Get Your Kicks on Route 66”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Get Your Kicks on Route 66",
+      "summary_or_excerpt": "Recording/video source for song.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.edwardhopper.net/western-motel.jsp",
+      "anchor_texts": [
+        "Western Motel"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Western Motel",
+      "summary_or_excerpt": "Artwork page for Hopper painting.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.moma.org/collection/works/76637",
+      "anchor_texts": [
+        "Standard Station"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Standard Station",
+      "summary_or_excerpt": "Museum catalog page for Ruscha work.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=dBN86y30Ufc",
+      "anchor_texts": [
+        "“On the Road Again Song”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "On the Road Again Song",
+      "summary_or_excerpt": "Recording/video source for song.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://davidhockneyexhibition.weebly.com/artwork-critiques.html",
+      "anchor_texts": [
+        "Pearblossom Highway"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Pearblossom Highway",
+      "summary_or_excerpt": "Reference page discussing Hockney road collage.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=U3sMjm9Eloo",
+      "anchor_texts": [
+        "“Life is a Highway”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Life is a Highway",
+      "summary_or_excerpt": "Recording/video source for song.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=xHGUh30U4tQ",
+      "anchor_texts": [
+        "“Drive”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Drive",
+      "summary_or_excerpt": "Recording/video source for song.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=lbjZPFBD6JU",
+      "anchor_texts": [
+        "“Come Away with Me”"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "Come Away with Me",
+      "summary_or_excerpt": "Recording/video source for song.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    },
+    {
+      "url": "https://www.scribd.com/document/119462191/Blue-Highways",
+      "anchor_texts": [
+        "first page here"
+      ],
+      "classification": "artwork",
+      "status": "ok",
+      "title": "first page here",
+      "summary_or_excerpt": "Hosted excerpt of Blue Highways opening page.",
+      "fetched_at": "2026-02-14T23:44:56Z"
+    }
+  ],
+  "derived_items": [
+    {
+      "type": "concept",
+      "name": "Macadam",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Macadam"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Pavement",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Road_surface"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Asphalt",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Asphalt_concrete"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Corduroy road",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Corduroy_road"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Gallery road",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Avalanche_gallery"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Holloway",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Holloway"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Ridgeway",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Ridgeway_(road)"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Milestone",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Milestone"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Trackway",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Trackway"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Solar roadway",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Solar_roadway"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Piezoelectric materials in roads",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Piezoelectricity"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Inductive charging road systems",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Inductive_charging"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "DSRC (Dedicated Short-Range Communications)",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Dedicated_short-range_communications"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Self-healing asphalt",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Self-healing_material"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Modular pavement",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Pavers_(flooring)"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Permeable pavement",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Permeable_paving"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Traveling salesman problem",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Travelling_salesman_problem"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Vector-based navigation",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Vector_map"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Explore-exploit problem",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Exploration-exploitation_dilemma"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Route elasticity",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Induced_demand"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Braess's paradox",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Braess%27s_paradox"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Dead reckoning",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Dead_reckoning"
+      ]
+    },
+    {
+      "type": "concept",
+      "name": "Steiner tree problem",
+      "discovered_by": "unlinked_topic_item",
+      "supporting_references": [
+        "https://en.wikipedia.org/wiki/Steiner_tree_problem"
+      ]
+    }
+  ]
+}
