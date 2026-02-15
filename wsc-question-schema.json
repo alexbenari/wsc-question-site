@@ -3,8 +3,14 @@
   "$id": "https://example.org/wsc-question.schema.json",
   "title": "WSC Question",
   "type": "object",
-  "required": ["category", "question", "choices", "correct", "topics"],
+  "required": ["id", "category", "question", "choices", "correct", "topics"],
   "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 24,
+      "pattern": "^q_[A-Za-z0-9]{6,22}$"
+    },
     "category": {
       "type": "string",
       "enum": [

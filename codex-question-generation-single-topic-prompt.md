@@ -18,6 +18,10 @@ Allowed categories:
 ## Hard requirements
 - Output must be valid JSONL: one JSON object per line.
 - Each object must conform to `wsc-question-schema.json`.
+- Include a compact unique question `id` per item:
+  - format: `q_<alphanumeric>`
+  - length target: 10-14 chars total
+  - example: `q_A7k29Zp1`
 - `question` is one sentence, max 22 words.
 - Exactly 5 choices.
 - `correct` is one of `A`-`E` and must match the best choice.
@@ -45,7 +49,7 @@ Allowed categories:
 - If uncertain, skip the candidate question.
 
 ## Output format example (single line)
-{"category":"single_topic_understanding","question":"Which term best describes ...?","choices":["...","...","...","...","..."],"correct":"C","topics":["The End is Nearish"]}
+{"id":"q_A7k29Zp1","category":"single_topic_understanding","question":"Which term best describes ...?","choices":["...","...","...","...","..."],"correct":"C","topics":["The End is Nearish"]}
 
 ## Final step
 - Run a verification loop before finalizing:

@@ -29,6 +29,7 @@ ABSOLUTE_TERMS = {
     "everyone",
     "nobody",
 }
+ID_PATTERN = re.compile(r"^q_[A-Za-z0-9]{6,22}$")
 
 
 def words(text: str) -> List[str]:
@@ -55,7 +56,7 @@ def looks_one_sentence(question: str) -> bool:
 
 def validate_shape(obj: dict) -> List[str]:
     errs: List[str] = []
-    required = {"category", "question", "choices", "correct", "topics"}
+    required = {"id", "category", "question", "choices", "correct", "topics"}
     missing = required - set(obj.keys())
     extra = set(obj.keys()) - required
     if missing:
@@ -65,6 +66,8 @@ def validate_shape(obj: dict) -> List[str]:
     if errs:
         return errs
 
+    if not isinstance(obj["id"], str) or not ID_PATTERN.match(obj["id"]):
+        errs.append("id must match pattern ^q_[A-Za-z0-9]{6,22}$")
     if obj["category"] not in CATEGORY_SET:
         errs.append(f"invalid category: {obj['category']}")
     if not isinstance(obj["question"], str) or not obj["question"].strip():
@@ -248,6 +251,7 @@ def main() -> int:
     category_counts = {c: 0 for c in CATEGORY_SET}
     correct_letter_counts = {k: 0 for k in sorted(CORRECT_SET)}
     correct_sequence: List[str] = []
+    seen_ids = set()
 
     with input_path.open("r", encoding="utf-8") as f:
         for i, line in enumerate(f, start=1):
@@ -264,6 +268,11 @@ def main() -> int:
             errors.extend(e)
             warnings.extend(w)
             if not e:
+                qid = obj["id"]
+                if qid in seen_ids:
+                    errors.append(f"line {i}: duplicate id '{qid}'")
+                    continue
+                seen_ids.add(qid)
                 if obj["category"] not in allowed_categories:
                     errors.append(
                         f"line {i}: category '{obj['category']}' not allowed by --allowed-categories"

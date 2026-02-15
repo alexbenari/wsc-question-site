@@ -26,6 +26,10 @@ Allowed categories:
 ## Hard requirements
 - Output must be valid JSONL: one JSON object per line.
 - Every line must conform to `wsc-question-schema.json`.
+- Include a compact unique question `id` per item:
+  - format: `q_<alphanumeric>`
+  - length target: 10-14 chars total
+  - example: `q_A7k29Zp1`
 - Each question is one sentence, max 22 words.
 - Exactly 5 choices.
 - `correct` is one of `A`-`E`.
@@ -56,7 +60,7 @@ Allowed categories:
 6. If validator fails, repair and rewrite until valid.
 
 ## Output format example (single line)
-{"category":"comparative_consequences","question":"If A mirrors B, what consequence is most likely shared?","choices":["...","...","...","...","..."],"correct":"D","topics":["The End is Nearish","Progress, Not Regress"]}
+{"id":"q_A7k29Zp1","category":"comparative_consequences","question":"If A mirrors B, what consequence is most likely shared?","choices":["...","...","...","...","..."],"correct":"D","topics":["The End is Nearish","Progress, Not Regress"]}
 
 ## Final report
 - question count
