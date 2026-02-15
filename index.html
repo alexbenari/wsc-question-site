@@ -272,6 +272,7 @@
     let isInReviewMode = false; // Track if we're in review mode
     let selectedTopics = new Set(); // Track selected topics
     let topicQuestionCounts = {}; // Count questions per topic
+    let topicNames = []; // Derived from question-pool.jsonl topics fields
     let selectedCategoryFilter = 'challenge';
 
     // Elements
@@ -295,22 +296,19 @@
       all: null
     };
 
-    const TOPIC_NAMES = [
-      "Introductory Questions",
-      "The Best is Yet to Be, or Not To Be?",
-      "In Futurity, Someone Prophetic Sees",
-      "The Future Wasn’t Meant to Be",
-      "If At First You Fall, Try, Try Again",
-      "Things Really Do Catch Fire",
-      "Speeches that Inspire, Speeches that Spit Fire",
-      "Reliving It Up",
-      "Entertaining Ourselves Back to Life",
-      "Much Excite, Much Ignite",
-      "The Generative Area A Mind for Imagination",
-      "No Backup, But Restore",
-      "Punky Futures",
-      "Concluding Questions"
-    ];
+    function deriveTopicNames(sourceQuestions = allQuestions) {
+      const uniqueTopics = new Set();
+      sourceQuestions.forEach(question => {
+        if (question.topics && Array.isArray(question.topics)) {
+          question.topics.forEach(topic => {
+            if (typeof topic === 'string' && topic.trim()) {
+              uniqueTopics.add(topic.trim());
+            }
+          });
+        }
+      });
+      topicNames = Array.from(uniqueTopics).sort((a, b) => a.localeCompare(b));
+    }
 
     // Fetch and parse JSONL from local file
     async function loadQuestions() {
@@ -337,7 +335,10 @@
           .filter(q => q && q.question && Array.isArray(q.choices) && typeof q.answer !== 'undefined');
         
         if (allQuestions.length === 0) throw new Error('No valid questions found.');
-        
+
+        deriveTopicNames(allQuestions);
+        if (topicNames.length === 0) throw new Error('No topics found in question pool.');
+
         // Build topic counts and create topic list
         createTopicList();
         
@@ -388,7 +389,7 @@
       const categoryFilteredQuestions = getQuestionsMatchingCategory();
       buildTopicCounts(categoryFilteredQuestions);
 
-      TOPIC_NAMES.forEach(topicName => {
+      topicNames.forEach(topicName => {
         const count = topicQuestionCounts[topicName] || 0;
         const topicItem = document.createElement('div');
         const isSelectable = count > 0;
