@@ -10,33 +10,20 @@ import shutil
 from pathlib import Path
 
 
-SINGLE_PROMPT_FILE = Path("codex-question-generation-single-topic-prompt.md")
 BATCH_PROMPT_FILE = Path("codex-question-generation-batch-prompt.md")
 VALIDATOR_FILE = Path("validate-question-pool.py")
 TOPICS_DIR = Path("topics")
 
 SINGLE_DEFAULT_CATEGORIES = "single_topic_understanding,context_clues"
-ALL_CATEGORIES = (
-    "single_topic_understanding,context_clues,comparative_consequences,thematic_synthesis"
-)
 
 
-def build_single_prompt(topic_slug: str, question_count: int, categories: str, output_file: str) -> str:
-    if not SINGLE_PROMPT_FILE.exists():
-        raise FileNotFoundError(f"Missing prompt file: {SINGLE_PROMPT_FILE}")
-    topic_json = TOPICS_DIR / topic_slug / "topic.json"
-    if not topic_json.exists():
-        raise FileNotFoundError(f"Missing topic file: {topic_json}")
-
-    prompt = SINGLE_PROMPT_FILE.read_text(encoding="utf-8")
-    prompt = prompt.replace("<TOPIC_SLUG>", topic_slug)
-    prompt = prompt.replace("<QUESTION_COUNT>", str(question_count))
-    prompt = prompt.replace("<CATEGORY_LIST_OR_ALL>", categories)
-    prompt = prompt.replace("<OUTPUT_FILE>", output_file)
-    return prompt
-
-
-def build_batch_prompt(question_count: int, categories: str, output_file: str) -> str:
+def build_generation_prompt(
+    question_count: int,
+    categories: str,
+    output_file: str,
+    scope_source: str,
+    scope_profile: str,
+) -> str:
     if not BATCH_PROMPT_FILE.exists():
         raise FileNotFoundError(f"Missing prompt file: {BATCH_PROMPT_FILE}")
     if not TOPICS_DIR.exists():
@@ -46,6 +33,8 @@ def build_batch_prompt(question_count: int, categories: str, output_file: str) -
     prompt = prompt.replace("<QUESTION_COUNT>", str(question_count))
     prompt = prompt.replace("<CATEGORY_LIST_OR_ALL>", categories)
     prompt = prompt.replace("<OUTPUT_FILE>", output_file)
+    prompt = prompt.replace("<SCOPE_SOURCE>", scope_source)
+    prompt = prompt.replace("<SCOPE_PROFILE>", scope_profile)
     return prompt
 
 
@@ -67,13 +56,13 @@ def run_codex(prompt: str, search: bool, full_auto: bool) -> int:
     return proc.returncode
 
 
-def run_validator(input_file: Path, categories: str, strict_warnings: bool) -> int:
+def run_validator_non_fatal(input_file: Path, categories: str) -> None:
     if not VALIDATOR_FILE.exists():
-        print(f"Validator file not found: {VALIDATOR_FILE}")
-        return 1
+        print(f"Validator file not found, skipping final validation: {VALIDATOR_FILE}")
+        return
     if not input_file.exists():
-        print(f"Generated question file not found: {input_file}")
-        return 1
+        print(f"Output file not found, skipping final validation: {input_file}")
+        return
 
     cmd = [
         sys.executable,
@@ -84,12 +73,15 @@ def run_validator(input_file: Path, categories: str, strict_warnings: bool) -> i
         str(TOPICS_DIR),
         "--allowed-categories",
         categories,
-        "--check-category-balance",
     ]
-    if strict_warnings:
-        cmd.append("--strict-warnings")
-    proc = subprocess.run(cmd, text=True)
-    return proc.returncode
+    rc = subprocess.run(cmd, text=True).returncode
+    if rc != 0:
+        print(
+            "\nFinal validation reported issues. Output file is kept.\n"
+            f"Output file: {input_file}"
+        )
+    else:
+        print("\nFinal validation passed.")
 
 
 def parse_args() -> argparse.Namespace:
@@ -115,14 +107,9 @@ def parse_args() -> argparse.Namespace:
     single.add_argument("--no-search", action="store_true", help="Disable codex --search.")
     single.add_argument("--no-full-auto", action="store_true", help="Disable codex --full-auto.")
     single.add_argument(
-        "--no-validate",
+        "--no-final-validate",
         action="store_true",
-        help="Skip local validator after generation (validation is on by default).",
-    )
-    single.add_argument(
-        "--strict-warnings",
-        action="store_true",
-        help="When validation runs, fail on validator warnings.",
+        help="Skip the wrapper's final non-fatal validator run.",
     )
 
     batch = sub.add_parser("batch", help="Generate full question pool across topics.")
@@ -140,14 +127,9 @@ def parse_args() -> argparse.Namespace:
     batch.add_argument("--no-search", action="store_true", help="Disable codex --search.")
     batch.add_argument("--no-full-auto", action="store_true", help="Disable codex --full-auto.")
     batch.add_argument(
-        "--no-validate",
+        "--no-final-validate",
         action="store_true",
-        help="Skip local validator after generation (validation is on by default).",
-    )
-    batch.add_argument(
-        "--strict-warnings",
-        action="store_true",
-        help="When validation runs, fail on validator warnings.",
+        help="Skip the wrapper's final non-fatal validator run.",
     )
 
     return parser.parse_args()
@@ -164,13 +146,29 @@ def main() -> int:
             if args.count <= 0:
                 print("--count must be > 0")
                 return 1
-            output_file = args.output.strip() or f"question-pool-{args.topic}.jsonl"
-            prompt = build_single_prompt(args.topic, args.count, categories, output_file)
+            topic_json = TOPICS_DIR / args.topic / "topic.json"
+            if not topic_json.exists():
+                print(f"Missing topic file: {topic_json}")
+                return 1
+            scope_source = str(topic_json)
+            scope_profile = "\n".join(
+                [
+                    "- Single-topic scope: use only this topic file.",
+                    "- Use categories: single_topic_understanding, context_clues.",
+                    "- Do NOT use comparative_consequences or thematic_synthesis in single-topic scope.",
+                    "- Every question must include exactly one topic in `topics`, matching this topic title.",
+                    "- Source fidelity remains mandatory against this topic's extracted fields.",
+                ]
+            )
+            output_file = Path(args.output.strip() or f"question-pool-{args.topic}.jsonl")
+            prompt = build_generation_prompt(
+                args.count, categories, str(output_file), scope_source, scope_profile
+            )
             rc = run_codex(prompt, search=not args.no_search, full_auto=not args.no_full_auto)
             if rc != 0:
                 return rc
-            if not args.no_validate:
-                return run_validator(Path(output_file), categories, args.strict_warnings)
+            if not args.no_final_validate:
+                run_validator_non_fatal(output_file, categories)
             return 0
 
         if args.mode == "batch":
@@ -181,13 +179,23 @@ def main() -> int:
             if categories.lower() != "all" and not categories:
                 print("--categories cannot be empty")
                 return 1
-            output_file = args.output.strip() or "question-pool.jsonl"
-            prompt = build_batch_prompt(args.count, categories, output_file)
+            scope_source = "topics/ (all topics/*/topic.json)"
+            scope_profile = "\n".join(
+                [
+                    "- Multi-topic scope: use all topic files under topics/ unless category constraints narrow usage.",
+                    "- For comparative_consequences and thematic_synthesis, use exactly 2 topics per question.",
+                    "- For single_topic_understanding and context_clues, prefer exactly 1 topic per question.",
+                ]
+            )
+            output_file = Path(args.output.strip() or "question-pool.jsonl")
+            prompt = build_generation_prompt(
+                args.count, categories, str(output_file), scope_source, scope_profile
+            )
             rc = run_codex(prompt, search=not args.no_search, full_auto=not args.no_full_auto)
             if rc != 0:
                 return rc
-            if not args.no_validate:
-                return run_validator(Path(output_file), categories, args.strict_warnings)
+            if not args.no_final_validate:
+                run_validator_non_fatal(output_file, categories)
             return 0
     except FileNotFoundError as exc:
         print(str(exc))

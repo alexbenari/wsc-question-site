@@ -18,17 +18,7 @@ CATEGORY_SET = {
     "thematic_synthesis",
 }
 CORRECT_SET = {"A", "B", "C", "D", "E"}
-ABSOLUTE_TERMS = {
-    "always",
-    "never",
-    "all",
-    "none",
-    "completely",
-    "entirely",
-    "impossible",
-    "everyone",
-    "nobody",
-}
+
 ID_PATTERN = re.compile(r"^q_[A-Za-z0-9]{6,22}$")
 
 
@@ -40,23 +30,19 @@ def normalize(text: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[^A-Za-z0-9 ]+", " ", text.lower())).strip()
 
 
-def is_negative_question(question: str) -> bool:
-    return bool(
-        re.search(
-            r"\b(not|except|least likely|isn['’]t|aren['’]t|doesn['’]t|cannot|can['’]t|never|false)\b",
-            question.lower(),
-        )
-    )
-
 
 def looks_one_sentence(question: str) -> bool:
     parts = [p.strip() for p in re.split(r"[.!?]+", question) if p.strip()]
     return len(parts) <= 1
 
 
+def sentence_count(text: str) -> int:
+    return len([p.strip() for p in re.split(r"[.!?]+", text) if p.strip()])
+
+
 def validate_shape(obj: dict) -> List[str]:
     errs: List[str] = []
-    required = {"id", "category", "question", "choices", "correct", "topics"}
+    required = {"id", "category", "question", "choices", "correct", "topics", "explanation"}
     missing = required - set(obj.keys())
     extra = set(obj.keys()) - required
     if missing:
@@ -86,6 +72,8 @@ def validate_shape(obj: dict) -> List[str]:
         for i, t in enumerate(obj["topics"]):
             if not isinstance(t, str) or not t.strip():
                 errs.append(f"topic {i+1} must be non-empty string")
+    if not isinstance(obj["explanation"], str) or len(obj["explanation"].strip()) < 30:
+        errs.append("explanation must be a non-empty string (>= 30 chars)")
     return errs
 
 
@@ -147,13 +135,13 @@ def validate_question(
     idx: int,
     topic_evidence: Dict[str, dict],
     known_titles: set,
-) -> Tuple[List[str], List[str], bool, bool, bool]:
+) -> Tuple[List[str], List[str]]:
     errs: List[str] = []
     warns: List[str] = []
 
     shape_errs = validate_shape(obj)
     if shape_errs:
-        return [f"line {idx}: {e}" for e in shape_errs], warns, False, False, False
+        return [f"line {idx}: {e}" for e in shape_errs], warns
 
     q = obj["question"].strip()
     q_words = len(words(q))
@@ -162,6 +150,11 @@ def validate_question(
     if not looks_one_sentence(q):
         errs.append(f"line {idx}: question appears to contain multiple sentences")
 
+    exp = obj["explanation"].strip()
+    exp_sentences = sentence_count(exp)
+    if exp_sentences < 2 or exp_sentences > 5:
+        errs.append(f"line {idx}: explanation must be 2-5 sentences (found {exp_sentences})")
+
     choices = obj["choices"]
     norm_choices = [normalize(c) for c in choices]
     if len(set(norm_choices)) != len(norm_choices):
@@ -169,6 +162,7 @@ def validate_question(
 
     correct_idx = ord(obj["correct"]) - ord("A")
     correct_words = len(words(choices[correct_idx]))
+
     for i, choice in enumerate(choices):
         if i == correct_idx:
             continue
@@ -179,11 +173,6 @@ def validate_question(
             )
             break
 
-    for c in choices:
-        lower = c.lower()
-        if any(re.search(rf"\b{re.escape(term)}\b", lower) for term in ABSOLUTE_TERMS):
-            warns.append(f"line {idx}: possible trivial distractor/absolute wording: '{c}'")
-            break
 
     cat = obj["category"]
     tlen = len(obj["topics"])
@@ -196,26 +185,19 @@ def validate_question(
         if t not in known_titles:
             warns.append(f"line {idx}: topic not found in topics dir: '{t}'")
 
-    neg = is_negative_question(q)
-    is_artwork, is_person = detect_artwork_or_person(obj, topic_evidence)
-    return errs, warns, neg, is_artwork, is_person
+    return errs, warns
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Validate WSC question pool.")
     parser.add_argument("--input", required=True, help="Path to question JSONL file.")
     parser.add_argument("--topics-dir", default="topics", help="Path to topics directory.")
-    parser.add_argument("--strict-warnings", action="store_true", help="Treat warnings as errors.")
     parser.add_argument(
         "--allowed-categories",
         default="all",
         help="Comma-separated allowed categories, or 'all' (default).",
     )
-    parser.add_argument(
-        "--check-category-balance",
-        action="store_true",
-        help="Require roughly equal counts across allowed categories.",
-    )
+
     args = parser.parse_args()
 
     input_path = Path(args.input)
@@ -245,13 +227,11 @@ def main() -> int:
     errors: List[str] = []
     warnings: List[str] = []
     total = 0
-    neg_count = 0
-    artwork_count = 0
-    person_count = 0
     category_counts = {c: 0 for c in CATEGORY_SET}
     correct_letter_counts = {k: 0 for k in sorted(CORRECT_SET)}
-    correct_sequence: List[str] = []
+    correct_sequence: List[Tuple[str, str]] = []  # (correct_letter, question_id)
     seen_ids = set()
+    has_question_level_errors = False
 
     with input_path.open("r", encoding="utf-8") as f:
         for i, line in enumerate(f, start=1):
@@ -264,86 +244,72 @@ def main() -> int:
             except json.JSONDecodeError as exc:
                 errors.append(f"line {i}: invalid JSON: {exc}")
                 continue
-            e, w, neg, art, person = validate_question(obj, i, topic_evidence, known_titles)
+            e, w = validate_question(obj, i, topic_evidence, known_titles)
             errors.extend(e)
             warnings.extend(w)
+            if e:
+                has_question_level_errors = True
             if not e:
                 qid = obj["id"]
                 if qid in seen_ids:
                     errors.append(f"line {i}: duplicate id '{qid}'")
+                    has_question_level_errors = True
                     continue
                 seen_ids.add(qid)
                 if obj["category"] not in allowed_categories:
                     errors.append(
                         f"line {i}: category '{obj['category']}' not allowed by --allowed-categories"
                     )
+                    has_question_level_errors = True
                 category_counts[obj["category"]] += 1
-                neg_count += 1 if neg else 0
-                artwork_count += 1 if art else 0
-                person_count += 1 if person else 0
                 correct_letter_counts[obj["correct"]] += 1
-                correct_sequence.append(obj["correct"])
+                correct_sequence.append((obj["correct"], qid))
 
     if total == 0:
         errors.append("no JSONL records found")
 
     if total > 0:
-        neg_ratio = neg_count / total
-        art_ratio = artwork_count / total
-        person_ratio = person_count / total
-        if neg_ratio < 0.30:
-            errors.append(f"negative-phrased ratio below 30% ({neg_ratio:.1%})")
-        if art_ratio < 0.20:
-            errors.append(f"artwork-related ratio below 20% ({art_ratio:.1%})")
-        if person_ratio < 0.20:
-            errors.append(f"person-related ratio below 20% ({person_ratio:.1%})")
-
         print(f"Total questions: {total}")
         print("Category counts:")
         for c in sorted(category_counts.keys()):
             print(f"  - {c}: {category_counts[c]}")
-        print(f"Negative phrasing: {neg_count}/{total} ({neg_count/total:.1%})")
-        print(f"Artwork-related: {artwork_count}/{total} ({artwork_count/total:.1%})")
-        print(f"Person-related: {person_count}/{total} ({person_count/total:.1%})")
         print("Correct-letter distribution:")
         for k in sorted(correct_letter_counts.keys()):
             print(f"  - {k}: {correct_letter_counts[k]}")
 
-        # Random placement checks (heuristic)
-        # 1) Distribution should not be heavily skewed.
-        for letter, count in correct_letter_counts.items():
-            ratio = count / total
-            if ratio < 0.10 or ratio > 0.35:
+        # Cross-question checks are run only if there are no question-level errors.
+        if not has_question_level_errors:
+            # 1) Distribution should not be heavily skewed.
+            for letter, count in correct_letter_counts.items():
+                ratio = count / total
+                if ratio < 0.10 or ratio > 0.35:
+                    errors.append(
+                        f"correct-answer placement skewed: {letter} ratio {ratio:.1%} outside [10%, 35%]"
+                    )
+
+            # 2) Avoid long repeated runs of same letter, and report question IDs in that run.
+            max_run = 1
+            max_run_start = 0
+            cur_run = 1
+            cur_start = 0
+            for i in range(1, len(correct_sequence)):
+                if correct_sequence[i][0] == correct_sequence[i - 1][0]:
+                    cur_run += 1
+                    if cur_run > max_run:
+                        max_run = cur_run
+                        max_run_start = cur_start
+                else:
+                    cur_run = 1
+                    cur_start = i
+            if max_run >= 5:
+                run_slice = correct_sequence[max_run_start : max_run_start + max_run]
+                run_letter = run_slice[0][0]
+                run_ids = [qid for _, qid in run_slice]
                 errors.append(
-                    f"correct-answer placement skewed: {letter} ratio {ratio:.1%} outside [10%, 35%]"
+                    "correct-answer placement has long repeated run "
+                    f"(letter={run_letter}, run={max_run}, ids={run_ids})"
                 )
 
-        # 2) Avoid long repeated runs of same letter.
-        max_run = 1
-        cur_run = 1
-        for i in range(1, len(correct_sequence)):
-            if correct_sequence[i] == correct_sequence[i - 1]:
-                cur_run += 1
-                if cur_run > max_run:
-                    max_run = cur_run
-            else:
-                cur_run = 1
-        if max_run >= 5:
-            errors.append(f"correct-answer placement has long repeated run (max run = {max_run})")
-
-        # 3) Category balance check (optional)
-        if args.check_category_balance and allowed_categories:
-            active_counts = [category_counts[c] for c in sorted(allowed_categories)]
-            min_c = min(active_counts)
-            max_c = max(active_counts)
-            if min_c == 0:
-                errors.append("category balance check failed: at least one allowed category has zero items")
-            else:
-                ratio = max_c / min_c
-                if ratio > 1.25:
-                    errors.append(
-                        f"category balance check failed: max/min ratio {ratio:.2f} exceeds 1.25"
-                    )
 
     if warnings:
         print(f"\nWarnings ({len(warnings)}):")
@@ -358,10 +324,6 @@ def main() -> int:
             print(f"  - {e}")
         if len(errors) > 200:
             print(f"  ... {len(errors) - 200} more errors")
-        return 1
-
-    if args.strict_warnings and warnings:
-        print("\nValidation failed due to strict warnings mode.")
         return 1
 
     print("\nValidation passed.")

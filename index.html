@@ -40,9 +40,34 @@
       padding: 2rem;
       border-radius: var(--radius);
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      max-width: 480px;
+      max-width: 920px;
       width: 100%;
       flex: 1;
+    }
+    .question-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 1.25rem;
+      align-items: start;
+    }
+    .question-main {
+      min-width: 0;
+    }
+    .explanation-panel {
+      border: 1px solid #dbe7f7;
+      border-radius: var(--radius);
+      background: #f7fbff;
+      padding: 1rem;
+    }
+    .explanation-panel h2 {
+      color: var(--primary);
+      font-size: 1rem;
+      margin: 0 0 0.5rem 0;
+    }
+    .explanation-panel p {
+      margin: 0;
+      line-height: 1.45;
+      white-space: pre-wrap;
     }
     h1 {
       text-align: center;
@@ -192,6 +217,9 @@
       main {
         margin: 0 1rem 1rem 1rem;
       }
+      .question-layout {
+        grid-template-columns: 1fr;
+      }
     }
     @media (max-width: 600px) {
       .sidebar, main {
@@ -232,13 +260,22 @@
   <main>
     <h1>Question Generator</h1>
     <section id="question-section" aria-live="polite" style="display:none;">
-      <div class="question" id="question-text"></div>
-      <ul class="choices" id="choices-list"></ul>
-      <div class="feedback" id="feedback" aria-live="assertive"></div>
-      <div class="actions">
-        <button id="skip-btn" type="button">Skip Question</button>
-        <button id="show-answer-btn" type="button" style="display:none;">Show Answer</button>
-        <button id="next-btn" type="button" style="display:none;">Next Question</button>
+      <div class="question-layout">
+        <div class="question-main">
+          <div class="question" id="question-text"></div>
+          <ul class="choices" id="choices-list"></ul>
+          <div class="feedback" id="feedback" aria-live="assertive"></div>
+          <div class="actions">
+            <button id="skip-btn" type="button">Skip Question</button>
+            <button id="show-answer-btn" type="button" style="display:none;">Show Answer</button>
+            <button id="explain-btn" type="button">Explain</button>
+            <button id="next-btn" type="button" style="display:none;">Next Question</button>
+          </div>
+        </div>
+        <aside class="explanation-panel" id="explanation-panel" style="display:none;">
+          <h2>Explanation</h2>
+          <p id="explanation-text"></p>
+        </aside>
       </div>
     </section>
     <div id="loading" style="text-align:center; margin-top:1.5rem;">Loading questions...</div>
@@ -281,7 +318,10 @@
     const feedback = document.getElementById('feedback');
     const skipBtn = document.getElementById('skip-btn');
     const showAnswerBtn = document.getElementById('show-answer-btn');
+    const explainBtn = document.getElementById('explain-btn');
     const nextBtn = document.getElementById('next-btn');
+    const explanationPanel = document.getElementById('explanation-panel');
+    const explanationText = document.getElementById('explanation-text');
     const loading = document.getElementById('loading');
     const errorDiv = document.getElementById('error');
     const topicList = document.getElementById('topic-list');
@@ -564,7 +604,12 @@
       feedback.textContent = '';
       skipBtn.style.display = 'inline-block';
       showAnswerBtn.style.display = 'none';
+      showAnswerBtn.textContent = 'Show Answer';
+      showAnswerBtn.dataset.mode = 'show-answer';
+      explainBtn.style.display = 'inline-block';
       nextBtn.style.display = 'none';
+      explanationPanel.style.display = 'none';
+      explanationText.textContent = '';
       hasAnswered = false;
 
       let availableQuestions;
@@ -617,6 +662,32 @@
       focusFirstChoice();
     }
 
+    function markCurrentQuestionAnswered() {
+      if (currentQuestion && currentQuestion.id) {
+        answeredQuestionIds.add(currentQuestion.id);
+        sessionAnsweredIds.add(currentQuestion.id);
+        skippedQuestionIds.delete(currentQuestion.id);
+        sessionSkippedIds.delete(currentQuestion.id);
+      }
+    }
+
+    function revealCorrectAnswer() {
+      hasAnswered = true;
+      const correct = currentQuestion.choices[currentQuestion.answer];
+      const btns = document.querySelectorAll('.choice-btn');
+      btns.forEach(b => {
+        b.disabled = true;
+        if (b.textContent === correct) {
+          b.classList.add('correct');
+        }
+      });
+      feedback.textContent = `The correct answer is: "${correct}".`;
+      skipBtn.style.display = 'none';
+      showAnswerBtn.style.display = 'none';
+      nextBtn.style.display = 'inline-block';
+      markCurrentQuestionAnswered();
+    }
+
     function handleChoice(btn, selectedChoice) {
       // Find correct answer text
       const correct = currentQuestion.choices[currentQuestion.answer];
@@ -640,13 +711,7 @@
         btn.setAttribute('aria-pressed', 'true');
         feedback.textContent = 'Correct!';
         nextBtn.style.display = 'inline-block';
-        // Mark question as answered (remove from skipped if it was there)
-        if (currentQuestion && currentQuestion.id) {
-          answeredQuestionIds.add(currentQuestion.id);
-          sessionAnsweredIds.add(currentQuestion.id);
-          skippedQuestionIds.delete(currentQuestion.id);
-          sessionSkippedIds.delete(currentQuestion.id);
-        }
+        markCurrentQuestionAnswered();
       } else {
         // Wrong answer - keep buttons enabled for retry
         btn.classList.add('incorrect');
@@ -701,7 +766,10 @@
       feedback.textContent = '';
       skipBtn.style.display = 'none';
       showAnswerBtn.style.display = 'none';
+      explainBtn.style.display = 'none';
       nextBtn.style.display = 'none';
+      explanationPanel.style.display = 'none';
+      explanationText.textContent = '';
       
       // Add event listeners for the new buttons
       const backToSkippedBtn = document.getElementById('back-to-skipped-btn');
@@ -734,26 +802,28 @@
     });
 
     showAnswerBtn.addEventListener('click', () => {
-      // Reveal correct answer and disable all buttons
-      hasAnswered = true;
-      const correct = currentQuestion.choices[currentQuestion.answer];
-      const btns = document.querySelectorAll('.choice-btn');
-      btns.forEach(b => {
-        b.disabled = true;
-        if (b.textContent === correct) {
-          b.classList.add('correct');
-        }
-      });
-      feedback.textContent = `The correct answer is: "${correct}".`;
-      showAnswerBtn.style.display = 'none';
-      nextBtn.style.display = 'inline-block';
-      // Mark question as answered (remove from skipped if it was there)
-      if (currentQuestion && currentQuestion.id) {
-        answeredQuestionIds.add(currentQuestion.id);
-        sessionAnsweredIds.add(currentQuestion.id);
-        skippedQuestionIds.delete(currentQuestion.id);
-        sessionSkippedIds.delete(currentQuestion.id);
+      if (showAnswerBtn.dataset.mode === 'next-question') {
+        showNextQuestion();
+        return;
       }
+
+      revealCorrectAnswer();
+    });
+
+    explainBtn.addEventListener('click', () => {
+      revealCorrectAnswer();
+
+      const explanationValue =
+        currentQuestion && typeof currentQuestion.explanation === 'string'
+          ? currentQuestion.explanation.trim()
+          : '';
+      explanationText.textContent = explanationValue || 'No explanation provided for this question.';
+      explanationPanel.style.display = 'block';
+
+      nextBtn.style.display = 'none';
+      showAnswerBtn.textContent = 'Next Question';
+      showAnswerBtn.dataset.mode = 'next-question';
+      showAnswerBtn.style.display = 'inline-block';
     });
 
     nextBtn.addEventListener('click', () => {
