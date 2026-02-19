@@ -35,6 +35,16 @@ Batch with selected categories:
 python .\question-generator.py batch --count 300 --categories "single_topic_understanding,context_clues,thematic_synthesis"
 ```
 
+Artwork-only flow (all questions about artworks; paintings include additional palette questions):
+```powershell
+python .\question-generator.py artwork --count 200
+```
+
+Artwork-only flow with custom output:
+```powershell
+python .\question-generator.py artwork --count 200 --output .\question-pool-artworks-v1.jsonl
+```
+
 Skip wrapper final validation:
 ```powershell
 python .\question-generator.py batch --count 300 --no-final-validate
@@ -47,7 +57,7 @@ Use unified prompt template:
 PowerShell example (300 questions):
 ```powershell
 $prompt = Get-Content -Raw .\codex-question-generation-batch-prompt.md
-$prompt = $prompt.Replace('<QUESTION_COUNT>', '300').Replace('<CATEGORY_LIST_OR_ALL>', 'all').Replace('<OUTPUT_FILE>', 'question-pool.jsonl').Replace('<SCOPE_SOURCE>', 'topics/ (all topics/*/topic.json)').Replace('<SCOPE_PROFILE>', '- Multi-topic scope: use all topic files under topics/.')
+$prompt = $prompt.Replace('<QUESTION_COUNT>', '300').Replace('<CATEGORY_LIST_OR_ALL>', 'all').Replace('<OUTPUT_FILE>', 'question-pool.jsonl').Replace('<SCOPE_SOURCE>', 'topics/ (all topics/*/topic.json)').Replace('<SCOPE_PROFILE>', '- Multi-topic scope: use all topic files under topics/.').Replace('<FLOW_RULES>', '- No additional flow-specific rules.')
 $prompt | codex --search exec --full-auto --cd . -
 ```
 

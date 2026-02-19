@@ -25,6 +25,9 @@ Generate `<QUESTION_COUNT>` questions across all available topics and write JSON
 ## Scope profile
 <SCOPE_PROFILE>
 
+## Flow-specific rules
+<FLOW_RULES>
+
 ## Generation mode constraint
 - Do NOT generate questions by writing/running code or scripts.
 - Do NOT create helper generators in Python/JS/etc.

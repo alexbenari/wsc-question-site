@@ -15,6 +15,7 @@ VALIDATOR_FILE = Path("validate-question-pool.py")
 TOPICS_DIR = Path("topics")
 
 SINGLE_DEFAULT_CATEGORIES = "single_topic_understanding,context_clues"
+DEFAULT_FLOW_RULES = "- No additional flow-specific rules."
 
 
 def build_generation_prompt(
@@ -23,6 +24,7 @@ def build_generation_prompt(
     output_file: str,
     scope_source: str,
     scope_profile: str,
+    flow_rules: str = DEFAULT_FLOW_RULES,
 ) -> str:
     if not BATCH_PROMPT_FILE.exists():
         raise FileNotFoundError(f"Missing prompt file: {BATCH_PROMPT_FILE}")
@@ -35,6 +37,7 @@ def build_generation_prompt(
     prompt = prompt.replace("<OUTPUT_FILE>", output_file)
     prompt = prompt.replace("<SCOPE_SOURCE>", scope_source)
     prompt = prompt.replace("<SCOPE_PROFILE>", scope_profile)
+    prompt = prompt.replace("<FLOW_RULES>", flow_rules)
     return prompt
 
 
@@ -132,6 +135,29 @@ def parse_args() -> argparse.Namespace:
         help="Skip the wrapper's final non-fatal validator run.",
     )
 
+    artwork = sub.add_parser(
+        "artwork",
+        help="Generate questions constrained to artworks, with extra color-palette questions for paintings.",
+    )
+    artwork.add_argument("--count", type=int, required=True, help="Number of questions to generate.")
+    artwork.add_argument(
+        "--output",
+        default="question-pool-artworks.jsonl",
+        help="Output JSONL path (default: question-pool-artworks.jsonl).",
+    )
+    artwork.add_argument(
+        "--categories",
+        default="all",
+        help="Comma-separated categories or 'all' (default).",
+    )
+    artwork.add_argument("--no-search", action="store_true", help="Disable codex --search.")
+    artwork.add_argument("--no-full-auto", action="store_true", help="Disable codex --full-auto.")
+    artwork.add_argument(
+        "--no-final-validate",
+        action="store_true",
+        help="Skip the wrapper's final non-fatal validator run.",
+    )
+
     return parser.parse_args()
 
 
@@ -162,7 +188,12 @@ def main() -> int:
             )
             output_file = Path(args.output.strip() or f"question-pool-{args.topic}.jsonl")
             prompt = build_generation_prompt(
-                args.count, categories, str(output_file), scope_source, scope_profile
+                args.count,
+                categories,
+                str(output_file),
+                scope_source,
+                scope_profile,
+                flow_rules=DEFAULT_FLOW_RULES,
             )
             rc = run_codex(prompt, search=not args.no_search, full_auto=not args.no_full_auto)
             if rc != 0:
@@ -189,7 +220,53 @@ def main() -> int:
             )
             output_file = Path(args.output.strip() or "question-pool.jsonl")
             prompt = build_generation_prompt(
-                args.count, categories, str(output_file), scope_source, scope_profile
+                args.count,
+                categories,
+                str(output_file),
+                scope_source,
+                scope_profile,
+                flow_rules=DEFAULT_FLOW_RULES,
+            )
+            rc = run_codex(prompt, search=not args.no_search, full_auto=not args.no_full_auto)
+            if rc != 0:
+                return rc
+            if not args.no_final_validate:
+                run_validator_non_fatal(output_file, categories)
+            return 0
+
+        if args.mode == "artwork":
+            categories = args.categories.strip()
+            if args.count <= 0:
+                print("--count must be > 0")
+                return 1
+            if categories.lower() != "all" and not categories:
+                print("--categories cannot be empty")
+                return 1
+            scope_source = "topics/ (all topics/*/topic.json)"
+            scope_profile = "\n".join(
+                [
+                    "- Multi-topic scope: use all topic files under topics/ unless category constraints narrow usage.",
+                    "- For comparative_consequences and thematic_synthesis, use exactly 2 topics per question.",
+                    "- For single_topic_understanding and context_clues, prefer exactly 1 topic per question.",
+                ]
+            )
+            flow_rules = "\n".join(
+                [
+                    "- Every question must be about a specific artwork from `artworks` in the selected topic scope.",
+                    "- Keep all existing question rules and hard requirements from the base prompt.",
+                    "- If an artwork is a painting, include at least one additional question about that painting's main color palette (dominant colors).",
+                    "- Palette questions must still follow one-sentence and <=22-word limits, with plausible distractor colors.",
+                    "- If painting status or palette evidence is unclear from extracted material, choose a different artwork instead of guessing.",
+                ]
+            )
+            output_file = Path(args.output.strip() or "question-pool-artworks.jsonl")
+            prompt = build_generation_prompt(
+                args.count,
+                categories,
+                str(output_file),
+                scope_source,
+                scope_profile,
+                flow_rules=flow_rules,
             )
             rc = run_codex(prompt, search=not args.no_search, full_auto=not args.no_full_auto)
             if rc != 0:

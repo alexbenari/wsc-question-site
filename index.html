@@ -236,18 +236,14 @@
   <aside class="sidebar">
     <h2 style="margin-top: 0; color: var(--primary); font-size: 1.2rem;">Select Topics</h2>
     <fieldset class="category-filters">
-      <legend>Question Type</legend>
+      <legend>Question Pool</legend>
       <label class="category-option">
-        <input type="radio" name="category-filter" value="challenge" checked>
-        Challenge questions
+        <input type="checkbox" name="question-pool" value="general" checked>
+        General
       </label>
       <label class="category-option">
-        <input type="radio" name="category-filter" value="single">
-        Single topic
-      </label>
-      <label class="category-option">
-        <input type="radio" name="category-filter" value="all">
-        All questions
+        <input type="checkbox" name="question-pool" value="artworks">
+        Art
       </label>
     </fieldset>
     <div style="margin-bottom: 1rem;">
@@ -309,8 +305,13 @@
     let isInReviewMode = false; // Track if we're in review mode
     let selectedTopics = new Set(); // Track selected topics
     let topicQuestionCounts = {}; // Count questions per topic
-    let topicNames = []; // Derived from question-pool.jsonl topics fields
-    let selectedCategoryFilter = 'challenge';
+    let topicNames = []; // Derived from selected question pool topics fields
+
+    const QUESTION_POOL_FILES = {
+      general: 'question-pool.jsonl',
+      artworks: 'question-pool-artworks.jsonl'
+    };
+    const poolQuestionsCache = new Map();
 
     // Elements
     const questionText = document.getElementById('question-text');
@@ -328,13 +329,7 @@
     const askButton = document.getElementById('ask-button');
     const selectAllButton = document.getElementById('select-all-button');
     const unselectAllButton = document.getElementById('unselect-all-button');
-    const categoryFilterRadios = document.querySelectorAll('input[name="category-filter"]');
-
-    const CATEGORY_FILTER_MAP = {
-      challenge: new Set(['comparative_consequences', 'thematic_synthesis', 'context_clues']),
-      single: new Set(['single_topic_understanding']),
-      all: null
-    };
+    const poolCheckboxes = document.querySelectorAll('input[name="question-pool"]');
 
     function deriveTopicNames(sourceQuestions = allQuestions) {
       const uniqueTopics = new Set();
@@ -350,56 +345,102 @@
       topicNames = Array.from(uniqueTopics).sort((a, b) => a.localeCompare(b));
     }
 
-    function buildQuestionId(parsedQuestion, lineIndex) {
+    function buildQuestionId(parsedQuestion, lineIndex, poolName) {
       if (parsedQuestion.id && typeof parsedQuestion.id === 'string' && parsedQuestion.id.trim()) {
-        return parsedQuestion.id.trim();
+        return `${poolName}::${parsedQuestion.id.trim()}`;
       }
       const base = [
+        poolName,
         parsedQuestion.category || '',
         parsedQuestion.question || '',
         Array.isArray(parsedQuestion.choices) ? parsedQuestion.choices.join('|') : '',
         Array.isArray(parsedQuestion.topics) ? parsedQuestion.topics.join('|') : '',
         String(lineIndex)
       ].join('::');
-      return `q-${btoa(unescape(encodeURIComponent(base))).replace(/=+$/,'')}`;
+      return `${poolName}::q-${btoa(unescape(encodeURIComponent(base))).replace(/=+$/,'')}`;
     }
 
-    // Fetch and parse JSONL from local file
-    async function loadQuestions() {
-      try {
-        const resp = await fetch('question-pool.jsonl');
-        if (!resp.ok) throw new Error('Could not load question pool.');
-        const text = await resp.text();
-        allQuestions = text
-          .split('\n')
-          .map(line => line.trim())
-          .filter(Boolean)
-          .map((line, index) => {
-            try {
-              const parsed = JSON.parse(line);
-              // Convert letter answer (A, B, C, etc.) to numeric index
-              if (parsed.correct && typeof parsed.correct === 'string') {
-                parsed.answer = parsed.correct.charCodeAt(0) - 65; // A=0, B=1, C=2, etc.
-              }
-              parsed.id = buildQuestionId(parsed, index);
-              return parsed;
-            } catch {
-              return null;
+    function parseJsonlQuestions(text, poolName) {
+      return text
+        .split('\n')
+        .map(line => line.trim())
+        .filter(Boolean)
+        .map((line, index) => {
+          try {
+            const parsed = JSON.parse(line);
+            if (parsed.correct && typeof parsed.correct === 'string') {
+              parsed.answer = parsed.correct.charCodeAt(0) - 65; // A=0, B=1, C=2, etc.
             }
-          })
-          .filter(q => q && q.question && Array.isArray(q.choices) && typeof q.answer !== 'undefined');
-        
-        if (allQuestions.length === 0) throw new Error('No valid questions found.');
+            parsed.id = buildQuestionId(parsed, index, poolName);
+            return parsed;
+          } catch {
+            return null;
+          }
+        })
+        .filter(q => q && q.question && Array.isArray(q.choices) && typeof q.answer !== 'undefined');
+    }
+
+    async function loadPoolQuestions(poolName) {
+      if (poolQuestionsCache.has(poolName)) {
+        return poolQuestionsCache.get(poolName);
+      }
+
+      const filePath = QUESTION_POOL_FILES[poolName];
+      if (!filePath) {
+        throw new Error(`Unknown question pool: ${poolName}`);
+      }
+
+      const resp = await fetch(filePath);
+      if (!resp.ok) throw new Error(`Could not load question pool file: ${filePath}`);
+      const text = await resp.text();
+      const parsedQuestions = parseJsonlQuestions(text, poolName);
+      if (parsedQuestions.length === 0) {
+        throw new Error(`No valid questions found in ${filePath}.`);
+      }
+      poolQuestionsCache.set(poolName, parsedQuestions);
+      return parsedQuestions;
+    }
+
+    // Fetch and parse selected JSONL pools from local files
+    async function loadQuestions({ preserveSelection = false } = {}) {
+      try {
+        loading.style.display = 'block';
+        errorDiv.style.display = 'none';
+        errorDiv.textContent = '';
+
+        const selectedPools = Array.from(poolCheckboxes)
+          .filter(checkbox => checkbox.checked)
+          .map(checkbox => checkbox.value);
+
+        if (selectedPools.length === 0) {
+          allQuestions = [];
+          questions = [];
+          topicNames = [];
+          topicQuestionCounts = {};
+          selectedTopics.clear();
+          topicList.innerHTML = '';
+          askButton.disabled = true;
+          document.getElementById('question-section').style.display = 'none';
+          document.getElementById('welcome-message').style.display = 'none';
+          loading.style.display = 'none';
+          errorDiv.style.display = 'block';
+          errorDiv.textContent = 'Select at least one question pool.';
+          return;
+        }
+
+        const poolQuestions = await Promise.all(selectedPools.map(loadPoolQuestions));
+        allQuestions = poolQuestions.flat();
+
+        if (allQuestions.length === 0) throw new Error('No valid questions found in selected pools.');
 
         deriveTopicNames(allQuestions);
-        if (topicNames.length === 0) throw new Error('No topics found in question pool.');
+        if (topicNames.length === 0) throw new Error('No topics found in selected question pools.');
 
-        // Build topic counts and create topic list
-        createTopicList();
-        
-        loading.style.display = 'none';
+        createTopicList({ preserveSelection });
+
+        document.getElementById('question-section').style.display = 'none';
         document.getElementById('welcome-message').style.display = 'block';
-        // Don't show questions until topics are selected
+        loading.style.display = 'none';
       } catch (e) {
         loading.style.display = 'none';
         errorDiv.style.display = 'block';
@@ -413,14 +454,6 @@
         [array[i], array[j]] = [array[j], array[i]];
       }
       return array;
-    }
-
-    function getQuestionsMatchingCategory() {
-      const allowedCategories = CATEGORY_FILTER_MAP[selectedCategoryFilter];
-      if (!allowedCategories) {
-        return allQuestions;
-      }
-      return allQuestions.filter(question => allowedCategories.has(question.category));
     }
 
     // Build counts of questions per topic
@@ -441,8 +474,7 @@
       selectedTopics.clear();
       topicList.innerHTML = '';
 
-      const categoryFilteredQuestions = getQuestionsMatchingCategory();
-      buildTopicCounts(categoryFilteredQuestions);
+      buildTopicCounts(allQuestions);
 
       topicNames.forEach(topicName => {
         const count = topicQuestionCounts[topicName] || 0;
@@ -518,15 +550,7 @@
         if (!question.topics || !Array.isArray(question.topics)) {
           return false;
         }
-        const matchesTopic = question.topics.some(topic => selectedTopics.has(topic));
-        if (!matchesTopic) {
-          return false;
-        }
-        const allowedCategories = CATEGORY_FILTER_MAP[selectedCategoryFilter];
-        if (!allowedCategories) {
-          return true;
-        }
-        return allowedCategories.has(question.category);
+        return question.topics.some(topic => selectedTopics.has(topic));
       });
     }
 
@@ -842,12 +866,9 @@
     askButton.addEventListener('click', startQuizWithTopics);
     selectAllButton.addEventListener('click', selectAllTopics);
     unselectAllButton.addEventListener('click', unselectAllTopics);
-    categoryFilterRadios.forEach(radio => {
-      radio.addEventListener('change', () => {
-        if (radio.checked) {
-          selectedCategoryFilter = radio.value;
-          createTopicList({ preserveSelection: true });
-        }
+    poolCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        loadQuestions({ preserveSelection: true });
       });
     });
 
