@@ -13,9 +13,12 @@ from pathlib import Path
 BATCH_PROMPT_FILE = Path("codex-question-generation-batch-prompt.md")
 VALIDATOR_FILE = Path("validate-question-pool.py")
 TOPICS_DIR = Path("topics")
+FLOWS_DIR = Path("flows")
 
 SINGLE_DEFAULT_CATEGORIES = "single_topic_understanding,context_clues"
 DEFAULT_FLOW_RULES = "- No additional flow-specific rules."
+ARTWORKS_FLOW = "artworks"
+ARTWORKS_FLOW_ALIASES = {ARTWORKS_FLOW, "artwoks", "artowrks"}
 
 
 def build_generation_prompt(
@@ -87,6 +90,28 @@ def run_validator_non_fatal(input_file: Path, categories: str) -> None:
         print("\nFinal validation passed.")
 
 
+def load_flow_rules(flow_file: Path) -> str:
+    if not flow_file.exists():
+        raise FileNotFoundError(f"Missing flow rules file: {flow_file}")
+    flow_rules = flow_file.read_text(encoding="utf-8").strip()
+    if not flow_rules:
+        raise FileNotFoundError(f"Flow rules file is empty: {flow_file}")
+    return flow_rules
+
+
+def normalize_flow_name(raw_flow: str) -> str:
+    flow = raw_flow.strip().lower()
+    if not flow:
+        return ""
+    if flow in ARTWORKS_FLOW_ALIASES:
+        return ARTWORKS_FLOW
+    return flow
+
+
+def get_flow_file(flow_name: str) -> Path:
+    return FLOWS_DIR / f"flow-{flow_name}.md"
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate WSC questions via Codex prompts.")
     sub = parser.add_subparsers(dest="mode", required=True)
@@ -127,32 +152,14 @@ def parse_args() -> argparse.Namespace:
         default="all",
         help="Comma-separated categories or 'all' (default).",
     )
+    batch.add_argument(
+        "--flow",
+        default="",
+        help="Optional flow profile name. Example: artworks (loads flows/flow-artworks.md).",
+    )
     batch.add_argument("--no-search", action="store_true", help="Disable codex --search.")
     batch.add_argument("--no-full-auto", action="store_true", help="Disable codex --full-auto.")
     batch.add_argument(
-        "--no-final-validate",
-        action="store_true",
-        help="Skip the wrapper's final non-fatal validator run.",
-    )
-
-    artwork = sub.add_parser(
-        "artwork",
-        help="Generate questions constrained to artworks, with extra color-palette questions for paintings.",
-    )
-    artwork.add_argument("--count", type=int, required=True, help="Number of questions to generate.")
-    artwork.add_argument(
-        "--output",
-        default="question-pool-artworks.jsonl",
-        help="Output JSONL path (default: question-pool-artworks.jsonl).",
-    )
-    artwork.add_argument(
-        "--categories",
-        default="all",
-        help="Comma-separated categories or 'all' (default).",
-    )
-    artwork.add_argument("--no-search", action="store_true", help="Disable codex --search.")
-    artwork.add_argument("--no-full-auto", action="store_true", help="Disable codex --full-auto.")
-    artwork.add_argument(
         "--no-final-validate",
         action="store_true",
         help="Skip the wrapper's final non-fatal validator run.",
@@ -204,6 +211,7 @@ def main() -> int:
 
         if args.mode == "batch":
             categories = args.categories.strip()
+            flow_name = normalize_flow_name(args.flow)
             if args.count <= 0:
                 print("--count must be > 0")
                 return 1
@@ -218,48 +226,17 @@ def main() -> int:
                     "- For single_topic_understanding and context_clues, prefer exactly 1 topic per question.",
                 ]
             )
-            output_file = Path(args.output.strip() or "question-pool.jsonl")
-            prompt = build_generation_prompt(
-                args.count,
-                categories,
-                str(output_file),
-                scope_source,
-                scope_profile,
-                flow_rules=DEFAULT_FLOW_RULES,
-            )
-            rc = run_codex(prompt, search=not args.no_search, full_auto=not args.no_full_auto)
-            if rc != 0:
-                return rc
-            if not args.no_final_validate:
-                run_validator_non_fatal(output_file, categories)
-            return 0
+            flow_rules = DEFAULT_FLOW_RULES
+            if flow_name:
+                flow_rules = load_flow_rules(get_flow_file(flow_name))
 
-        if args.mode == "artwork":
-            categories = args.categories.strip()
-            if args.count <= 0:
-                print("--count must be > 0")
-                return 1
-            if categories.lower() != "all" and not categories:
-                print("--categories cannot be empty")
-                return 1
-            scope_source = "topics/ (all topics/*/topic.json)"
-            scope_profile = "\n".join(
-                [
-                    "- Multi-topic scope: use all topic files under topics/ unless category constraints narrow usage.",
-                    "- For comparative_consequences and thematic_synthesis, use exactly 2 topics per question.",
-                    "- For single_topic_understanding and context_clues, prefer exactly 1 topic per question.",
-                ]
-            )
-            flow_rules = "\n".join(
-                [
-                    "- Every question must be about a specific artwork from `artworks` in the selected topic scope.",
-                    "- Keep all existing question rules and hard requirements from the base prompt.",
-                    "- If an artwork is a painting, include at least one additional question about that painting's main color palette (dominant colors).",
-                    "- Palette questions must still follow one-sentence and <=22-word limits, with plausible distractor colors.",
-                    "- If painting status or palette evidence is unclear from extracted material, choose a different artwork instead of guessing.",
-                ]
-            )
-            output_file = Path(args.output.strip() or "question-pool-artworks.jsonl")
+            default_output = "question-pool.jsonl"
+            if flow_name == ARTWORKS_FLOW:
+                default_output = "question-pool-artworks.jsonl"
+            elif flow_name:
+                default_output = f"question-pool-{flow_name}.jsonl"
+
+            output_file = Path(args.output.strip() or default_output)
             prompt = build_generation_prompt(
                 args.count,
                 categories,

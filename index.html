@@ -245,6 +245,10 @@
         <input type="checkbox" name="question-pool" value="artworks">
         Art
       </label>
+      <label class="category-option">
+        <input type="checkbox" name="question-pool" value="lit">
+        Lit
+      </label>
     </fieldset>
     <div style="margin-bottom: 1rem;">
       <button id="select-all-button" style="margin-right: 0.5rem; padding: 0.4rem 0.8rem; font-size: 0.9rem; border: none; border-radius: var(--radius); background: var(--primary); color: white; cursor: pointer;">Select All</button>
@@ -309,7 +313,8 @@
 
     const QUESTION_POOL_FILES = {
       general: 'question-pool.jsonl',
-      artworks: 'question-pool-artworks.jsonl'
+      artworks: 'question-pool-artworks.jsonl',
+      lit: 'question-pool-lit.jsonl'
     };
     const poolQuestionsCache = new Map();
 

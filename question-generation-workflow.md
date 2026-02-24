@@ -37,12 +37,15 @@ python .\question-generator.py batch --count 300 --categories "single_topic_unde
 
 Artwork-only flow (all questions about artworks; paintings include additional palette questions):
 ```powershell
-python .\question-generator.py artwork --count 200
+python .\question-generator.py batch --count 200 --flow artworks
 ```
+
+Artwork flow rules are loaded from:
+- `flows/flow-artworks.md`
 
 Artwork-only flow with custom output:
 ```powershell
-python .\question-generator.py artwork --count 200 --output .\question-pool-artworks-v1.jsonl
+python .\question-generator.py batch --count 200 --flow artworks --output .\question-pool-artworks-v1.jsonl
 ```
 
 Skip wrapper final validation:

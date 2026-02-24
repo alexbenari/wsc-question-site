@@ -1,0 +1,16 @@
+- Every question must be about a specific work of literature from `artworks` in the selected topic scope.
+- Treat as literature only items that are clearly novels, short stories, poems, plays, or literary essays/memoirs.
+- Exclude non-literary media (songs, films/TV, paintings, concept art, architecture, etc.).
+- Determine literary eligibility from extracted `topic.json` fields first (title, creator, description, source links).
+- If eligibility is still unclear, you may use web search only to verify the work's medium/genre (classification step only).
+- Do not use web lookup to add unsupported content details; keep question content grounded in extracted topic material.
+- If medium/genre remains unclear after lookup, skip the item rather than guessing.
+- Keep all existing question rules and hard requirements from the base prompt.
+- Avoid low-effort title-author lookup forms (in both directions), including equivalent phrasings.
+- Avoid examples (do not use patterns like these):
+  - "Which of the following authors wrote The New Colossus?"
+  - "Which of the following books was written by Mary Shelley?"
+  - "Which of the following titles belongs to T.S. Eliot?"
+  - "Which of the following authors created this work?" (when the stem only tests title-author mapping)
+  - "Which of the following is a literary work?" (pure list-membership without reasoning)
+- Prefer reasoning-driven literary questions about theme, characterization, narrative voice, symbolism, structure, or historical context.

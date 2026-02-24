@@ -1,0 +1,5 @@
+- Every question must be about a specific artwork from `artworks` in the selected topic scope.
+- Keep all existing question rules and hard requirements from the base prompt.
+- If an artwork is a painting, include at least one additional question about that painting's main color palette (dominant colors).
+- Palette questions must still follow one-sentence and <=22-word limits, with plausible distractor colors.
+- If painting status or palette evidence is unclear from extracted material, choose a different artwork instead of guessing.
