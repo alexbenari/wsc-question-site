@@ -2,6 +2,7 @@
   "files": [
     "question-pool.jsonl",
     "question-pool-artworks.jsonl",
-    "question-pool-lit.jsonl"
+    "question-pool-lit.jsonl",
+    "question-pool-palette.jsonl"
   ]
 }
