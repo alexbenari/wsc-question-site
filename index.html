@@ -237,18 +237,7 @@
     <h2 style="margin-top: 0; color: var(--primary); font-size: 1.2rem;">Select Topics</h2>
     <fieldset class="category-filters">
       <legend>Question Pool</legend>
-      <label class="category-option">
-        <input type="checkbox" name="question-pool" value="general" checked>
-        General
-      </label>
-      <label class="category-option">
-        <input type="checkbox" name="question-pool" value="artworks">
-        Art
-      </label>
-      <label class="category-option">
-        <input type="checkbox" name="question-pool" value="lit">
-        Lit
-      </label>
+      <div id="pool-options"></div>
     </fieldset>
     <div style="margin-bottom: 1rem;">
       <button id="select-all-button" style="margin-right: 0.5rem; padding: 0.4rem 0.8rem; font-size: 0.9rem; border: none; border-radius: var(--radius); background: var(--primary); color: white; cursor: pointer;">Select All</button>
@@ -311,11 +300,10 @@
     let topicQuestionCounts = {}; // Count questions per topic
     let topicNames = []; // Derived from selected question pool topics fields
 
-    const QUESTION_POOL_FILES = {
-      general: 'question-pool.jsonl',
-      artworks: 'question-pool-artworks.jsonl',
-      lit: 'question-pool-lit.jsonl'
-    };
+    const QUESTION_POOL_MANIFEST = 'question-pools.json';
+    const QUESTION_POOL_PATTERN = /^question-pool(?:-[a-z0-9-]+)?\.jsonl$/i;
+    const FALLBACK_POOL_FILES = ['question-pool.jsonl', 'question-pool-artworks.jsonl'];
+    const QUESTION_POOL_FILES = {};
     const poolQuestionsCache = new Map();
 
     // Elements
@@ -334,7 +322,116 @@
     const askButton = document.getElementById('ask-button');
     const selectAllButton = document.getElementById('select-all-button');
     const unselectAllButton = document.getElementById('unselect-all-button');
-    const poolCheckboxes = document.querySelectorAll('input[name="question-pool"]');
+    const poolOptions = document.getElementById('pool-options');
+
+    function getPoolCheckboxes() {
+      return document.querySelectorAll('input[name="question-pool"]');
+    }
+
+    function titleCaseWords(value) {
+      return value
+        .split('-')
+        .filter(Boolean)
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(' ');
+    }
+
+    function poolKeyFromFile(fileName) {
+      const normalized = fileName.toLowerCase();
+      if (normalized === 'question-pool.jsonl') return 'general';
+      return normalized.replace(/^question-pool-/, '').replace(/\.jsonl$/, '');
+    }
+
+    function poolLabelFromFile(fileName) {
+      const key = poolKeyFromFile(fileName);
+      if (key === 'general') return 'General';
+      if (key === 'artworks') return 'Art';
+      return titleCaseWords(key);
+    }
+
+    function normalizePoolFileList(items) {
+      const deduped = new Set();
+      items.forEach(item => {
+        if (typeof item !== 'string') return;
+        const fileName = item.split('/').pop().trim();
+        if (!QUESTION_POOL_PATTERN.test(fileName)) return;
+        deduped.add(fileName);
+      });
+      return Array.from(deduped).sort((a, b) => {
+        const aIsGeneral = a.toLowerCase() === 'question-pool.jsonl';
+        const bIsGeneral = b.toLowerCase() === 'question-pool.jsonl';
+        if (aIsGeneral && !bIsGeneral) return -1;
+        if (!aIsGeneral && bIsGeneral) return 1;
+        return a.localeCompare(b);
+      });
+    }
+
+    async function tryLoadManifestPools() {
+      try {
+        const resp = await fetch(QUESTION_POOL_MANIFEST, { cache: 'no-store' });
+        if (!resp.ok) return [];
+        const payload = await resp.json();
+        if (Array.isArray(payload)) return normalizePoolFileList(payload);
+        if (payload && Array.isArray(payload.files)) return normalizePoolFileList(payload.files);
+      } catch {}
+      return [];
+    }
+
+    async function tryLoadDirectoryListingPools() {
+      try {
+        const resp = await fetch('.', { cache: 'no-store' });
+        if (!resp.ok) return [];
+        const html = await resp.text();
+        const matches = Array.from(
+          html.matchAll(/href=["']([^"']*question-pool(?:-[a-z0-9-]+)?\.jsonl)["']/gi)
+        ).map(match => match[1]);
+        return normalizePoolFileList(matches);
+      } catch {}
+      return [];
+    }
+
+    async function discoverQuestionPools() {
+      const manifestPools = await tryLoadManifestPools();
+      if (manifestPools.length > 0) return manifestPools;
+
+      const listingPools = await tryLoadDirectoryListingPools();
+      if (listingPools.length > 0) return listingPools;
+
+      return normalizePoolFileList(FALLBACK_POOL_FILES);
+    }
+
+    function renderPoolOptions(poolFiles) {
+      Object.keys(QUESTION_POOL_FILES).forEach(key => delete QUESTION_POOL_FILES[key]);
+      poolOptions.innerHTML = '';
+
+      if (!poolFiles.length) {
+        poolOptions.innerHTML = '<p style="margin:0;color:#666;font-size:0.9rem;">No question pools found.</p>';
+        return;
+      }
+
+      poolFiles.forEach((fileName, idx) => {
+        const key = poolKeyFromFile(fileName);
+        QUESTION_POOL_FILES[key] = fileName;
+
+        const label = document.createElement('label');
+        label.className = 'category-option';
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.name = 'question-pool';
+        checkbox.value = key;
+        checkbox.checked = idx === 0;
+
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(poolLabelFromFile(fileName)));
+        poolOptions.appendChild(label);
+      });
+    }
+
+    async function initializeQuestionPools() {
+      const discoveredPools = await discoverQuestionPools();
+      renderPoolOptions(discoveredPools);
+    }
 
     function deriveTopicNames(sourceQuestions = allQuestions) {
       const uniqueTopics = new Set();
@@ -413,7 +510,7 @@
         errorDiv.style.display = 'none';
         errorDiv.textContent = '';
 
-        const selectedPools = Array.from(poolCheckboxes)
+        const selectedPools = Array.from(getPoolCheckboxes())
           .filter(checkbox => checkbox.checked)
           .map(checkbox => checkbox.value);
 
@@ -871,14 +968,17 @@
     askButton.addEventListener('click', startQuizWithTopics);
     selectAllButton.addEventListener('click', selectAllTopics);
     unselectAllButton.addEventListener('click', unselectAllTopics);
-    poolCheckboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', () => {
+    poolOptions.addEventListener('change', event => {
+      if (event.target && event.target.name === 'question-pool') {
         loadQuestions({ preserveSelection: true });
-      });
+      }
     });
 
     // Initial load
-    window.addEventListener('DOMContentLoaded', loadQuestions);
+    window.addEventListener('DOMContentLoaded', async () => {
+      await initializeQuestionPools();
+      await loadQuestions();
+    });
   </script>
 </body>
 </html>

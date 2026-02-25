@@ -1,0 +1,12 @@
+- Every question must be about a specific painting from `artworks` in the selected topic scope.
+- Allowed task type only: ask for the painting's main color palette (dominant colors).
+- Do not generate any other question type (no author/title mapping, theme, symbolism, date, movement, or medium questions).
+- For each eligible painting, generate exactly one question unless question-count limits prevent full coverage.
+- If requested question count exceeds the number of eligible paintings, reuse the same painting-question stem and correct palette for additional items, but vary distractors and correct-letter placement.
+- In repeated items for the same painting, keep the core question intent identical and only change option sets/order to create variants.
+- Determine painting eligibility from extracted `topic.json` fields first (title, creator, description, source links).
+- If painting status or palette evidence is unclear, you may use web search only to verify painting status and dominant colors.
+- Do not use web lookup to add unsupported details beyond painting status and dominant color palette.
+- If status or palette remains unclear after lookup, skip that artwork rather than guessing.
+- Keep all base prompt hard requirements (one-sentence stem, <=22 words, 5 choices, plausible distractors, explanation quality, schema compliance).
+- Distractors in palette questions must be plausible color palettes for the same painting context, not absurd or unrelated colors.

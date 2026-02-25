@@ -53,6 +53,16 @@ Skip wrapper final validation:
 python .\question-generator.py batch --count 300 --no-final-validate
 ```
 
+Refresh question-pool manifest used by the UI:
+```powershell
+python .\update-question-pools-manifest.py
+```
+
+Enable the shared pre-commit hook (one-time per clone):
+```powershell
+git config core.hooksPath .githooks
+```
+
 ## 1) Manual prompt run (optional)
 Use unified prompt template:
 - `codex-question-generation-batch-prompt.md`
